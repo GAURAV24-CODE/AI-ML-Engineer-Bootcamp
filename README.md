@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="Images/banner.png" alt="AI/ML Engineer Bootcamp Banner" width="100%">
+  <img src="image/banner.png" alt="AI/ML Engineer Bootcamp Banner" width="100%">
 </p>
 
 <h1 align="center">🚀 AI/ML Engineer Bootcamp</h1>
