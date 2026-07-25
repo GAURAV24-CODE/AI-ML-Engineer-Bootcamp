@@ -1,0 +1,53 @@
+Day 3 Python Cheat Sheet
+
+• Function: A reusable block of code that performs a specific task.
+
+• def: Keyword used to define a function.
+
+• Parameters: Variables defined in the function declaration.
+
+• Arguments: Actual values passed to a function during a function call.
+
+• return: Sends a value back to the caller.
+
+• Default Arguments: Uses a default value if no argument is provided.
+
+• Keyword Arguments: Pass values using parameter names.
+
+• *args: Accepts multiple positional arguments as a tuple.
+
+• **kwargs: Accepts multiple keyword arguments as a dictionary.
+
+• Lambda Function: A small anonymous function written using the lambda keyword.
+
+• Recursion: A function that calls itself until a base condition is met.
+
+• Module: A Python file containing reusable code.
+
+• import: Imports an entire module.
+
+• from ... import: Imports specific functions or objects from a module.
+
+• math Module: Used for mathematical operations such as sqrt(), pow(), pi, ceil(), and floor().
+
+• random Module: Generates random numbers and selects random items.
+
+• datetime Module: Works with the current date and time.
+
+• try: Contains code that may raise an exception.
+
+• except: Handles exceptions if they occur.
+
+• else: Executes only if no exception occurs.
+
+• finally: Always executes, whether an exception occurs or not.
+
+• raise: Manually generates an exception.
+
+• ValueError: Raised when an invalid value is provided.
+
+• ZeroDivisionError: Raised when dividing by zero.
+
+• TypeError: Raised when an operation is performed on incompatible data types.
+
+• Function Benefits: Reusability, readability, modularity, and easier maintenance.
