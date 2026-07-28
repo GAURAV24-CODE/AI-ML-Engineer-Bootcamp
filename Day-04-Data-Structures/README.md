@@ -1,54 +1,114 @@
-# 🚀 Day 04 - Data Structures in Python
+# 📅 Day 4 - Python Data Structures
 
-Welcome to **Day 04** of the **45-Day AI/ML Engineer Bootcamp**.
+Welcome to **Day 4** of my **45-Day AI/ML Engineer Bootcamp**.
 
-In this module, you'll learn Python's built-in data structures, which are essential for storing, organizing, and manipulating data efficiently. These concepts form the foundation for Data Analysis, Machine Learning, and Artificial Intelligence.
+Today, I learned the fundamentals of **Python Data Structures**, which are essential for Data Science, Machine Learning, and AI development.
+
+---
+
+# 🎯 Learning Objectives
+
+By completing Day 4, I learned how to:
+
+- Store data efficiently
+- Access and modify data
+- Choose the right data structure
+- Work with nested data
+- Build a real-world mini project
 
 ---
 
 # 📚 Topics Covered
 
-- Lists
-- Tuples
-- Sets
-- Dictionaries
-- List Methods
-- Tuple Operations
-- Set Operations
-- Dictionary Operations
-- List Comprehension
-- Dictionary Comprehension
-- String Operations
-- Searching
-- Sorting
+## 📌 Lists
+
+- Creating Lists
+- Indexing
+- Slicing
+- append()
+- insert()
+- remove()
+- pop()
+- sort()
+- reverse()
+- len()
 
 ---
 
-# 📂 Folder Structure
+## 📌 Tuples
+
+- Creating Tuples
+- Indexing
+- count()
+- index()
+
+---
+
+## 📌 Sets
+
+- Creating Sets
+- add()
+- remove()
+- discard()
+- union()
+- intersection()
+- difference()
+
+---
+
+## 📌 Dictionaries
+
+- Creating Dictionaries
+- Accessing Values
+- Updating Values
+- Adding New Keys
+- keys()
+- values()
+- items()
+
+---
+
+## 📌 Nested Data Structures
+
+- List of Dictionaries
+- Dictionary inside List
+
+---
+
+# 💻 Files Included
 
 ```
 Day-04-Data-Structures/
 │
+├── Assignment/
+│   └── Day04_Assignment.md
+│
+├── Cheat_Sheet/
+│   └── Day04_CheatSheet.md
+│
+├── Code/
+│   ├── practice.py
+│   ├── exercises.py
+│   └── solutions.py
+│
+├── Dataset/
+│
+├── Images/
+│
+├── Interview_Questions/
+│   └── Day04_Interview_Questions.md
+│
+├── Mini_Project/
+│   └── project4.ipynb
+│
 ├── Notebook/
 │   └── Day04.ipynb
 │
-├── Mini_Project/
-│   └── Student_Record_Management.ipynb
-│
-├── Assignment/
-│   └── Assignment.ipynb
-│
-├── Quiz/
-│   └── Quiz.ipynb
-│
-├── Interview_Questions/
-│   └── Interview_Questions.ipynb
-│
-├── Cheat_Sheet/
-│   └── Cheat_Sheet.md
-│
 ├── Notes/
 │   └── Day04_Theory.md
+│
+├── Quiz/
+│   └── Day04_Quiz.md
 │
 ├── README.md
 └── requirements.txt
@@ -56,114 +116,120 @@ Day-04-Data-Structures/
 
 ---
 
-# 🎯 Learning Outcomes
+# 🚀 Mini Project
 
-After completing Day 04, you will be able to:
-
-- Create and use Lists, Tuples, Sets, and Dictionaries
-- Perform common operations on data structures
-- Store and manage data efficiently
-- Use List and Dictionary Comprehensions
-- Apply data structures in real-world Python programs
-
----
-
-# 💻 Practical Programs
-
-- Create and Access Lists
-- List Methods
-- Tuple Operations
-- Set Operations
-- Dictionary CRUD Operations
-- List Comprehension
-- Dictionary Comprehension
-- Word Counter
-- Sorting Lists
-- Searching Elements
-
----
-
-# 🛠️ Mini Project
-
-## 📚 Student Record Management System
+## Student Record Management System
 
 ### Features
 
 - Add Student
-- View Students
+- Display Student
 - Search Student
-- Update Student
+- Update Marks
 - Delete Student
-- Display All Records
 
----
-
-# 📝 Assignment
-
-Practice beginner-friendly exercises on:
+### Concepts Used
 
 - Lists
-- Tuples
-- Sets
 - Dictionaries
-- Searching
-- Sorting
-- Comprehensions
+- Functions
+- Loops
+- Conditional Statements
 
 ---
 
-# ❓ Quiz
+# 🎯 Assignment
 
-Test your understanding of Python Data Structures with multiple-choice questions.
+✔️ 20 Programming Tasks
+
+✔️ Data Structure Practice
+
+✔️ Resume Dictionary
+
+✔️ Student Records
 
 ---
 
-# 💼 Interview Questions
+# 🧠 Quiz
 
-Prepare for interviews with questions on:
+- 20 Multiple Choice Questions
+- Interview-Oriented
+- Beginner Friendly
 
-- Lists
-- Tuples
-- Sets
-- Dictionaries
+---
+
+# 💼 Interview Preparation
+
+Topics covered include:
+
 - List vs Tuple
 - Set vs Dictionary
-- List Comprehension
-- Dictionary Comprehension
+- Mutable vs Immutable
+- Common Built-in Methods
+- Nested Data Structures
+- Real-world Python Usage
 
 ---
 
-# 📌 Prerequisites
+# 📈 Skills Gained
 
-- Python 3.x
-- Jupyter Notebook or VS Code
-- Completion of Day 01, Day 02, and Day 03
+By completing Day 4, I improved my understanding of:
+
+- Python Programming
+- Data Structures
+- Problem Solving
+- Data Organization
+- CRUD Operations
+- Logic Building
 
 ---
 
-# 🚀 What's Next?
+# 🌟 Key Takeaways
 
-➡️ **Day 05 – File Handling & Exception Handling**
+- Lists are mutable and ordered.
+- Tuples are immutable.
+- Sets store unique values.
+- Dictionaries store key-value pairs.
+- Nested data structures help represent real-world data.
+
+---
+
+# 🔥 GitHub Progress
+
+- ✅ Notes Completed
+- ✅ Notebook Completed
+- ✅ Practice Completed
+- ✅ Exercises Completed
+- ✅ Solutions Completed
+- ✅ Mini Project Completed
+- ✅ Assignment Completed
+- ✅ Quiz Completed
+- ✅ Interview Questions Completed
+
+---
+
+# 📌 What's Next?
+
+➡️ **Day 5 – File Handling & Exception Handling**
 
 Topics include:
 
 - Reading Files
 - Writing Files
-- Appending Data
-- File Modes
 - CSV Files
-- Exception Handling
-- try, except, else, finally
-- Mini Project
+- JSON Files
+- Try-Except
+- Finally
+- Custom Exceptions
 
 ---
 
-## ⭐ Support the Project
+## 🙌 Connect With Me
 
-If you find this repository helpful:
+**GitHub:** https://github.com/GAURAV24-CODE
 
-- ⭐ Star the repository
-- 🍴 Fork the project
-- 📢 Share it with others
+**LinkedIn:** https://www.linkedin.com/in/gaurav-kumbhar-0b4a39293
 
-Happy Learning! 🚀
+---
+
+⭐ If you found this repository helpful, don't forget to **Star** it!
