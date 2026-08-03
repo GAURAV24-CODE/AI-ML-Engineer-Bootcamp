@@ -1,0 +1,40 @@
+# NumPy Cheat Sheet
+
+## Array Creation
+- np.array()
+- np.zeros()
+- np.ones()
+- np.eye()
+- np.arange()
+- np.linspace()
+
+## Array Information
+- ndim
+- shape
+- size
+- dtype
+
+## Mathematical Functions
+- sum()
+- mean()
+- max()
+- min()
+- median()
+- std()
+- var()
+
+## Array Operations
+- reshape()
+- flatten()
+- sort()
+- unique()
+
+## Random Module
+- rand()
+- randint()
+- choice()
+
+## Joining & Splitting
+- vstack()
+- hstack()
+- array_split()

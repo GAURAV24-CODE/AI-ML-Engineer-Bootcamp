@@ -1,0 +1,44 @@
+📘 Day 7 Interview Questions with Short Answers
+1. What is NumPy?
+
+Answer: NumPy is a Python library used for fast numerical computations and array operations.
+
+2. Why is NumPy faster than Python lists?
+
+Answer: NumPy uses optimized C code and stores data in continuous memory, making operations much faster.
+
+3. What is ndarray?
+
+Answer: ndarray (N-dimensional array) is the main data structure of NumPy used to store arrays.
+
+4. Difference between List and NumPy Array?
+Python List      	NumPy Array
+Slower	            Faster
+Uses more memory	Uses less memory
+ different data types	Usually stores the same data type
+Limited mathematical operations	Supports vectorized operations
+5. What is Broadcasting?
+
+Answer: Broadcasting allows NumPy to perform operations on arrays of different shapes without manually resizing them.
+
+6. What is Vectorization?
+
+Answer: Vectorization performs operations on entire arrays at once without using loops, making code faster.
+
+7. Difference between Copy and View?
+
+Copy: Creates a new array. Changes do not affect the original array.
+
+View: Shares the original array's data. Changes affect both arrays.
+
+8. What is reshape()?
+
+Answer: reshape() changes the shape (dimensions) of an array without changing its data.
+
+9. What is flatten()?
+
+Answer: flatten() converts a multi-dimensional array into a one-dimensional array.
+
+10. Difference between rand() and randint()?
+rand() → Generates random floating-point numbers between 0 and 1.
+randint() → Generates random integer numbers within a specified range.
