@@ -1,0 +1,20 @@
+What is file handling in Python?
+→ Reading, writing, and modifying files using Python.
+Which function is used to open a file?
+→ open()
+What is the difference between r, w, and a?
+→ r = read, w = write/overwrite, a = append.
+What does with open() do?
+→ Automatically closes the file after use.
+What is an exception?
+→ An error that occurs during program execution.
+What is try-except used for?
+→ To handle runtime errors without crashing the program.
+What is FileNotFoundError?
+→ It occurs when the requested file doesn't exist.
+What is ValueError?
+→ It occurs when a value has an invalid type or format.
+What is the purpose of finally?
+→ It executes whether an exception occurs or not.
+What does raise do?
+→ It manually generates an exception.

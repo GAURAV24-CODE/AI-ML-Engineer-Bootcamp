@@ -1,0 +1,4 @@
+Hello Python
+Welcome to File Handling
+Learning Python is fun!
+Learning Python is fun!
