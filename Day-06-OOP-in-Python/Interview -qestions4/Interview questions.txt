@@ -1,1 +1,47 @@
 
+OOP — 15 Interview Questions & Short Answers
+
+1. What is Object-Oriented Programming?
+Answer: A programming approach based on classes and objects.
+
+2. What is a class and an object?
+Answer: Class: Blueprint. Object: Instance of a class.
+
+3. Explain the self keyword.
+Answer: self refers to the current object.
+
+4. What is the __init__ constructor?
+Answer: It initializes an object's attributes when created.
+
+5. What are instance and class variables?
+Answer: Instance: Belongs to an object. Class: Shared by all objects.
+
+6. What is encapsulation?
+Answer: Bundling data and methods inside a class.
+
+7. What is inheritance? Give its types.
+Answer: Acquiring properties of another class. Types: Single, Multiple, Multilevel, Hierarchical, Hybrid.
+
+8. What is polymorphism?
+Answer: Same method/interface behaving differently for different objects.
+
+9. What is abstraction?
+Answer: Hiding implementation details and showing only essential features.
+
+10. What is method overriding?
+Answer: A child class provides its own version of a parent method.
+
+11. What is the super() function?
+Answer: Used to access parent class methods or attributes.
+
+12. Difference between method overloading and overriding in Python.
+Answer: Overloading: Same method with different parameters; Python does not support traditional overloading. Overriding: Child redefines parent method.
+
+13. What is multiple inheritance?
+Answer: A class inherits from more than one parent class.
+
+14. What are static methods and class methods?
+Answer: Static: Does not use self or cls. Class: Uses cls and works with class-level data.
+
+15. Why is OOP important in Python and AI/ML projects?
+Answer: It makes code reusable, organized, modular, and easier to maintain
