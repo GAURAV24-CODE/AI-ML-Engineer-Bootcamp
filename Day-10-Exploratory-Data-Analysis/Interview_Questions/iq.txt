@@ -1,0 +1,52 @@
+EDA INTERVIEW QUESTIONS — AI/ML BOOTCAMP
+
+1. What is EDA? — EDA is the process of exploring, cleaning, visualizing, and understanding data.
+2. Why is EDA important? — It helps find patterns, missing values, outliers, and relationships before modeling.
+3. What is the EDA workflow? — Understand → Load → Inspect → Clean → Feature Engineering → Statistics → Univariate → Bivariate → Multivariate → Insights.
+4. What is Univariate Analysis? — Analysis of one variable at a time.
+5. What is Bivariate Analysis? — Analysis of two variables to understand their relationship.
+6. What is Multivariate Analysis? — Analysis of three or more variables together.
+7. What is Data Cleaning? — Fixing missing, duplicate, incorrect, and inconsistent data.
+8. How do you check missing values? — df.isnull().sum()
+9. How do you remove duplicates? — df.drop_duplicates()
+10. How do you check dataset shape? — df.shape
+11. How do you check data types? — df.dtypes
+12. What does df.info() do? — It shows columns, data types, non-null values, and memory usage.
+13. What does df.describe() do? — It provides statistical summaries such as mean, standard deviation, minimum, and maximum.
+14. How do you check unique values? — df.nunique()
+15. What is Feature Engineering? — Creating or transforming useful features from existing data.
+16. Give an example of Feature Engineering. — Revenue = Quantity × Price.
+17. What is Binning? — Converting numerical values into meaningful groups.
+18. What are Date Features? — Year, Month, Quarter, Day, Weekday, and Weekend extracted from dates.
+19. What is Mean? — The average of all values.
+20. What is Median? — The middle value after sorting the data.
+21. Mean vs Median? — Mean is sensitive to outliers, while median is more robust.
+22. What is Mode? — The most frequently occurring value.
+23. What is Standard Deviation? — It measures how spread out values are around the mean.
+24. What is an Outlier? — An unusually high or low observation compared with the rest of the data.
+25. How do you detect Outliers? — Using Boxplot, IQR, or Z-score.
+26. What is IQR? — IQR = Q3 − Q1 and represents the middle 50% of the data.
+27. What is Correlation? — It measures the strength and direction of a linear relationship between two variables.
+28. What does +1 correlation mean? — Perfect positive linear relationship.
+29. What does -1 correlation mean? — Perfect negative linear relationship.
+30. Does correlation mean causation? — No, correlation does not prove causation.
+31. What is a Histogram? — A chart used to understand the distribution of numerical data.
+32. What is a Boxplot? — A chart used to show spread, median, and potential outliers.
+33. What is a Scatterplot? — A chart used to show the relationship between two numerical variables.
+34. What is a Bar Chart? — A chart used to compare categorical values.
+35. What is a Heatmap? — A color-based chart commonly used to visualize correlations.
+36. What is GroupBy? — It groups data by categories and applies aggregation functions.
+37. What is Aggregation? — Summarizing data using functions such as sum, mean, count, minimum, and maximum.
+38. What is Segmentation? — Dividing data into meaningful groups such as customers, regions, or products.
+39. What is Time-Series Analysis? — Analyzing data over time to find trends, seasonality, and growth.
+40. What is a Business Insight? — A meaningful finding from data that helps support a business decision.
+41. What is a Recommendation? — An actionable suggestion based on the insights found in the data.
+42. What is a Correlation Matrix? — A table showing correlations between multiple numerical variables.
+43. What is a Pairplot? — A visualization showing pairwise relationships and distributions among numerical variables.
+44. What is a Pivot Table? — A summary of data across multiple categories or dimensions.
+45. What is Categorical Data? — Data containing labels or categories such as country, gender, or type.
+46. What is Numerical Data? — Data containing quantitative values such as age, salary, price, or revenue.
+47. Which chart is used for numerical distribution? — Histogram.
+48. Which chart is used for detecting outliers? — Boxplot.
+49. Which chart is used for two numerical variables? — Scatterplot.
+50. What is Data Leakage? — Using information during feature creation that would not be available at prediction time.

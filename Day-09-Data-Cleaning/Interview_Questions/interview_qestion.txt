@@ -1,0 +1,65 @@
+# DAY 09 — DATA CLEANING INTERVIEW Q&A
+
+# 1. What is Data Cleaning?
+# Answer: Removing errors, duplicates, missing and inconsistent data.
+
+# 2. Why is Data Cleaning important?
+# Answer: It improves data quality and produces reliable results.
+
+# 3. How do you check missing values?
+df.isnull().sum()
+
+# 4. How do you handle missing values?
+df.fillna(value)
+
+# 5. How do you remove missing rows?
+df.dropna()
+
+# 6. Mean vs Median for missing values?
+# Answer: Median is better when data contains outliers.
+
+# 7. How do you find duplicates?
+df.duplicated().sum()
+
+# 8. How do you remove duplicates?
+df.drop_duplicates(inplace=True)
+
+# 9. How do you check data types?
+df.dtypes
+
+# 10. How do you convert a column to datetime?
+df["Date"] = pd.to_datetime(df["Date"])
+
+# 11. What is an outlier?
+# Answer: An unusually high or low observation.
+
+# 12. How do you detect outliers?
+# Answer: IQR, Z-score, Box Plot.
+
+# 13. What is IQR?
+# Answer: IQR = Q3 - Q1
+
+# 14. How do you clean text?
+df["Name"] = df["Name"].str.strip().str.lower()
+
+# 15. What is inconsistent data?
+# Answer: Different formats for the same value.
+# Example: Male, male, M
+
+# 16. What is data preprocessing?
+# Answer: Preparing raw data for analysis or machine learning.
+
+# 17. Should every outlier be removed?
+# Answer: No. First check whether it is an error or a genuine value.
+
+# 18. Final data cleaning check
+print("Missing values:")
+print(df.isnull().sum())
+
+print("Duplicates:", df.duplicated().sum())
+
+print("Data types:")
+print(df.dtypes)
+
+print("Cleaned Dataset:")
+print(df.head())

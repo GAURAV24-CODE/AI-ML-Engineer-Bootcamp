@@ -1,0 +1,175 @@
+==================================================
+        STATISTICS PART 1 — CHEAT SHEET
+==================================================
+
+1. POPULATION
+   → Entire group
+   Example: All students
+
+2. SAMPLE
+   → Small part of population
+   Example: 50 students
+
+3. MEAN
+   → Average value
+   Formula: Sum / Count
+
+4. MEDIAN
+   → Middle value after sorting
+
+5. MODE
+   → Most frequently occurring value
+
+6. RANGE
+   → Maximum - Minimum
+
+7. VARIANCE
+   → Measures how spread out data is
+
+8. STANDARD DEVIATION
+   → Shows how far values usually are from the mean
+
+9. QUARTILES
+   Q1 → 25% of data
+   Q2 → 50% (Median)
+   Q3 → 75%
+
+10. PERCENTILE
+    → Shows the position of a value in data
+
+11. IQR
+    → Middle 50% of data
+
+    Formula:
+    IQR = Q3 - Q1
+
+12. OUTLIER
+    → Unusually high or low value
+
+    Lower = Q1 - 1.5 × IQR
+    Upper = Q3 + 1.5 × IQR
+
+13. SKEWNESS
+    → Shows the direction of data's tail
+
+    Positive → Right-skewed
+    Negative → Left-skewed
+    0         → Approximately symmetric
+
+14. KURTOSIS
+    → Describes tail/extreme-value behavior
+
+15. CORRELATION
+    → Shows relationship between two variables
+
+    +1 → Strong positive
+     0 → No linear relationship
+    -1 → Strong negative
+
+16. DESCRIPTIVE STATISTICS
+    → Summarizes the data
+
+    Mean
+    Median
+    Mode
+    Range
+    Variance
+    Standard Deviation
+    Quartiles
+    IQR
+    Skewness
+    Kurtosis
+    Correlation
+
+
+==================================================
+              QUICK MEMORY FLOW
+==================================================
+
+             DATA
+               ↓
+        ┌──────┴──────┐
+        ↓             ↓
+   CENTER          SPREAD
+        ↓             ↓
+ Mean/Median     Range/Variance
+  /Mode          /Std/IQR
+        ↓             ↓
+        └──────┬──────┘
+               ↓
+           DISTRIBUTION
+               ↓
+       Skewness/Kurtosis
+               ↓
+          RELATIONSHIP
+               ↓
+          Correlation
+
+
+==================================================
+              PYTHON QUICK COMMANDS
+==================================================
+
+Mean:
+df["Marks"].mean()
+
+Median:
+df["Marks"].median()
+
+Mode:
+df["Marks"].mode()
+
+Range:
+df["Marks"].max() - df["Marks"].min()
+
+Variance:
+df["Marks"].var()
+
+Standard Deviation:
+df["Marks"].std()
+
+Q1:
+df["Marks"].quantile(0.25)
+
+Q2:
+df["Marks"].quantile(0.50)
+
+Q3:
+df["Marks"].quantile(0.75)
+
+IQR:
+Q3 - Q1
+
+Skewness:
+df["Marks"].skew()
+
+Kurtosis:
+df["Marks"].kurt()
+
+Correlation:
+df[["Study_Hours", "Attendance", "Marks"]].corr()
+
+Summary:
+df.describe()
+
+
+==================================================
+        ONE-LINE REVISION
+==================================================
+
+Mean       = Average
+Median     = Middle
+Mode       = Most common
+Range      = Max - Min
+Variance   = Spread
+Std        = Typical distance from mean
+Q1         = 25%
+Q2         = 50%
+Q3         = 75%
+IQR        = Q3 - Q1
+Outlier    = Unusual value
+Skewness   = Tail direction
+Kurtosis   = Tail/extreme-value behavior
+Correlation= Relationship
+
+==================================================

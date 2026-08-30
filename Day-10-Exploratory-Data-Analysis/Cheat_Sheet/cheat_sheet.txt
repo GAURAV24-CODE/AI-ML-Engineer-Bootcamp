@@ -1,0 +1,123 @@
+EDA = Explore → Clean → Analyze → Visualize → Insight
+
+1. EDA
+   → Understand data, find patterns, problems, and relationships.
+
+2. DATA UNDERSTANDING
+   shape     → rows & columns
+   head()    → first rows
+   tail()    → last rows
+   info()    → types + non-null values
+   describe()→ statistics
+   nunique() → unique count
+
+3. DATA CLEANING
+   Missing    → isnull().sum()
+   Duplicates → duplicated().sum()
+   Remove     → drop_duplicates()
+   Data Type  → astype() / to_datetime()
+   Text       → strip(), lower(), upper()
+   Invalid    → filter / replace
+
+4. FEATURE ENGINEERING
+   Create useful features from existing data.
+   Revenue = Quantity × Price
+   Date → Year, Month, Quarter
+   Age → Age Groups
+   Text → Word Count
+
+5. DESCRIPTIVE STATISTICS
+   Mean   → Average
+   Median → Middle value
+   Mode   → Most frequent
+   Min/Max→ Smallest/Largest
+   Std    → Data spread
+   IQR    → Q3 − Q1
+
+6. UNIVARIATE = 1 VARIABLE
+   Numerical   → Histogram / Boxplot
+   Categorical → Countplot / Barplot
+   Goal → Understand distribution/frequency.
+
+7. BIVARIATE = 2 VARIABLES
+   Num + Num → Scatterplot / Correlation
+   Cat + Num → Boxplot / Barplot
+   Cat + Cat → Crosstab / Countplot
+   Goal → Find relationships/differences.
+
+8. MULTIVARIATE = 3+ VARIABLES
+   → Correlation Matrix
+   → Heatmap
+   → Pairplot
+   → GroupBy/Pivot
+   → Multi-variable charts
+   Goal → Find combined relationships/patterns.
+
+9. DISTRIBUTION
+   → Understand how values are spread.
+   Histogram → Shape
+   KDE       → Density
+   Skewness  → Asymmetry
+   Kurtosis  → Tail/peakedness
+
+10. OUTLIERS
+    → Unusually high/low values.
+    Detect → Boxplot / IQR / Z-score
+    IQR → Q3 − Q1
+    Lower → Q1 − 1.5×IQR
+    Upper → Q3 + 1.5×IQR
+    ⚠️ Don't automatically remove; investigate first.
+
+11. CORRELATION
+    → Measures linear relationship.
+    +1 → Perfect positive
+     0 → No linear relationship
+    -1 → Perfect negative
+    ⚠️ Correlation ≠ Causation.
+
+12. GROUPBY
+    → Group data and calculate.
+    sum() / mean() / count() / min() / max()
+
+13. SEGMENTATION
+    → Divide data into meaningful groups.
+    Example → Low / Medium / High customers.
+
+14. TIME-SERIES
+    → Analyze data over time.
+    Year → Month → Quarter → Trend → Growth → Seasonality
+
+15. BUSINESS QUESTIONS
+    → Convert analysis into questions.
+    What? → Where? → When? → Why? → Which?
+
+16. INSIGHTS
+    → Important patterns/findings discovered from data.
+
+17. RECOMMENDATIONS
+    → What should the business do based on insights?
+
+18. FINAL EDA STORY
+    Business Problem
+        ↓
+    Data
+        ↓
+    Cleaning
+        ↓
+    Feature Engineering
+        ↓
+    Analysis
+        ↓
+    Visualization
+        ↓
+    Insights
+        ↓
+    Recommendations
+
+⭐ MEMORY TRICK:
+UNI  = 1 variable
+BI   = 2 variables
+MULTI = 3+ variables
+
+⭐ MOST IMPORTANT:
+Clean → Engineer → Describe → Uni → Bi → Multi → Outliers → Correlation → Time → Insights

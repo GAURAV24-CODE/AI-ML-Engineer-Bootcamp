@@ -1,0 +1,392 @@
+==================================================
+      INFERENTIAL STATISTICS — PART 1
+                 CHEAT SHEET
+==================================================
+
+1. POPULATION
+   Entire group we want to study.
+   Example: All students in a college.
+
+2. SAMPLE
+   Small part selected from the population.
+   Example: 50 students selected from the college.
+
+   FLOW:
+   Population → Sample → Analyze → Conclusion
+
+
+3. PARAMETER
+   Numerical value of the population.
+   Example: Population average = μ
+
+4. STATISTIC
+   Numerical value calculated from a sample.
+   Example: Sample average = x̄
+
+   REMEMBER:
+   Parameter → Population
+   Statistic → Sample
+
+
+5. SAMPLING
+   Process of selecting a sample from a population.
+
+   TYPES:
+
+   Simple Random → Everyone has equal chance
+   Stratified → Divide into groups → Sample from each
+   Systematic → Select every kth person
+   Cluster → Select whole groups
+
+
+6. SAMPLING BIAS
+   When the sample does not properly represent
+   the population.
+
+   Example:
+   Asking only toppers about average student marks.
+
+   REMEMBER:
+   Bad Sample → Biased Result
+
+
+7. SAMPLING DISTRIBUTION
+   Distribution of a statistic obtained from
+   many different samples.
+
+   FLOW:
+   Population
+       ↓
+   Many Samples
+       ↓
+   Calculate Statistic
+       ↓
+   Sampling Distribution
+
+
+8. STANDARD ERROR (SE)
+   Measures how much a sample statistic varies
+   from sample to sample.
+
+   Formula:
+   SE = σ / √n
+
+   REMEMBER:
+   Bigger Sample → Smaller SE → More Precision
+
+
+9. CENTRAL LIMIT THEOREM (CLT)
+   For sufficiently large samples, the sampling
+   distribution of the sample mean becomes
+   approximately normal.
+
+   FLOW:
+   Population
+       ↓
+   Many Large Samples
+       ↓
+   Sample Means
+       ↓
+   Approximately Normal Distribution
+
+   REMEMBER:
+   Large Sample → Sample Mean → Approximately Normal
+
+
+10. ESTIMATION
+    Using sample data to estimate a population parameter.
+
+    TYPES:
+
+    Point Estimate → One value
+    Interval Estimate → Range of values
+
+    Example:
+    Sample Mean = 70
+    → Point Estimate of Population Mean
+
+
+11. CONFIDENCE INTERVAL (CI)
+    A range of plausible values for a population
+    parameter.
+
+    Formula:
+    Estimate ± Margin of Error
+
+    Example:
+    95% CI = (68, 72)
+
+    REMEMBER:
+    CI = Estimate + Uncertainty
+
+
+12. HYPOTHESIS TESTING
+    Method used to test a claim about a population.
+
+    FLOW:
+    Claim
+      ↓
+    H₀ + H₁
+      ↓
+    Choose Test
+      ↓
+    Test Statistic
+      ↓
+    p-value
+      ↓
+    Decision
+
+
+13. NULL HYPOTHESIS (H₀)
+    Default assumption or no-effect claim.
+
+    Example:
+    H₀: Average marks = 70
+
+
+14. ALTERNATIVE HYPOTHESIS (H₁)
+    Claim that there is a difference or effect.
+
+    Example:
+    H₁: Average marks ≠ 70
+
+    REMEMBER:
+    H₀ → Default / No Effect
+    H₁ → Difference / Effect
+
+
+15. ONE-TAILED & TWO-TAILED TEST
+
+    μ < μ₀ → Left-tailed
+    μ > μ₀ → Right-tailed
+    μ ≠ μ₀ → Two-tailed
+
+    REMEMBER:
+    < → Left
+    > → Right
+    ≠ → Two
+
+
+16. SIGNIFICANCE LEVEL (α)
+    Maximum acceptable probability of Type I Error.
+
+    Common values:
+    α = 0.10 → 10%
+    α = 0.05 → 5%
+    α = 0.01 → 1%
+
+    REMEMBER:
+    α = Significance Level
+
+
+17. TYPE I ERROR
+    Rejecting a TRUE H₀.
+
+    Also called:
+    False Positive
+
+    REMEMBER:
+    Type I → False Positive → α
+
+
+18. TYPE II ERROR
+    Failing to reject a FALSE H₀.
+
+    Also called:
+    False Negative
+
+    REMEMBER:
+    Type II → False Negative → β
+
+
+19. POWER OF TEST
+    Ability of a test to detect a real effect.
+
+    Formula:
+    Power = 1 − β
+
+    Example:
+    β = 0.20
+    Power = 0.80 = 80%
+
+    REMEMBER:
+    Higher Power → Better Detection
+
+
+20. p-VALUE
+    Measures how surprising the observed result
+    would be if H₀ were true.
+
+    Decision:
+
+    p ≤ α → Reject H₀
+    p > α → Fail to Reject H₀
+
+    REMEMBER:
+    Small p-value → Strong Evidence Against H₀
+
+    IMPORTANT:
+    p-value is NOT the probability that H₀ is true.
+
+
+21. TEST STATISTIC
+    Measures how far the sample result is from
+    the value expected under H₀, relative to
+    sampling variability.
+
+    General idea:
+
+    Test Statistic =
+    (Observed − Expected) / Standard Error
+
+
+22. Z-TEST
+    Used for mean inference when population
+    standard deviation (σ) is known.
+
+    Formula:
+
+    Z = (x̄ − μ₀) / (σ / √n)
+
+    REMEMBER:
+    Z-test → σ Known
+
+
+23. t-TEST
+    Used for mean inference when population
+    standard deviation is unknown.
+
+    Common types:
+    • One-sample t-test
+    • Independent t-test
+    • Paired t-test
+
+    REMEMBER:
+    t-test → Mean + σ Unknown
+
+
+24. CHI-SQUARE TEST
+    Mainly used for categorical/count data.
+
+    Common uses:
+    • Goodness of Fit
+    • Test of Independence
+
+    Formula:
+
+    χ² = Σ (O − E)² / E
+
+    O = Observed
+    E = Expected
+
+    REMEMBER:
+    Chi-Square → Categories / Counts
+
+
+25. ANOVA
+    Analysis of Variance.
+
+    Used to compare means of 3 or more groups.
+
+    FLOW:
+
+    Group A ─┐
+    Group B ─┼→ ANOVA → F-statistic → p-value
+    Group C ─┘
+
+    REMEMBER:
+    ANOVA → 3+ Group Means
+
+
+26. EFFECT SIZE
+    Tells us HOW LARGE an effect or difference is.
+
+    p-value → Is there evidence of an effect?
+    Effect Size → How big is the effect?
+
+    REMEMBER:
+    Statistical Significance ≠ Practical Importance
+
+
+27. A/B TESTING
+    Compares two versions to see which performs better.
+
+    Example:
+    A → Old Website
+    B → New Website
+
+    FLOW:
+    A/B Groups
+       ↓
+    Measure Result
+       ↓
+    Statistical Test
+       ↓
+    Decision
+
+
+==================================================
+              FINAL MEMORY MAP
+==================================================
+
+Population
+    ↓
+Sample
+    ↓
+Statistic
+    ↓
+Sampling Distribution
+    ↓
+Standard Error
+    ↓
+CLT
+    ↓
+Estimation
+    ↓
+Confidence Interval
+    ↓
+Hypothesis Testing
+    ↓
+H₀ + H₁
+    ↓
+α
+    ↓
+Choose Test
+    ↓
+Test Statistic
+    ↓
+p-value
+    ↓
+Decision
+    ↓
+Conclusion
+
+
+==================================================
+             MOST IMPORTANT REMEMBER
+==================================================
+
+Population  = Whole Group
+Sample      = Part of Group
+Parameter   = Population Value
+Statistic   = Sample Value
+
+SE          = Sampling Variability
+CLT         = Large Sample → Approximately Normal
+CI          = Range of Plausible Values
+
+H₀          = Default Claim
+H₁          = Alternative Claim
+α           = Significance Level
+p-value     = Evidence Against H₀
+
+Type I      = False Positive
+Type II     = False Negative
+Power       = 1 − β
+
+Z-test      = σ Known
+t-test      = σ Unknown / Mean Inference
+Chi-Square  = Categorical / Count Data
+ANOVA       = Compare 3+ Means
+
+==================================================
