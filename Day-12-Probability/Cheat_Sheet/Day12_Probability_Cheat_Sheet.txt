@@ -1,0 +1,138 @@
+DAY 12 — PROBABILITY CHEAT SHEET
+AI/ML ENGINEER BOOTCAMP
+
+1. PROBABILITY
+Measures how likely an event is to happen.
+0 ≤ P(A) ≤ 1
+P(A) = Favorable Outcomes / Total Outcomes
+0 = Impossible | 1 = Certain
+
+2. EXPERIMENT
+A process that produces an uncertain outcome.
+Examples: toss coin, roll dice, select customer.
+
+3. OUTCOME
+One possible result of an experiment.
+Dice: 1, 2, 3, 4, 5, 6
+
+4. SAMPLE SPACE
+All possible outcomes.
+Dice: S = {1,2,3,4,5,6}
+Coin: S = {H,T}
+
+5. EVENT
+One or more outcomes of interest.
+Example: Even = {2,4,6}
+P(Even) = 3/6 = 0.5
+
+6. COMPLEMENT
+P(Not A) = 1 - P(A)
+
+7. ADDITION RULE
+For mutually exclusive events:
+P(A or B) = P(A) + P(B)
+
+8. MULTIPLICATION RULE
+For independent events:
+P(A and B) = P(A) × P(B)
+
+9. CONDITIONAL PROBABILITY
+Probability of A given B.
+P(A|B) = P(A and B) / P(B)
+Used when new information changes probability.
+
+10. INDEPENDENT EVENTS
+One event does not affect another.
+Example: separate coin tosses.
+
+11. DEPENDENT EVENTS
+One event affects another.
+Example: drawing cards without replacement.
+
+12. RANDOM VARIABLE
+A numerical value assigned to a random outcome.
+Example: X = Number of Heads.
+
+13. DISCRETE RANDOM VARIABLE
+Countable values.
+Examples: customers, defects, goals.
+Memory: COUNT → Discrete
+
+14. CONTINUOUS RANDOM VARIABLE
+Any value within a range.
+Examples: height, weight, temperature, time.
+Memory: MEASURE → Continuous
+
+15. EXPECTED VALUE
+Long-run average outcome.
+E(X) = Σ[x × P(x)]
+Used in risk, business decisions and ML.
+
+16. VARIANCE
+Measures spread around the mean.
+Var(X) = E[(X - μ)^2]
+High variance = more spread.
+
+17. PROBABILITY DISTRIBUTION
+Describes possible values and their probabilities.
+
+18. BERNOULLI DISTRIBUTION
+One trial with two outcomes.
+Success = 1, Failure = 0
+Memory: ONE trial → Bernoulli
+
+19. BINOMIAL DISTRIBUTION
+Number of successes in fixed independent Bernoulli trials.
+Conditions: fixed trials, two outcomes, independent, same probability.
+Memory: MULTIPLE trials → Binomial
+
+20. POISSON DISTRIBUTION
+Number of events in a fixed interval.
+Examples: calls/minute, customers/hour, requests/second.
+Memory: EVENTS per INTERVAL → Poisson
+
+21. NORMAL DISTRIBUTION
+Continuous, symmetric, bell-shaped.
+Mean = Median = Mode
+~68% within 1 SD
+~95% within 2 SD
+~99.7% within 3 SD
+
+22. PROBABILITY IN MACHINE LEARNING
+Used in classification, Naive Bayes, Logistic Regression,
+Bayesian inference and uncertainty estimation.
+Example: P(Customer Churn) = 0.87
+
+QUICK DIFFERENCES
+Probability → Likelihood
+Sample Space → All outcomes
+Event → Selected outcome(s)
+Conditional → Given information
+Independent → No effect
+Dependent → One affects another
+Discrete → Count
+Continuous → Measure
+Expected Value → Long-run average
+Variance → Spread
+Bernoulli → 1 trial, 2 outcomes
+Binomial → Multiple Bernoulli trials
+Poisson → Events in an interval
+Normal → Bell-shaped continuous distribution
+
+KEY FORMULAS
+P(A) = Favorable / Total
+P(Aᶜ) = 1 - P(A)
+P(A or B) = P(A) + P(B)  [mutually exclusive]
+P(A and B) = P(A)P(B)     [independent]
+P(A|B) = P(A and B) / P(B)
+E(X) = Σ[xP(x)]
+Var(X) = E[(X-μ)^2]
+
+INTERVIEW MEMORY
+Bernoulli = One trial
+Binomial = Fixed number of trials
+Poisson = Events in an interval
+Normal = Bell curve
+Conditional = Given information
+Discrete = Count
+Continuous = Measure

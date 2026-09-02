@@ -1,0 +1,89 @@
+DAY 12 — PROBABILITY
+INTERVIEW QUESTIONS & 1–2 LINE ANSWERS
+AI/ML ENGINEER BOOTCAMP
+
+1. What is Probability?
+Probability measures how likely an event is to happen, from 0 (impossible) to 1 (certain).
+
+2. What is a Sample Space?
+A sample space is the complete set of all possible outcomes of an experiment.
+
+3. What is an Event?
+An event is a specific outcome or group of outcomes from a sample space.
+
+4. What is the complement of an event?
+The complement means the event does not occur. Formula: P(Aᶜ) = 1 − P(A).
+
+5. What is the Addition Rule?
+For mutually exclusive events, P(A or B) = P(A) + P(B).
+
+6. What is the Multiplication Rule?
+For independent events, P(A and B) = P(A) × P(B).
+
+7. What is Conditional Probability?
+It is the probability of an event occurring given that another event has already occurred: P(A|B) = P(A∩B)/P(B).
+
+8. What are independent events?
+Two events are independent when the occurrence of one does not affect the probability of the other.
+
+9. What are dependent events?
+Two events are dependent when the occurrence of one changes the probability of the other.
+
+10. What is a Random Variable?
+A random variable assigns numerical values to outcomes of a random experiment.
+
+11. What is a Discrete Random Variable?
+It takes countable values, such as number of customers or number of defects.
+
+12. What is a Continuous Random Variable?
+It can take any value within a range, such as height, weight, or temperature.
+
+13. What is Expected Value?
+Expected value is the long-run average value of a random variable.
+
+14. What is Variance?
+Variance measures how far values are spread from their mean.
+
+15. What is a Probability Distribution?
+A probability distribution describes the possible values of a variable and their probabilities.
+
+16. What is Bernoulli Distribution?
+It models one trial with exactly two outcomes, such as success/failure or yes/no.
+
+17. What is Binomial Distribution?
+It models the number of successes in a fixed number of independent Bernoulli trials.
+
+18. What is Poisson Distribution?
+It models the number of events occurring in a fixed interval when events happen at a known average rate.
+
+19. What is Normal Distribution?
+It is a continuous, symmetric, bell-shaped distribution centered around its mean.
+
+20. What is the 68-95-99.7 rule?
+For a normal distribution, about 68%, 95%, and 99.7% of values lie within 1, 2, and 3 standard deviations of the mean.
+
+21. Why is probability important in Machine Learning?
+It helps ML models handle uncertainty, estimate outcomes, classify data, and make predictions.
+
+22. Where is probability used in ML?
+It is used in classification, Naive Bayes, Logistic Regression, Bayesian methods, and uncertainty estimation.
+
+23. What is the difference between Bernoulli and Binomial?
+Bernoulli represents one trial; Binomial represents the number of successes across multiple fixed trials.
+
+24. What is the difference between discrete and continuous variables?
+Discrete variables are countable, while continuous variables can take any value within a range.
+
+25. What is the difference between expected value and variance?
+Expected value describes the average outcome, while variance describes the spread around that average.
+
+QUICK INTERVIEW FORMULAS
+P(A) = Favorable outcomes / Total outcomes
+P(Aᶜ) = 1 − P(A)
+P(A|B) = P(A∩B) / P(B)
+Independent: P(A∩B) = P(A)P(B)
+Expected Value: E(X) = Σ xP(x)
+Variance: Var(X) = E[(X − μ)²]
+
+INTERVIEW TIP
+Keep answers short first. If the interviewer asks for an example, give one simple real-world or ML example.
