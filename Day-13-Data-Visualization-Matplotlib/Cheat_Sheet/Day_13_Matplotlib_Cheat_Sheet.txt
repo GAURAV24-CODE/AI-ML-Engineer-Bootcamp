@@ -1,0 +1,183 @@
+DAY 13 — MATPLOTLIB CHEAT SHEET
+AI/ML Engineer Bootcamp
+
+1. IMPORT
+import matplotlib.pyplot as plt
+
+2. BASIC PLOT
+plt.plot(x, y)
+plt.show()
+
+3. FIGURE & AXES
+fig, ax = plt.subplots()
+ax.plot(x, y)
+
+Figure = complete canvas
+Axes = actual plotting area
+
+4. LINE PLOT
+Use: Trends / changes over time
+Syntax:
+plt.plot(x, y)
+
+5. BAR CHART
+Use: Compare categories
+Syntax:
+plt.bar(categories, values)
+
+Horizontal:
+plt.barh(categories, values)
+
+6. HISTOGRAM
+Use: Numerical data distribution
+Syntax:
+plt.hist(data, bins=5)
+
+Bin = interval/range used to group numerical values.
+
+7. SCATTER PLOT
+Use: Relationship between two numerical variables
+Syntax:
+plt.scatter(x, y)
+
+Remember:
+Association ≠ Causation
+
+8. PIE CHART
+Use: Parts of a whole / proportions
+Syntax:
+plt.pie(values, labels=labels, autopct="%1.1f%%")
+
+9. BOX PLOT
+Use: Distribution, spread, potential outliers
+Syntax:
+plt.boxplot(data)
+
+IQR = Q3 - Q1
+
+10. TITLE & LABELS
+plt.title("Chart Title")
+plt.xlabel("X Label")
+plt.ylabel("Y Label")
+
+11. MARKERS & LINE STYLES
+marker="o"
+linestyle="--"
+linewidth=2
+
+Common markers:
+o = circle
+s = square
+^ = triangle
+* = star
+x = X
+
+Common line styles:
+-  = solid
+-- = dashed
+:  = dotted
+-. = dash-dot
+
+12. LEGEND
+plt.plot(x, y, label="Sales")
+plt.legend()
+
+13. GRID
+plt.grid()
+
+14. FIGURE SIZE
+plt.figure(figsize=(10, 5))
+
+15. SUBPLOTS
+fig, axes = plt.subplots(2, 2)
+
+axes[0, 0] = top-left
+axes[0, 1] = top-right
+axes[1, 0] = bottom-left
+axes[1, 1] = bottom-right
+
+plt.tight_layout()
+
+16. SAVE FIGURE
+plt.savefig("chart.png", dpi=300)
+
+DPI = Dots Per Inch
+
+17. PANDAS + MATPLOTLIB
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data.csv")
+
+plt.plot(df["Month"], df["Sales"])
+plt.show()
+
+18. CHART SELECTION
+Trend → Line
+Comparison → Bar
+Distribution → Histogram
+Relationship → Scatter
+Outliers/Spread → Box Plot
+Proportion → Pie
+Multiple Charts → Subplots
+
+19. REAL DATA WORKFLOW
+Dataset
+→ Cleaning
+→ EDA
+→ Visualization
+→ Pattern
+→ Insight
+→ Decision
+
+20. INTERVIEW QUICK ANSWERS
+
+Data Visualization:
+Showing data using charts/graphs to understand patterns and trends.
+
+Matplotlib:
+A Python library used to create charts and graphs.
+
+Pyplot:
+A Matplotlib module used to create and customize plots.
+
+Figure:
+The complete canvas containing plots.
+
+Axes:
+The actual plotting area.
+
+Subplot:
+A single plot inside a Figure.
+
+Histogram:
+Shows the distribution/frequency of numerical data.
+
+Scatter Plot:
+Shows the relationship between two numerical variables.
+
+Box Plot:
+Shows distribution, spread, median, and potential outliers.
+
+Histogram vs Bar:
+Histogram → Numerical distribution
+Bar → Category comparison
+
+Why visualize before ML?
+To understand patterns, relationships, distributions, outliers, and data quality.
+
+21. GOLDEN RULE
+WHAT? → Definition
+WHY? → Purpose
+WHEN? → Use case
+HOW? → Syntax/code
+INTERPRET → What does the chart show?
+INSIGHT → What can we learn?
+
+22. MOST IMPORTANT MEMORY
+Line → Trend
+Bar → Compare
+Histogram → Distribution
+Scatter → Relationship
+Box → Outliers
+Pie → Proportion

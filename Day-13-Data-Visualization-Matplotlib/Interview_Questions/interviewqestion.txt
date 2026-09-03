@@ -1,0 +1,72 @@
+# 42. Interview Questions
+
+### Q1. What is Data Visualization?
+
+Data Visualization means showing data using charts and graphs
+
+ to understand patterns and trends.
+
+### Q2. What is Matplotlib?
+
+Matplotlib is a Python library used to create different types of 
+charts and graphs.
+
+### Q3. How do you import Matplotlib?
+
+```python
+import matplotlib.pyplot as plt
+```
+
+### Q4. What is pyplot?
+
+Pyplot is a Matplotlib module used to create and customize plots.
+
+### Q5. When do you use a Line Chart?
+
+A line chart is used to show trends or changes over time.
+
+### Q6. When do you use a Bar Chart?
+
+A bar chart is used to compare different categories.
+
+### Q7. What is a Histogram?
+
+A histogram shows the distribution and frequency of numerical data.
+
+### Q8. What is a Scatter Plot?
+
+A scatter plot is used to see the relationship between two
+ numerical variables.
+
+### Q9. What is a Box Plot?
+
+A box plot shows the distribution, spread, median, and potential outliers of data.
+
+### Q10. Histogram vs Bar Chart?
+
+**Histogram:** Numerical data distribution.
+**Bar Chart:** Category comparison.
+
+### Q11. What is a Figure?
+
+A Figure is the complete canvas that contains one or more plots.
+
+### Q12. What is an Axes?
+
+Axes is the actual area where the data and plot are displayed.
+
+### Q13. What is a Subplot?
+
+A subplot is a single plot inside a larger Figure.
+
+### Q14. What is figsize?
+
+`figsize` controls the width and height of a plot.
+
+### Q15. What is DPI?
+
+DPI means Dots Per Inch and controls the resolution of a saved image.
+
+### Q16. Why is Visualization important before Machine Learning?
+
+It helps us understand patterns, relationships, distributions, and outliers before building a model.
