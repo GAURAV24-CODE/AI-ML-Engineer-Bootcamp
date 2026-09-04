@@ -1,0 +1,238 @@
+DAY 14 — SEABORN CHEAT SHEET
+AI/ML ENGINEER BOOTCAMP
+
+1. SEABORN
+Seaborn is a Python visualization library built on Matplotlib.
+Best for statistical visualization, EDA, distributions, relationships and categorical analysis.
+
+2. IMPORT
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+3. LOAD DATA
+df = sns.load_dataset("tips")
+df.head()
+df.shape
+df.info()
+df.describe()
+
+4. BASIC SYNTAX
+sns.plot_type(data=df, x="column1", y="column2")
+plt.show()
+
+5. LINE PLOT
+Purpose: Show trends.
+sns.lineplot(data=df, x="day", y="total_bill")
+
+6. BAR PLOT
+Purpose: Compare aggregated values.
+sns.barplot(data=df, x="day", y="total_bill")
+
+7. COUNT PLOT
+Purpose: Count categories.
+sns.countplot(data=df, x="day")
+
+8. HISTOGRAM
+Purpose: Show numerical distribution.
+sns.histplot(data=df, x="total_bill")
+
+9. KDE PLOT
+Purpose: Show smooth density.
+sns.kdeplot(data=df, x="total_bill")
+
+10. HISTOGRAM + KDE
+sns.histplot(data=df, x="total_bill", kde=True)
+
+11. BOX PLOT
+Purpose: Distribution, median, quartiles and outliers.
+sns.boxplot(data=df, x="day", y="total_bill")
+
+12. VIOLIN PLOT
+Purpose: Distribution + density.
+sns.violinplot(data=df, x="day", y="total_bill")
+
+13. STRIP PLOT
+Purpose: Individual observations.
+sns.stripplot(data=df, x="day", y="total_bill")
+
+14. SWARM PLOT
+Purpose: Individual observations with reduced overlap.
+sns.swarmplot(data=df, x="day", y="total_bill")
+
+15. SCATTER PLOT
+Purpose: Relationship between two numerical variables.
+sns.scatterplot(data=df, x="total_bill", y="tip")
+
+16. HUE
+Purpose: Add color based on category.
+sns.scatterplot(data=df, x="total_bill", y="tip", hue="sex")
+
+17. STYLE
+Purpose: Change marker style by variable.
+sns.scatterplot(data=df, x="total_bill", y="tip", style="sex")
+
+18. SIZE
+Purpose: Change marker size by variable.
+sns.scatterplot(data=df, x="total_bill", y="tip", size="size")
+
+19. REGRESSION PLOT
+Purpose: Show relationship with regression line.
+sns.regplot(data=df, x="total_bill", y="tip")
+
+20. HEATMAP
+Purpose: Visualize correlation or matrix values.
+correlation = df.select_dtypes("number").corr()
+sns.heatmap(correlation, annot=True)
+
+Correlation:
++1 = Strong positive
+ 0 = No linear relationship
+-1 = Strong negative
+
+21. PAIRPLOT
+Purpose: Show relationships among multiple numerical variables.
+sns.pairplot(df)
+
+22. PAIRPLOT WITH HUE
+sns.pairplot(df, hue="sex")
+
+23. JOINTPLOT
+Purpose: Relationship + individual distributions.
+sns.jointplot(data=df, x="total_bill", y="tip")
+
+24. CATEGORICAL VISUALIZATION
+Category Count        -> Count Plot
+Category Comparison  -> Bar Plot
+Distribution          -> Box Plot
+Density               -> Violin Plot
+Individual Values    -> Strip / Swarm Plot
+
+25. NUMERICAL VISUALIZATION
+Distribution           -> Histogram
+Smooth Distribution    -> KDE
+Relationship            -> Scatter Plot
+Regression              -> Regplot
+Multiple Relationships -> Pairplot
+Correlation             -> Heatmap
+
+26. COLOR PALETTE
+Common palettes:
+Set1, Set2, Set3, deep, muted, pastel, dark, colorblind
+
+Example:
+sns.countplot(data=df, x="day", hue="day", palette="Set2", legend=False)
+
+27. TITLES AND LABELS
+sns.scatterplot(data=df, x="total_bill", y="tip")
+plt.title("Total Bill vs Tip")
+plt.xlabel("Total Bill")
+plt.ylabel("Tip")
+plt.show()
+
+28. SEABORN + MATPLOTLIB
+Seaborn creates statistical plots.
+Matplotlib provides additional customization.
+
+29. SEABORN + PANDAS
+Seaborn works directly with Pandas DataFrames.
+
+30. EDA WORKFLOW
+Load Data
+  ↓
+Understand Data
+  ↓
+Check Missing Values
+  ↓
+Univariate Analysis
+  ↓
+Bivariate Analysis
+  ↓
+Correlation Analysis
+  ↓
+Outlier Detection
+  ↓
+Business Insights
+
+31. E-COMMERCE VISUALIZATION
+Category Sales -> Bar Plot
+Sales Distribution -> Histogram/KDE
+Sales vs Profit -> Scatter Plot
+Category comparison -> Hue
+
+32. CHART SELECTION
+Trend              -> Line Plot
+Comparison         -> Bar Plot
+Category Count     -> Count Plot
+Distribution       -> Histogram / KDE
+Outliers           -> Box Plot
+Density            -> Violin Plot
+Relationship       -> Scatter Plot
+Regression         -> Regplot
+Correlation        -> Heatmap
+Multiple Variables -> Pairplot
+
+33. COMMON MISTAKES
+- Too many colors
+- Too many categories
+- Missing labels
+- Misleading axes
+- Overcrowded plots
+- Wrong chart selection
+- Ignoring outliers
+- Ignoring business context
+
+34. SEABORN IN MACHINE LEARNING
+Useful for:
+- EDA
+- Feature analysis
+- Outlier detection
+- Correlation analysis
+- Class distribution
+- Feature relationships
+
+ML Workflow:
+Dataset -> Pandas -> Seaborn EDA -> Feature Engineering -> ML Model -> Evaluation
+
+35. INTERVIEW QUESTIONS
+Q: What is Seaborn?
+A: A Python visualization library built on Matplotlib.
+
+Q: Seaborn vs Matplotlib?
+A: Seaborn provides easier statistical visualizations; Matplotlib provides detailed customization.
+
+Q: What is hue?
+A: It adds color based on a categorical variable.
+
+Q: What is a box plot used for?
+A: To understand distribution and detect outliers.
+
+Q: What is a heatmap used for?
+A: To visualize correlation or matrix data.
+
+Q: What is pairplot?
+A: It shows relationships between multiple numerical variables.
+
+Q: Histogram vs KDE?
+A: Histogram uses bins; KDE shows a smooth density curve.
+
+36. QUICK REVISION
+Line Plot       -> Trends
+Bar Plot        -> Comparison
+Count Plot      -> Counts
+Histogram       -> Distribution
+KDE             -> Density
+Box Plot        -> Outliers
+Violin Plot     -> Distribution + Density
+Strip Plot      -> Individual Points
+Swarm Plot      -> Individual Points
+Scatter Plot    -> Relationship
+Regplot         -> Regression
+Heatmap         -> Correlation
+Pairplot        -> Multiple Relationships
+Jointplot       -> Relationship + Distribution
+
+37. DAY 14 KEY TAKEAWAY
+Seaborn makes EDA faster, cleaner and easier to interpret.
+Always choose the chart based on the business question.

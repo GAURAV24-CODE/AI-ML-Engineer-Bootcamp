@@ -1,0 +1,217 @@
+DAY 14 — SEABORN INTERVIEW QUESTIONS & ANSWERS
+AI/ML ENGINEER BOOTCAMP
+
+==================================================
+IMPORTANT SEABORN INTERVIEW QUESTIONS
+==================================================
+
+1. What is Seaborn?
+Answer:
+Seaborn is a Python visualization library built on top of Matplotlib. It is mainly used for statistical visualization and EDA.
+
+2. Why do we use Seaborn?
+Answer:
+Seaborn makes it easier to create attractive statistical plots and analyze distributions, relationships, categories, and correlations.
+
+3. Seaborn vs Matplotlib?
+Answer:
+Seaborn provides high-level statistical visualizations, while Matplotlib provides more detailed control and customization.
+
+4. How do you import Seaborn?
+Answer:
+import seaborn as sns
+
+5. How do you load a Seaborn built-in dataset?
+Answer:
+df = sns.load_dataset("tips")
+
+6. What is a line plot used for?
+Answer:
+A line plot is mainly used to visualize trends or changes across an ordered variable.
+
+Example:
+sns.lineplot(data=df, x="day", y="total_bill")
+
+7. What is a bar plot used for?
+Answer:
+A bar plot is used to compare numerical values across different categories.
+
+Example:
+sns.barplot(data=df, x="day", y="total_bill")
+
+8. Bar plot vs Count plot?
+Answer:
+A bar plot compares an aggregated numerical value, while a count plot shows the number of observations in each category.
+
+9. What is a histogram?
+Answer:
+A histogram shows the distribution of a numerical variable by dividing values into bins.
+
+10. What is KDE?
+Answer:
+KDE stands for Kernel Density Estimation. It represents a smooth estimate of the distribution of numerical data.
+
+11. Histogram vs KDE?
+Answer:
+A histogram shows frequency using bins, while KDE shows a smooth density curve.
+
+12. What is a box plot?
+Answer:
+A box plot summarizes a distribution and helps identify the median, quartiles, and potential outliers.
+
+13. Which plot is commonly used to detect outliers?
+Answer:
+A box plot is commonly used to detect outliers.
+
+14. What is a violin plot?
+Answer:
+A violin plot combines distribution information with density estimation and is useful for comparing distributions across categories.
+
+15. Box plot vs Violin plot?
+Answer:
+A box plot focuses on summary statistics and outliers, while a violin plot also shows the shape of the distribution.
+
+16. What is a scatter plot?
+Answer:
+A scatter plot shows the relationship between two numerical variables.
+
+Example:
+sns.scatterplot(data=df, x="total_bill", y="tip")
+
+17. What is hue in Seaborn?
+Answer:
+hue adds color based on another variable, usually a categorical variable.
+
+Example:
+sns.scatterplot(data=df, x="total_bill", y="tip", hue="sex")
+
+18. What is style?
+Answer:
+style changes the marker style based on a variable.
+
+19. What is size?
+Answer:
+size changes the size of markers according to a variable.
+
+20. Can we use hue, style, and size together?
+Answer:
+Yes. They can represent multiple dimensions of data in one visualization.
+
+21. What is a regression plot?
+Answer:
+A regression plot shows the relationship between two variables along with a fitted regression line.
+
+Example:
+sns.regplot(data=df, x="total_bill", y="tip")
+
+22. What is a heatmap?
+Answer:
+A heatmap represents numerical values using different color intensities. It is commonly used for correlation analysis.
+
+Example:
+sns.heatmap(df.select_dtypes("number").corr(), annot=True)
+
+23. What is correlation?
+Answer:
+Correlation measures the strength and direction of a linear relationship between two numerical variables.
+
+24. What does correlation +1 mean?
+Answer:
+It indicates a perfect positive linear relationship.
+
+25. What does correlation -1 mean?
+Answer:
+It indicates a perfect negative linear relationship.
+
+26. What does correlation 0 mean?
+Answer:
+It means there is no linear relationship between the variables.
+
+27. What is a pairplot?
+Answer:
+A pairplot visualizes pairwise relationships between multiple numerical variables.
+
+Example:
+sns.pairplot(df)
+
+28. What is a jointplot?
+Answer:
+A jointplot shows the relationship between two variables along with their individual distributions.
+
+29. What is a color palette?
+Answer:
+A color palette defines the set of colors used in a Seaborn visualization.
+
+30. How do you add a title to a Seaborn plot?
+Answer:
+plt.title("Total Bill vs Tip")
+
+31. How do you add axis labels?
+Answer:
+plt.xlabel("Total Bill")
+plt.ylabel("Tip")
+
+32. How is Seaborn useful in EDA?
+Answer:
+Seaborn helps identify distributions, relationships, outliers, correlations, and patterns before machine learning.
+
+33. Which Seaborn plot would you use to analyze correlation?
+Answer:
+A heatmap.
+
+34. Which plot would you use to analyze the relationship between two numerical variables?
+Answer:
+A scatter plot.
+
+35. Which plot would you use to compare categories?
+Answer:
+A bar plot.
+
+36. Which plot would you use to count categories?
+Answer:
+A count plot.
+
+37. Which plot would you use to analyze a numerical distribution?
+Answer:
+A histogram or KDE plot.
+
+38. Which plot would you use to analyze outliers?
+Answer:
+A box plot.
+
+39. Which plot would you use to analyze multiple numerical variables?
+Answer:
+A pairplot.
+
+40. Why is visualization important before machine learning?
+Answer:
+Visualization helps understand the dataset, detect outliers, discover relationships, identify patterns, and select useful features before modeling.
+
+==================================================
+TOP 10 — MUST PREPARE
+==================================================
+
+1. What is Seaborn?
+2. Seaborn vs Matplotlib
+3. Histogram
+4. Box Plot
+5. Scatter Plot
+6. Bar Plot vs Count Plot
+7. Hue
+8. Heatmap + Correlation
+9. Pairplot
+10. Seaborn in EDA
+
+==================================================
+ONE-LINE REVISION
+==================================================
+
+Seaborn = EDA + Statistical Visualization + Easy-to-read Charts
+
+Interview goal:
+Do not only memorize syntax. Be able to explain WHY
+you selected a particular plot for a particular business question.
+
+==================================================
+END OF DAY 14 — SEABORN INTERVIEW Q&A
+==================================================
