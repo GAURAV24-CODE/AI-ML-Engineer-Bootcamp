@@ -1,0 +1,287 @@
+DAY 21 — MACHINE LEARNING INTRODUCTION
+CHEATSHEET
+
+1. ML FUNDAMENTALS
+Definition: Machine Learning is a branch of AI where algorithms learn patterns from data and use those patterns to make predictions or decisions on new data.
+
+Flow:
+Data → Patterns → Model → Prediction
+
+Traditional Programming:
+Rules + Data → Output
+
+Machine Learning:
+Data + Correct Answers → ML Algorithm → Model
+New Data → Trained Model → Prediction
+
+Core Terms:
+Data → Information used for learning
+Feature → Input variable
+Target → Output to predict
+Algorithm → Learning procedure
+Model → Learned pattern
+Training → Learning from data
+Prediction → Output for new data
+
+2. AI vs ML vs DL
+Relationship: AI ⊃ ML ⊃ DL
+
+AI → Artificial Intelligence
+ML → Machine Learning
+DL → Deep Learning
+
+AI → Broad field of creating intelligent systems
+ML → Subset of AI that learns patterns from data
+DL → Subset of ML using deep neural networks
+
+AI Examples:
+Robotics, Game AI, Expert systems, Intelligent assistants
+
+ML Examples:
+Spam detection, Fraud detection, House price prediction, Recommendation systems
+
+DL Examples:
+Image recognition, Speech recognition, NLP, Autonomous systems
+
+3. TYPES OF MACHINE LEARNING
+1. Supervised Learning → Learn from labeled data
+   Regression → Predict a number
+   Classification → Predict a category
+
+2. Unsupervised Learning → Find hidden patterns in unlabeled data
+   Clustering
+   Dimensionality Reduction
+
+3. Semi-Supervised Learning → Uses labeled + unlabeled data
+
+4. Reinforcement Learning → Learns through rewards and penalties
+   Agent → Action → Environment → Reward → Agent
+
+Memory:
+Supervised → Teacher gives answers
+Unsupervised → No teacher
+Semi-Supervised → Some answers
+Reinforcement → Rewards / Penalties
+
+4. ML WORKFLOW
+Data Collection
+↓
+Data Cleaning
+↓
+Data Preprocessing
+↓
+Feature Engineering
+↓
+Train / Validation / Test Split
+↓
+Choose Algorithm
+↓
+Train Model
+↓
+Evaluate Model
+↓
+Tune Model
+↓
+Final Model
+↓
+Prediction
+↓
+Deployment
+
+Stage purposes:
+Collection → Gather data
+Cleaning → Fix data problems
+Preprocessing → Prepare data
+Feature Engineering → Create useful inputs
+Split → Separate learning and evaluation data
+Training → Learn patterns
+Evaluation → Measure performance
+Tuning → Improve model configuration
+Prediction → Predict new data
+Deployment → Make model available for use
+
+5. FEATURES
+Definition: Feature = Input variable
+
+Examples:
+Area, Bedrooms, Age, Location
+
+Numerical Features:
+Continuous → Height, temperature, income
+Discrete → Bedrooms, number of children, number of products
+
+Categorical Features:
+City, Education, Department, Product Type
+
+Feature Selection → Choose useful features
+Feature Engineering → Create new useful features from existing data
+
+6. TARGET
+Definition: Target = Output variable
+
+Also called:
+Target variable
+Dependent variable
+Label
+y
+
+Regression Target:
+Usually numerical
+Examples: House Price, Salary, Sales, Temperature
+
+Classification Target:
+Represents a category
+Examples: Spam/Not Spam, Fraud/Not Fraud, Pass/Fail, Cat/Dog
+
+Memory:
+X → Features → Input
+y → Target → Output
+
+7. TRAIN / VALIDATION / TEST
+Training → Learn
+Validation → Tune
+Test → Final Check
+
+Training Set → Learn patterns from data
+Validation Set → Tune/select model configurations
+Test Set → Final evaluation on unseen data
+
+Example:
+1000 records
+80% → Training = 800
+10% → Validation = 100
+10% → Test = 100
+
+Important:
+The exact split ratio is not fixed.
+It depends on dataset size, problem, and validation strategy.
+
+Data Leakage:
+Test information should not influence model training.
+Preprocessing should be learned from training data and then applied appropriately to validation/test data.
+
+Memory:
+TRAIN → LEARN
+VALIDATE → TUNE
+TEST → CHECK
+
+8. OVERFITTING
+Definition: Overfitting = Model memorizes training data.
+
+Training performance → Very high
+Unseen-data performance → Poor
+
+Example:
+Training Accuracy = 99%
+Test Accuracy = 72%
+
+Causes:
+Too complex model
+Too many features
+Small training dataset
+Noise in data
+Excessive training
+
+Model learns useful patterns + noise.
+
+How to reduce:
+1. Add more representative data
+2. Reduce model complexity
+3. Use regularization
+4. Feature selection
+5. Cross-validation
+6. Hyperparameter tuning
+
+Regularization:
+L1 / Lasso
+L2 / Ridge
+ElasticNet
+
+Memory:
+Overfitting = Learns too much = Poor on new data
+
+9. UNDERFITTING
+Definition: Underfitting = Model is too simple.
+
+The model fails to learn important patterns.
+
+Example:
+Training Accuracy = 65%
+Test Accuracy = 63%
+
+Causes:
+Too simple model
+Insufficient features
+Too much regularization
+Insufficient training
+
+How to reduce:
+1. Use a more complex model
+2. Add useful features
+3. Reduce excessive regularization
+4. Train longer when appropriate
+
+Comparison:
+Underfitting → Training Poor, Test Poor
+Good Fit → Training Good, Test Good
+Overfitting → Training Excellent, Test Poor
+
+Memory:
+Underfitting → Learns too little
+Overfitting → Learns too much
+
+10. BIAS-VARIANCE
+Definition: Bias-Variance = Balance between underfitting and overfitting.
+
+Bias:
+Error from overly simple assumptions
+High Bias → Model too simple → Underfitting
+
+Variance:
+Error from sensitivity to training data
+High Variance → Model too complex → Overfitting
+
+Relationship:
+Too Simple → High Bias → Underfitting
+Appropriate Complexity → Good Generalization
+Too Complex → High Variance → Overfitting
+
+Bias-Variance Tradeoff:
+As model complexity increases:
+Bias generally decreases.
+Variance generally increases.
+
+Goal:
+Find appropriate model complexity that gives good performance on unseen data.
+
+Memory:
+Bias → Too Simple → Underfitting
+Variance → Too Sensitive → Overfitting
+
+DAY 21 FINAL FLOW
+Data
+↓
+Features + Target
+↓
+Train / Validation / Test
+↓
+Model Training
+↓
+Bias ↔ Variance
+↓
+Underfitting ↔ Good Fit ↔ Overfitting
+↓
+Generalization
+↓
+Prediction
+
+KEY MEMORY:
+Feature = Input
+Target = Output
+Train = Learn
+Validation = Tune
+Test = Check
+Underfitting = Learns too little
+Overfitting = Learns too much
+Bias = Too simple
+Variance = Too sensitive

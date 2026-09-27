@@ -1,0 +1,43 @@
+DAY 21 — ML INTRODUCTION
+│
+├── 1. ML Fundamentals
+│   └── Learning from data
+│
+├── 2. AI vs ML vs DL
+│   └── AI ⊃ ML ⊃ DL
+│
+├── 3. Types of Machine Learning
+│   ├── Supervised Learning
+│   │   └── Learn from labeled data
+│   ├── Unsupervised Learning
+│   │   └── Find hidden patterns
+│   ├── Semi-Supervised Learning
+│   │   └── Labeled + unlabeled data
+│   └── Reinforcement Learning
+│       └── Learn through rewards
+│
+├── 4. ML Workflow
+│   └── Data → Model → Prediction
+│
+├── 5. Features
+│   └── Input variables
+│
+├── 6. Target
+│   └── Output variable
+│
+├── 7. Train / Validation / Test
+│   ├── Training Set
+│   │   └── Learn model patterns
+│   ├── Validation Set
+│   │   └── Tune model
+│   └── Test Set
+│       └── Evaluate final model
+│
+├── 8. Overfitting
+│   └── Memorizes training data
+│
+├── 9. Underfitting
+│   └── Model too simple
+│
+└── 10. Bias-Variance
+    └── Model error balance
