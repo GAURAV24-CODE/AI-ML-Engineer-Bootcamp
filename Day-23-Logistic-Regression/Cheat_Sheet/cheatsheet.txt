@@ -1,0 +1,565 @@
+============================================================
+DAY 23 — LOGISTIC REGRESSION CHEATSHEET
+============================================================
+
+1. WHAT IS LOGISTIC REGRESSION?
+------------------------------------------------------------
+
+Logistic Regression is a supervised Machine Learning
+algorithm mainly used for classification problems.
+
+It predicts the probability of an input belonging to
+a particular class.
+
+Examples:
+- Pass / Fail
+- Spam / Not Spam
+- Yes / No
+- Disease / No Disease
+- Buy / Not Buy
+
+
+============================================================
+2. CLASSIFICATION
+============================================================
+
+Classification means predicting a category or class.
+
+Types:
+
+1. Binary Classification
+   → Two classes
+
+   Example:
+   0 = Fail
+   1 = Pass
+
+2. Multiclass Classification
+   → More than two classes
+
+   Example:
+   Low / Medium / High
+
+
+============================================================
+3. REGRESSION vs CLASSIFICATION
+============================================================
+
+Regression:
+- Predicts continuous numerical values.
+- Example: House Price
+- Example: Salary
+- Example: Temperature
+
+Classification:
+- Predicts categories/classes.
+- Example: Pass/Fail
+- Example: Spam/Not Spam
+
+
+============================================================
+4. LOGISTIC REGRESSION IDEA
+============================================================
+
+Input Feature
+      ↓
+Logistic Regression
+      ↓
+Probability
+      ↓
+Threshold
+      ↓
+Class
+
+
+Example:
+
+Study Hours → 0.85 probability
+             ↓
+          0.85 >= 0.5
+             ↓
+          PASS (1)
+
+
+============================================================
+5. SIGMOID FUNCTION
+============================================================
+
+Logistic Regression uses the Sigmoid function.
+
+Formula:
+
+Sigmoid(z) = 1 / (1 + e^(-z))
+
+The Sigmoid function converts values into a range
+between 0 and 1.
+
+Range:
+
+0 ≤ Probability ≤ 1
+
+Important values:
+
+z → -∞  → Probability ≈ 0
+z = 0   → Probability = 0.5
+z → +∞  → Probability ≈ 1
+
+
+============================================================
+6. PROBABILITY
+============================================================
+
+Logistic Regression predicts probability.
+
+Example:
+
+0.20 → 20%
+0.50 → 50%
+0.80 → 80%
+0.95 → 95%
+
+For binary classification:
+
+Probability of Class 0
+Probability of Class 1
+
+
+============================================================
+7. CLASSIFICATION THRESHOLD
+============================================================
+
+Common threshold = 0.5
+
+Rule:
+
+Probability >= 0.5
+→ Class 1
+
+Probability < 0.5
+→ Class 0
+
+
+Example:
+
+0.30 → 0 → FAIL
+0.45 → 0 → FAIL
+0.50 → 1 → PASS
+0.80 → 1 → PASS
+
+
+============================================================
+8. BINARY CLASSIFICATION
+============================================================
+
+Binary classification has only two classes.
+
+Example:
+
+0 = Fail
+1 = Pass
+
+Example:
+
+Study Hours → Result
+
+1 → Fail
+2 → Fail
+3 → Fail
+4 → Fail
+5 → Pass
+6 → Pass
+7 → Pass
+
+
+============================================================
+9. BASIC LOGISTIC REGRESSION CODE
+============================================================
+
+from sklearn.linear_model import LogisticRegression
+
+X = [[1], [2], [3], [4], [5],
+     [6], [7], [8], [9], [10]]
+
+y = [0, 0, 0, 0, 1,
+     1, 1, 1, 1, 1]
+
+model = LogisticRegression()
+
+model.fit(X, y)
+
+
+============================================================
+10. TRAIN / TEST SPLIT
+============================================================
+
+Training Data:
+→ Used to learn patterns.
+
+Testing Data:
+→ Used to evaluate the model.
+
+Code:
+
+from sklearn.model_selection import train_test_split
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X,
+    y,
+    test_size=0.2,
+    random_state=42,
+    stratify=y
+)
+
+
+============================================================
+11. TRAINING THE MODEL
+============================================================
+
+model = LogisticRegression()
+
+model.fit(X_train, y_train)
+
+fit()
+→ Trains the model.
+
+
+============================================================
+12. PREDICT()
+============================================================
+
+predict() returns the predicted class.
+
+Example:
+
+prediction = model.predict([[7]])
+
+Possible result:
+
+[1]
+
+Meaning:
+
+1 = PASS
+
+
+============================================================
+13. PREDICT_PROBA()
+============================================================
+
+predict_proba() returns probabilities.
+
+Example:
+
+probability = model.predict_proba([[7]])
+
+Output:
+
+[[0.10, 0.90]]
+
+Meaning:
+
+0.10 → Probability of Class 0
+0.90 → Probability of Class 1
+
+
+MEMORY:
+
+predict()
+→ Class
+
+predict_proba()
+→ Probability
+
+
+============================================================
+14. CONFUSION MATRIX
+============================================================
+
+A Confusion Matrix evaluates classification predictions.
+
+                    ACTUAL
+                 0          1
+
+PREDICTED  0     TN         FN
+
+           1     FP         TP
+
+
+TN = True Negative
+TP = True Positive
+FP = False Positive
+FN = False Negative
+
+
+============================================================
+15. TRUE POSITIVE (TP)
+============================================================
+
+Actual = Positive
+Predicted = Positive
+
+Example:
+
+Actual = Pass
+Predicted = Pass
+
+
+============================================================
+16. TRUE NEGATIVE (TN)
+============================================================
+
+Actual = Negative
+Predicted = Negative
+
+Example:
+
+Actual = Fail
+Predicted = Fail
+
+
+============================================================
+17. FALSE POSITIVE (FP)
+============================================================
+
+Actual = Negative
+Predicted = Positive
+
+Example:
+
+Actual = Fail
+Predicted = Pass
+
+
+============================================================
+18. FALSE NEGATIVE (FN)
+============================================================
+
+Actual = Positive
+Predicted = Negative
+
+Example:
+
+Actual = Pass
+Predicted = Fail
+
+
+============================================================
+19. ACCURACY
+============================================================
+
+Accuracy measures overall correct predictions.
+
+Formula:
+
+Accuracy = (TP + TN) / (TP + TN + FP + FN)
+
+Use:
+
+from sklearn.metrics import accuracy_score
+
+accuracy_score(y_test, y_pred)
+
+
+============================================================
+20. PRECISION
+============================================================
+
+Precision answers:
+
+"Out of all predicted positives,
+how many were actually positive?"
+
+Formula:
+
+Precision = TP / (TP + FP)
+
+High Precision:
+→ Fewer False Positives
+
+
+============================================================
+21. RECALL
+============================================================
+
+Recall answers:
+
+"Out of all actual positives,
+how many did the model find?"
+
+Formula:
+
+Recall = TP / (TP + FN)
+
+High Recall:
+→ Fewer False Negatives
+
+
+============================================================
+22. F1 SCORE
+============================================================
+
+F1 Score combines Precision and Recall.
+
+Formula:
+
+F1 = 2 × (Precision × Recall)
+     / (Precision + Recall)
+
+Useful when both Precision and Recall are important.
+
+
+============================================================
+23. CLASSIFICATION METRICS CODE
+============================================================
+
+from sklearn.metrics import (
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score
+)
+
+print("Accuracy:",
+      accuracy_score(y_test, y_pred))
+
+print("Precision:",
+      precision_score(y_test, y_pred))
+
+print("Recall:",
+      recall_score(y_test, y_pred))
+
+print("F1 Score:",
+      f1_score(y_test, y_pred))
+
+
+============================================================
+24. LOGISTIC REGRESSION VISUALIZATION
+============================================================
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+X_curve = np.linspace(
+    1, 10, 100
+).reshape(-1, 1)
+
+probability = model.predict_proba(
+    X_curve
+)[:, 1]
+
+plt.scatter(X, y)
+
+plt.plot(
+    X_curve,
+    probability
+)
+
+plt.axhline(
+    0.5,
+    linestyle="--"
+)
+
+plt.xlabel("Study Hours")
+plt.ylabel("Probability")
+
+plt.title(
+    "Logistic Regression"
+)
+
+plt.grid(True)
+plt.show()
+
+
+============================================================
+25. IMPORTANT SKLEARN METHODS
+============================================================
+
+LogisticRegression()
+
+→ Creates Logistic Regression model
+
+model.fit(X, y)
+
+→ Trains model
+
+model.predict(X)
+
+→ Predicts classes
+
+model.predict_proba(X)
+
+→ Predicts probabilities
+
+
+============================================================
+26. IMPORTANT PARAMETERS
+============================================================
+
+LogisticRegression(
+    C=1.0,
+    penalty="l2",
+    solver="lbfgs",
+    max_iter=100
+)
+
+C:
+→ Controls regularization strength.
+
+penalty:
+→ Regularization type.
+
+solver:
+→ Optimization algorithm.
+
+max_iter:
+→ Maximum number of iterations.
+
+
+============================================================
+27. LOGISTIC REGRESSION WORKFLOW
+============================================================
+
+Dataset
+   ↓
+Data Cleaning
+   ↓
+Features + Target
+   ↓
+Train/Test Split
+   ↓
+Create Model
+   ↓
+Train Model
+   ↓
+Predict
+   ↓
+Probability
+   ↓
+Threshold
+   ↓
+Confusion Matrix
+   ↓
+Accuracy
+   ↓
+Precision
+   ↓
+Recall
+   ↓
+F1 Score
+   ↓
+Evaluation
+
+
+============================================================
+28. ADVANTAGES
+============================================================
+
+✓ Simple and easy to understand
+✓ Fast to train
+✓ Good baseline classification model
+✓ Produces probabilities
+✓ Works well for many binary classification problems
+✓ Interpretable coefficients
+
+
+
