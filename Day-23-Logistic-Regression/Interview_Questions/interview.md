@@ -93,6 +93,3 @@ Answer: It is simple, fast, interpretable, and provides class probabilities.
 Q30. What is the main limitation of Logistic Regression?
 Answer: It may perform poorly when the relationship between features and classes is highly nonlinear.
 
-============================================================
-END OF INTERVIEW QUESTIONS
-============================================================

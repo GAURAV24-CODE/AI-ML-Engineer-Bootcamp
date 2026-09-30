@@ -15,7 +15,6 @@ DAY 21 — ML INTRODUCTION
 │   │   └── Labeled + unlabeled data
 │   └── Reinforcement Learning
 │       └── Learn through rewards
-│
 ├── 4. ML Workflow
 │   └── Data → Model → Prediction
 │

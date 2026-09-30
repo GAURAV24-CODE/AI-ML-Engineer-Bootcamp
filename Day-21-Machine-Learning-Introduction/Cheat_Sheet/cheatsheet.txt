@@ -72,7 +72,7 @@ Data Preprocessing
 ↓
 Feature Engineering
 ↓
-Train / Validation / Test Split
+Train / Validation / Test Splis
 ↓
 Choose Algorithm
 ↓
@@ -87,6 +87,9 @@ Final Model
 Prediction
 ↓
 Deployment
+
+
+
 
 Stage purposes:
 Collection → Gather data

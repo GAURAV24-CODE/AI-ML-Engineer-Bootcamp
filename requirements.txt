@@ -1,0 +1,563 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+AI-ML-Engineer-Bootcamp/
+│
+├── Day-21-Machine-Learning-Introduction/
+│   ├── README.md
+│   ├── 01-ML-Fundamentals.md
+│   ├── 02-AI-vs-ML-vs-DL.md
+│   ├── 03-ML-vs-Data-Science.md
+│   ├── 04-Types-of-Machine-Learning.md
+│   │   ├── Supervised Learning
+│   │   ├── Unsupervised Learning
+│   │   ├── Semi-Supervised Learning
+│   │   └── Reinforcement Learning
+│   ├── 05-ML-Use-Cases.md
+│   ├── 06-How-ML-Works.md
+│   ├── 07-ML-Modelling-Steps.md
+│   ├── 08-Features-and-Target.md
+│   ├── 09-Training-Testing-Validation.md
+│   ├── 10-Overfitting-Underfitting.md
+│   ├── 11-Bias-Variance.md
+│   └── Cheatsheet.txt
+│
+├── Day-22-Linear-Regression/
+│   ├── README.md
+│   ├── 01-Simple-Linear-Regression.md
+│   ├── 02-Multiple-Linear-Regression.md
+│   ├── 03-Polynomial-Regression.md
+│   ├── 04-How-Linear-Regression-Works.md
+│   ├── 05-Cost-Function.md
+│   ├── 06-Gradient-Descent.md
+│   ├── 07-Stochastic-Gradient-Descent.md
+│   ├── 08-SVR.md
+│   ├── 09-Decision-Tree-Regression.md
+│   ├── 10-Random-Forest-Regression.md
+│   ├── 11-Regularization.md
+│   │   ├── L1-Lasso
+│   │   ├── L2-Ridge
+│   │   └── ElasticNet
+│   ├── 12-Regression-Metrics.md
+│   │   ├── MAE
+│   │   ├── MSE
+│   │   ├── RMSE
+│   │   └── R²
+│   └── Practice/
+│
+├── Day-23-Logistic-Regression/
+│   ├── README.md
+│   ├── 01-Classification-Basics.md
+│   ├── 02-Logistic-Regression.md
+│   ├── 03-Sigmoid-Function.md
+│   ├── 04-Decision-Boundary.md
+│   ├── 05-Probability-and-Threshold.md
+│   ├── 06-Binary-Classification.md
+│   ├── 07-Multiclass-Classification.md
+│   ├── 08-Hyperparameters.md
+│   ├── 09-Advantages-Limitations.md
+│   └── Practice/
+│
+├── Day-24-KNN/
+│   ├── README.md
+│   ├── 01-How-KNN-Works.md
+│   ├── 02-Distance-Metrics.md
+│   ├── 03-Choosing-K.md
+│   ├── 04-KNN-Classification.md
+│   ├── 05-KNN-Regression.md
+│   ├── 06-KNN-Hyperparameters.md
+│   ├── 07-Advantages-Limitations.md
+│   └── Practice/
+│
+├── Day-25-Decision-Tree/
+│   ├── README.md
+│   ├── 01-Decision-Tree-Basics.md
+│   ├── 02-Classification.md
+│   ├── 03-Regression.md
+│   ├── 04-Entropy.md
+│   ├── 05-Gini-Index.md
+│   ├── 06-Information-Gain.md
+│   ├── 07-Tree-Splitting.md
+│   ├── 08-Pruning.md
+│   ├── 09-Hyperparameters.md
+│   └── Practice/
+│
+├── Day-26-Random-Forest/
+│   ├── README.md
+│   ├── 01-Random-Forest-Basics.md
+│   ├── 02-Bagging.md
+│   ├── 03-Bootstrap-Sampling.md
+│   ├── 04-Random-Subspaces.md
+│   ├── 05-Random-Patches.md
+│   ├── 06-Random-Forest-Classification.md
+│   ├── 07-Random-Forest-Regression.md
+│   ├── 08-Feature-Importance.md
+│   ├── 09-Hyperparameters.md
+│   └── Practice/
+│
+├── Day-27-SVM/
+│   ├── README.md
+│   ├── 01-SVM-Basics.md
+│   ├── 02-Hyperplane.md
+│   ├── 03-Margin.md
+│   ├── 04-Support-Vectors.md
+│   ├── 05-Kernel-Trick.md
+│   ├── 06-Linear-SVM.md
+│   ├── 07-Kernel-SVM.md
+│   ├── 08-SVR.md
+│   ├── 09-SVM-Hyperparameters.md
+│   └── Practice/
+│
+├── Day-28-Naive-Bayes/
+│   ├── README.md
+│   ├── 01-Bayes-Theorem.md
+│   ├── 02-Naive-Bayes.md
+│   ├── 03-Gaussian-Naive-Bayes.md
+│   ├── 04-Multinomial-Naive-Bayes.md
+│   ├── 05-Bernoulli-Naive-Bayes.md
+│   ├── 06-Conditional-Independence.md
+│   ├── 07-Applications.md
+│   └── Practice/
+│
+├── Day-29-Clustering-KMeans/
+│   ├── README.md
+│   ├── 01-Unsupervised-Learning.md
+│   ├── 02-K-Means.md
+│   ├── 03-K-Means-Algorithm.md
+│   ├── 04-Centroids.md
+│   ├── 05-K-Means-Plus-Plus.md
+│   ├── 06-Elbow-Method.md
+│   ├── 07-Silhouette-Score.md
+│   ├── 08-Hierarchical-Clustering.md
+│   ├── 09-Dendrogram.md
+│   ├── 10-DBSCAN.md
+│   ├── 11-GMM.md
+│   └── Practice/
+│
+├── Day-30-PCA-Dimensionality-Reduction/
+│   ├── README.md
+│   ├── 01-Dimensionality-Reduction.md
+│   ├── 02-PCA.md
+│   ├── 03-Principal-Components.md
+│   ├── 04-Eigenvalues-Eigenvectors.md
+│   ├── 05-Explained-Variance.md
+│   ├── 06-LDA.md
+│   ├── 07-t-SNE.md
+│   └── Practice/
+│
+├── Day-31-Model-Evaluation/
+│   ├── README.md
+│   ├── 01-Train-Test-Split.md
+│   ├── 02-Validation-Set.md
+│   ├── 03-Confusion-Matrix.md
+│   ├── 04-TP-TN-FP-FN.md
+│   ├── 05-Accuracy.md
+│   ├── 06-Precision.md
+│   ├── 07-Recall.md
+│   ├── 08-F1-Score.md
+│   ├── 09-ROC-AUC.md
+│   ├── 10-MAE-MSE-RMSE.md
+│   ├── 11-R2-Score.md
+│   └── Practice/
+│
+├── Day-32-Hyperparameter-Tuning/
+│   ├── README.md
+│   ├── 01-Parameters-vs-Hyperparameters.md
+│   ├── 02-Model-Selection.md
+│   ├── 03-K-Fold-Cross-Validation.md
+│   ├── 04-Stratified-K-Fold.md
+│   ├── 05-GridSearchCV.md
+│   ├── 06-RandomizedSearchCV.md
+│   ├── 07-Pipeline.md
+│   └── Practice/
+│
+├── Day-33-Ensemble-Learning/
+│   ├── README.md
+│   ├── 01-Ensemble-Learning.md
+│   ├── 02-Voting.md
+│   ├── 03-Bagging.md
+│   ├── 04-Pasting.md
+│   ├── 05-Random-Patches.md
+│   ├── 06-Random-Subspaces.md
+│   ├── 07-AdaBoost.md
+│   ├── 08-Gradient-Boosting.md
+│   ├── 09-XGBoost.md
+│   ├── 10-LightGBM.md
+│   ├── 11-CatBoost.md
+│   ├── 12-Stacking.md
+│   ├── 13-Blending.md
+│   └── Practice/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Day-34-Deep-Learning-with-TensorFlow/
+├── Neural Networks
+├── Perceptron
+├── ANN
+├── Neurons
+├── Layers
+├── Activation Functions
+├── Forward Propagation
+├── Backpropagation
+├── Loss Functions
+├── Optimizers
+├── TensorFlow
+└── Keras
+
+Day-35-CNN/
+├── CNN Basics
+├── Convolution
+├── Filters
+├── Feature Maps
+├── Pooling
+├── Flattening
+├── CNN Architecture
+├── Image Classification
+└── TensorFlow CNN
+
+Day-36-NLP/
+├── NLP Basics
+├── Text Cleaning
+├── Tokenization
+├── Stopwords
+├── Stemming
+├── Lemmatization
+├── Bag of Words
+├── TF-IDF
+├── Word Embeddings
+├── Text Classification
+└── Sentiment Analysis
+
+Day-37-Time-Series/
+├── Time-Series Basics
+├── Trend
+├── Seasonality
+├── Stationarity
+├── Moving Average
+├── Forecasting
+├── ARIMA
+└── Model Evaluation
+
+Day-38-Recommendation-System/
+├── Recommendation Basics
+├── Content-Based Filtering
+├── Collaborative Filtering
+├── User-Based Filtering
+├── Item-Based Filtering
+├── Similarity
+└── Recommendation Pipeline
+
+Day-39-Streamlit-Deployment/
+├── Streamlit Basics
+├── UI Components
+├── Model Loading
+├── Input Forms
+├── Prediction
+├── Visualization
+└── Deployment
+
+Day-40-Flask-FastAPI/
+├── REST API
+├── Flask Basics
+├── FastAPI Basics
+├── Endpoints
+├── Request / Response
+├── Pydantic
+├── Model Serving
+└── API Testing
+
+Day-41-Git-GitHub-Portfolio/
+├── Git Basics
+├── Branching
+├── Commits
+├── README
+├── Project Documentation
+├── GitHub
+├── Portfolio
+└── Recruiter Presentation
+
+Day-42-AWS-Basics/
+├── Cloud Computing
+├── AWS Basics
+├── EC2
+├── S3
+├── IAM
+├── Deployment Concepts
+└── ML Deployment Basics
+
+Day-43-End-to-End-ML-Project/
+├── Problem Definition
+├── Data Collection
+├── EDA
+├── Data Cleaning
+├── Feature Engineering
+├── Model Selection
+├── Training
+├── Evaluation
+├── Tuning
+├── Deployment
+└── Documentation
+
+Day-44-Interview-Preparation/
+├── ML Fundamentals
+├── Algorithms
+├── Statistics
+├── Python
+├── SQL
+├── Projects
+├── Scenario Questions
+├── HR Questions
+└── Resume Discussion
+
+Day-45-Capstone-Project/
+├── Problem Statement
+├── Dataset
+├── EDA
+├── Preprocessing
+├── Feature Engineering
+├── Multiple Models
+├── Evaluation
+├── Hyperparameter Tuning
+├── Final Model
+├── Deployment
+├── GitHub
+├── README
+└── Presentation
+
+
+
+
+
+
+
+
+MACHINE LEARNING
+│
+├── 21. ML Introduction
+│   ├── ML Fundamentals → Learning from data
+│   ├── AI vs ML vs DL → AI ⊃ ML ⊃ DL
+│   ├── Types of ML → Different learning approaches
+│   ├── ML Workflow → Data → Model → Prediction
+│   ├── Features → Input variables
+│   ├── Target → Output variable
+│   ├── Train/Test → Learn and evaluate
+│   ├── Overfitting → Memorizes training data
+│   ├── Underfitting → Too simple model
+│   └── Bias-Variance → Model error balance
+│
+├── 22. Regression
+│   ├── Linear Regression → Predict continuous values
+│   ├── Multiple Regression → Multiple input variables
+│   ├── Polynomial Regression → Nonlinear relationships
+│   ├── Gradient Descent → Minimize model error
+│   ├── SVR → SVM for regression
+│   ├── Decision Tree Regression → Tree-based prediction
+│   ├── Random Forest Regression → Multiple trees prediction
+│   └── Regularization → Prevent model overfitting
+│       ├── L1 / Lasso → Removes weak features
+│       ├── L2 / Ridge → Shrinks coefficients
+│       └── ElasticNet → L1 + L2
+│
+├── 23. Logistic Regression
+│   ├── Classification → Predict categories
+│   ├── Sigmoid → Probability conversion
+│   ├── Threshold → Probability decision point
+│   ├── Decision Boundary → Separates classes
+│   ├── Binary → Two classes
+│   └── Multiclass → Multiple classes
+│
+├── 24. KNN
+│   ├── KNN → Nearest-neighbor prediction
+│   ├── Distance → Measure similarity
+│   ├── Choosing K → Select neighbors
+│   ├── Classification → Predict class
+│   └── Regression → Predict value
+│
+├── 25. Decision Tree
+│   ├── Tree → Decision-based structure
+│   ├── Splitting → Divide data
+│   ├── Entropy → Measure disorder
+│   ├── Gini → Measure impurity
+│   ├── Information Gain → Best split selection
+│   ├── Pruning → Reduce tree complexity
+│   └── Hyperparameters → Control tree behavior
+│
+├── 26. Random Forest
+│   ├── Random Forest → Ensemble of trees
+│   ├── Bagging → Bootstrap aggregation
+│   ├── Bootstrap → Random data sampling
+│   ├── Random Subspaces → Random feature subsets
+│   ├── Random Patches → Random rows + features
+│   ├── Classification → Class prediction
+│   ├── Regression → Value prediction
+│   └── Feature Importance → Important feature ranking
+│
+├── 27. SVM
+│   ├── SVM → Maximum-margin classifier
+│   ├── Hyperplane → Separating boundary
+│   ├── Margin → Boundary separation distance
+│   ├── Support Vectors → Critical data points
+│   ├── Kernel Trick → Handle nonlinear data
+│   ├── Linear SVM → Linear separation
+│   └── SVR → Regression using SVM
+│
+├── 28. Naive Bayes
+│   ├── Bayes Theorem → Probability updating
+│   ├── Naive Bayes → Probabilistic classifier
+│   ├── Gaussian → Continuous features
+│   ├── Multinomial → Count-based features
+│   └── Bernoulli → Binary features
+│
+├── 29. Clustering
+│   ├── Clustering → Group similar data
+│   ├── K-Means → Centroid-based clustering
+│   ├── K-Means++ → Better centroid initialization
+│   ├── Elbow Method → Choose optimal K
+│   ├── Silhouette Score → Measure cluster quality
+│   ├── Hierarchical → Tree-based clustering
+│   ├── Dendrogram → Cluster hierarchy
+│   ├── DBSCAN → Density-based clustering
+│   └── GMM → Probabilistic clustering
+│
+├── 30. Dimensionality Reduction
+│   ├── PCA → Reduce feature dimensions
+│   ├── Eigenvalues → Variance magnitude
+│   ├── Eigenvectors → Principal directions
+│   ├── Explained Variance → Information retained
+│   ├── LDA → Supervised dimension reduction
+│   └── t-SNE → Visualize high dimensions
+│
+├── 31. Model Evaluation
+│   ├── Confusion Matrix → Classification result table
+│   ├── Accuracy → Overall correct predictions
+│   ├── Precision → Correct positive predictions
+│   ├── Recall → Actual positives found
+│   ├── F1 → Precision-recall balance
+│   ├── ROC-AUC → Ranking classification performance
+│   ├── MAE → Average absolute error
+│   ├── MSE → Average squared error
+│   ├── RMSE → Square-root error
+│   └── R² → Explained variance
+│
+├── 32. Hyperparameter Tuning
+│   ├── Hyperparameters → Model configuration settings
+│   ├── Model Selection → Choose suitable model
+│   ├── K-Fold CV → Repeated validation
+│   ├── Stratified K-Fold → Preserve class proportions
+│   ├── GridSearchCV → Exhaustive parameter search
+│   ├── RandomizedSearchCV → Random parameter search
+│   └── Pipeline → Chain ML steps
+│
+└── 33. Ensemble Learning
+    ├── Ensemble → Combine multiple models
+    ├── Voting → Combine model predictions
+    ├── Bagging → Train parallel models
+    ├── Pasting → Sample without replacement
+    ├── Random Patches → Random data + features
+    ├── Random Subspaces → Random feature subsets
+    ├── AdaBoost → Sequential error correction
+    ├── Gradient Boosting → Sequential weak learners
+    ├── XGBoost → Optimized gradient boosting
+    ├── LightGBM → Fast gradient boosting
+    ├── CatBoost → Categorical boosting
+    ├── Stacking → Meta-model combines models
+    └── Blending → Weighted model combination
