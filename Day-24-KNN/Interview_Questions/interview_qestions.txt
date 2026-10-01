@@ -1,0 +1,406 @@
+============================================================
+DAY 23 - K-NEAREST NEIGHBORS (KNN)
+30 INTERVIEW QUESTIONS WITH ANSWERS
+AI/ML ENGINEER BOOTCAMP
+============================================================
+
+SECTION 1: KNN FUNDAMENTALS
+============================================================
+
+Q1. What is K-Nearest Neighbors (KNN)?
+
+Answer:
+KNN is a supervised machine learning algorithm that predicts
+the output of a new data point using its K nearest neighbors
+from the training dataset.
+
+
+Q2. Is KNN a supervised or unsupervised learning algorithm?
+
+Answer:
+KNN is a supervised learning algorithm because it learns
+from labeled training data.
+
+
+Q3. What types of problems can KNN solve?
+
+Answer:
+KNN can solve two types of problems:
+
+1. Classification - predicts a category.
+   Example: Spam or Not Spam.
+
+2. Regression - predicts a numerical value.
+   Example: Predicting house prices.
+
+
+Q4. Why is KNN called a lazy learning algorithm?
+
+Answer:
+KNN is called a lazy learning algorithm because it does not
+build an explicit model during training.
+
+It stores the training data and performs most of its
+computation when making predictions.
+
+
+Q5. What does K represent in KNN?
+
+Answer:
+K represents the number of nearest neighbors considered
+when predicting the output of a new data point.
+
+Example:
+If K = 5, the algorithm considers the five nearest neighbors.
+
+
+Q6. Explain how the KNN algorithm works.
+
+Answer:
+Step 1: Select the value of K.
+Step 2: Calculate the distance between the new point and
+        the training data points.
+Step 3: Find the K nearest neighbors.
+Step 4: For classification, use majority voting.
+Step 5: For regression, calculate the average of the
+        neighbors' target values.
+
+
+SECTION 2: K VALUE AND DISTANCE METRICS
+============================================================
+
+Q7. What happens when K = 1?
+
+Answer:
+The prediction depends on the single nearest neighbor.
+
+The model can become sensitive to noise and outliers,
+which may lead to overfitting.
+
+
+Q8. What happens when K is too large?
+
+Answer:
+The model considers too many neighbors.
+
+It may include points from different classes or regions,
+which can lead to underfitting.
+
+
+Q9. How do you choose the optimal value of K?
+
+Answer:
+We can test different K values using validation data
+or cross-validation.
+
+GridSearchCV can help find a suitable value of K.
+
+
+Q10. Why is an odd value of K often used?
+
+Answer:
+An odd value of K can reduce the possibility of a tie
+in binary classification.
+
+However, it does not guarantee that ties are impossible
+in every classification problem.
+
+
+Q11. What is Euclidean distance?
+
+Answer:
+Euclidean distance measures the straight-line distance
+between two points.
+
+Formula:
+
+d = sqrt(sum((x_i - y_i)^2))
+
+It is commonly used in KNN.
+
+
+Q12. What is Manhattan distance?
+
+Answer:
+Manhattan distance calculates the sum of the absolute
+differences between corresponding coordinates.
+
+Formula:
+
+d = sum(abs(x_i - y_i))
+
+It measures distance along coordinate-wise paths.
+
+
+Q13. What is Minkowski distance?
+
+Answer:
+Minkowski distance is a generalized distance metric.
+
+Euclidean and Manhattan distances are special cases
+of Minkowski distance.
+
+
+Q14. What is the difference between Euclidean and
+Manhattan distance?
+
+Answer:
+Euclidean Distance:
+- Measures straight-line distance.
+- Uses squared differences and a square root.
+
+Manhattan Distance:
+- Calculates the sum of absolute differences.
+- Measures distance along coordinate-wise paths.
+
+
+SECTION 3: FEATURE SCALING AND PERFORMANCE
+============================================================
+
+Q15. Why is feature scaling important in KNN?
+
+Answer:
+KNN uses distance calculations to identify neighbors.
+
+Features with larger numerical ranges can dominate
+the distance calculation.
+
+Feature scaling helps features contribute more
+comparably to the distance.
+
+
+Q16. What is StandardScaler?
+
+Answer:
+StandardScaler transforms features so that they have
+approximately:
+
+- Mean = 0
+- Standard deviation = 1
+
+The scaler should be fitted using training data only.
+
+
+Q17. What is MinMaxScaler?
+
+Answer:
+MinMaxScaler commonly scales feature values to a range
+between 0 and 1.
+
+It uses the minimum and maximum values from the data
+used to fit the scaler.
+
+
+Q18. What is the Curse of Dimensionality?
+
+Answer:
+The Curse of Dimensionality refers to problems that arise
+when working with high-dimensional data.
+
+As the number of features increases, data becomes sparse
+and distances can become less useful for identifying
+meaningful nearest neighbors.
+
+
+Q19. Is KNN sensitive to outliers?
+
+Answer:
+Yes. Outliers and noisy data can affect which points
+are considered nearest and influence predictions.
+
+The effect can be especially noticeable when K is small.
+
+
+Q20. What are the main disadvantages of KNN?
+
+Answer:
+1. Prediction can be slow on large datasets.
+2. It requires storing the training data.
+3. It is sensitive to feature scaling.
+4. It can struggle with high-dimensional data.
+5. Its performance depends on K and the distance metric.
+6. Irrelevant features can reduce performance.
+
+
+SECTION 4: PYTHON AND SCIKIT-LEARN
+============================================================
+
+Q21. Which Python library is commonly used to implement KNN?
+
+Answer:
+Scikit-learn is commonly used to implement KNN.
+
+Important classes:
+
+- KNeighborsClassifier
+- KNeighborsRegressor
+
+
+Q22. What is the difference between
+KNeighborsClassifier and KNeighborsRegressor?
+
+Answer:
+
+KNeighborsClassifier:
+- Used for classification.
+- Predicts a class or category.
+- Commonly uses majority voting.
+
+KNeighborsRegressor:
+- Used for regression.
+- Predicts a numerical value.
+- Commonly averages neighboring target values.
+
+
+Q23. How do you implement KNN classification in Python?
+
+Answer:
+
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+
+model = make_pipeline(
+    StandardScaler(),
+    KNeighborsClassifier(n_neighbors=5)
+)
+
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+
+print("Predictions:", y_pred)
+
+
+Q24. What is the purpose of GridSearchCV in KNN?
+
+Answer:
+GridSearchCV tests different hyperparameter combinations
+using cross-validation.
+
+It can help select a suitable value of K and other
+parameters, such as the distance metric.
+
+
+Example:
+
+from sklearn.model_selection import GridSearchCV
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+
+pipeline = make_pipeline(
+    StandardScaler(),
+    KNeighborsClassifier()
+)
+
+param_grid = {
+    "kneighborsclassifier__n_neighbors": [3, 5, 7, 9],
+    "kneighborsclassifier__weights": ["uniform", "distance"]
+}
+
+grid = GridSearchCV(
+    pipeline,
+    param_grid,
+    cv=5,
+    scoring="accuracy"
+)
+
+grid.fit(X_train, y_train)
+
+print("Best Parameters:", grid.best_params_)
+print("Best Score:", grid.best_score_)
+
+
+SECTION 5: MODEL EVALUATION
+============================================================
+
+Q25. Which metrics are used to evaluate KNN classification?
+
+Answer:
+Common classification metrics include:
+
+1. Accuracy
+2. Precision
+3. Recall
+4. F1-score
+5. Confusion Matrix
+
+The appropriate metric depends on the problem.
+
+
+Q26. What is the difference between precision and recall?
+
+Answer:
+
+Precision:
+Measures how many predicted positive cases are actually
+positive.
+
+Precision = TP / (TP + FP)
+
+Recall:
+Measures how many actual positive cases are correctly
+identified.
+
+Recall = TP / (TP + FN)
+
+TP = True Positives
+FP = False Positives
+FN = False Negatives
+
+
+Q27. Which metrics are used to evaluate KNN regression?
+
+Answer:
+Common regression metrics include:
+
+1. MAE - Mean Absolute Error
+2. MSE - Mean Squared Error
+3. RMSE - Root Mean Squared Error
+4. R-squared (R2)
+
+MAE, MSE and RMSE measure prediction errors.
+R-squared measures model fit relative to a baseline.
+
+
+SECTION 6: ADVANCED AND SCENARIO-BASED QUESTIONS
+============================================================
+
+Q28. Can KNN handle nonlinear data?
+
+Answer:
+Yes. KNN can model nonlinear decision boundaries because
+its predictions depend on nearby training examples.
+
+It does not require a linear relationship between
+features and the target.
+
+
+Q29. Why can KNN be slow during prediction?
+
+Answer:
+KNN commonly calculates distances between a query point
+and many training examples.
+
+For large datasets, this can make prediction expensive.
+
+Efficient search structures and approximate nearest
+neighbor methods can help in some situations.
+
+
+Q30. When would you choose KNN for a machine learning
+project?
+
+Answer:
+KNN can be useful when:
+
+1. The dataset is small or moderately sized.
+2. Similar data points are expected to have similar outputs.
+3. A simple, instance-based method is appropriate.
+4. The features and distance metric are meaningful.
+5. The model's prediction speed is acceptable.
+
+The algorithm should be evaluated against other suitable
+models before selecting it for deployment.
+

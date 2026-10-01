@@ -1,0 +1,78 @@
+============================================================
+              K-NEAREST NEIGHBORS (KNN)
+                    ALGORITHM FLOW
+============================================================
+
+                 START
+                   |
+                   v
+       +------------------------+
+       | Load Training Dataset  |
+       | Features (X) + Labels  |
+       |         (y)            |
+       +------------------------+
+                   |
+                   v
+       +------------------------+
+       |   Preprocess Data      |
+       | Handle Missing Values  |
+       | Scale Features         |
+       +------------------------+
+                   |
+                   v
+       +------------------------+
+       | Choose Value of K      |
+       | Example: K = 5         |
+       +------------------------+
+                   |
+                   v
+       +------------------------+
+       | Input New Data Point   |
+       +------------------------+
+                   |
+                   v
+       +------------------------+
+       | Calculate Distance     |
+       | from New Point to      |
+       | Training Data Points   |
+       +------------------------+
+                   |
+                   v
+       +------------------------+
+       | Find K Nearest         |
+       | Neighbors              |
+       +------------------------+
+                   |
+                   v
+       +------------------------+
+       |   Select Task Type     |
+       +------------------------+
+             /           \
+            v             v
+   +----------------+  +----------------+
+   | Classification |  |   Regression   |
+   +----------------+  +----------------+
+            |             |
+            v             v
+   +----------------+  +----------------+
+   | Majority Vote  |  | Calculate Mean |
+   | of Neighbor    |  | of Neighbor    |
+   | Classes        |  | Target Values  |
+   +----------------+  +----------------+
+            |             |
+            v             v
+   +----------------+  +----------------+
+   | Predict Class  |  | Predict Number |
+   | Example: Spam  |  | Example: Price|
+   +----------------+  +----------------+
+            \             /
+             \           /
+                   |
+                   v
+       +------------------------+
+       |      Evaluation        |
+       | Accuracy / MAE / RMSE  |
+       +------------------------+
+                   |
+                   v
+                  END
