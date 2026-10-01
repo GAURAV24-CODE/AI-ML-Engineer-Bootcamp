@@ -1,0 +1,262 @@
+============================================================
+DAY 23 - K-NEAREST NEIGHBORS (KNN) CHEAT SHEET
+AI/ML ENGINEER BOOTCAMP
+============================================================
+
+1. WHAT IS KNN?
+----------------
+K-Nearest Neighbors (KNN) is a supervised machine learning algorithm
+that predicts a new data point using its K nearest training examples.
+
+- Classification: Predicts a category or class.
+- Regression: Predicts a numerical value.
+- KNN is a lazy learning algorithm.
+- KNN is also called an instance-based learning algorithm.
+
+Example:
+Predict whether an email is spam by looking at similar emails.
+
+
+2. HOW KNN WORKS
+----------------
+Step 1: Choose the value of K.
+Step 2: Calculate distances from the new point to training points.
+Step 3: Find the K nearest neighbors.
+Step 4: Classification uses majority voting.
+Step 5: Regression uses the average of neighbors' target values.
+
+FLOW:
+New Data Point
+      |
+Calculate Distances
+      |
+Find K Nearest Neighbors
+      |
+Majority Vote / Average
+      |
+Final Prediction
+
+
+3. KNN CLASSIFICATION VS REGRESSION
+-----------------------------------
+CLASSIFICATION:
+- Predicts a class or category.
+- Uses majority voting.
+- Example: Spam or Not Spam.
+- Python class: KNeighborsClassifier
+
+REGRESSION:
+- Predicts a numerical value.
+- Usually averages neighboring target values.
+- Example: Predicting house prices.
+- Python class: KNeighborsRegressor
+
+
+4. DISTANCE METRICS
+-------------------
+A. EUCLIDEAN DISTANCE
+Straight-line distance between two points.
+
+Formula:
+d = sqrt(sum((x_i - y_i)^2))
+
+B. MANHATTAN DISTANCE
+Sum of absolute differences.
+
+Formula:
+d = sum(abs(x_i - y_i))
+
+C. MINKOWSKI DISTANCE
+Generalized distance metric.
+
+Formula:
+d = (sum(abs(x_i - y_i)^p))^(1/p)
+
+In Scikit-learn:
+metric="euclidean"
+metric="manhattan"
+metric="minkowski"
+
+
+5. CHOOSING THE VALUE OF K
+--------------------------
+Small K:
+- Considers fewer neighbors.
+- Sensitive to noise.
+- May cause overfitting.
+
+Large K:
+- Considers more neighbors.
+- Produces smoother predictions.
+- May cause underfitting.
+
+Important:
+- There is no universally best value of K.
+- Select K using validation or cross-validation.
+- GridSearchCV can help find a suitable K.
+- Odd K may reduce ties in binary classification.
+
+
+6. FEATURE SCALING
+------------------
+KNN depends on distances between data points.
+
+Features with large numerical ranges can dominate distance
+calculations.
+
+STANDARD SCALER:
+- Centers features around mean 0.
+- Scales features to standard deviation 1.
+
+MIN-MAX SCALER:
+- Commonly scales values between 0 and 1.
+
+Example:
+Age: 18 to 60
+Salary: 10,000 to 100,000
+
+Without scaling, salary may dominate the distance calculation.
+
+Always consider feature scaling when using KNN.
+
+
+7. KNN CLASSIFICATION - PYTHON
+------------------------------
+from sklearn.model_selection import train_test_split
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.metrics import accuracy_score
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y,
+    test_size=0.2,
+    random_state=42,
+    stratify=y
+)
+
+model = make_pipeline(
+    StandardScaler(),
+    KNeighborsClassifier(n_neighbors=5)
+)
+
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+
+accuracy = accuracy_score(y_test, y_pred)
+
+print("Accuracy:", accuracy)
+
+
+8. KNN REGRESSION - PYTHON
+--------------------------
+from sklearn.model_selection import train_test_split
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.metrics import mean_absolute_error
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y,
+    test_size=0.2,
+    random_state=42
+)
+
+model = make_pipeline(
+    StandardScaler(),
+    KNeighborsRegressor(n_neighbors=5)
+)
+
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+
+mae = mean_absolute_error(y_test, y_pred)
+
+print("Mean Absolute Error:", mae)
+
+
+9. CLASSIFICATION EVALUATION METRICS
+------------------------------------
+ACCURACY:
+Correct predictions / Total predictions
+
+PRECISION:
+TP / (TP + FP)
+
+Measures how many predicted positive cases are truly positive.
+
+RECALL:
+TP / (TP + FN)
+
+Measures how many actual positive cases are correctly identified.
+
+F1-SCORE:
+2 * (Precision * Recall) / (Precision + Recall)
+
+Confusion Matrix:
+Displays actual classes against predicted classes.
+
+Note:
+Accuracy alone may be misleading when classes are imbalanced.
+
+
+10. REGRESSION EVALUATION METRICS
+---------------------------------
+MAE - Mean Absolute Error
+- Average absolute prediction error.
+- Lower is generally better.
+
+MSE - Mean Squared Error
+- Average squared prediction error.
+- Penalizes large errors more heavily.
+- Lower is generally better.
+
+RMSE - Root Mean Squared Error
+- Square root of MSE.
+- Expressed in the target's units.
+- Lower is generally better.
+
+R-SQUARED (R2)
+- Measures model fit relative to a baseline.
+- A value closer to 1 is generally better.
+- Can be negative on test data.
+
+
+11. ADVANTAGES OF KNN
+---------------------
+- Simple and easy to understand.
+- Used for classification and regression.
+- Can model nonlinear decision boundaries.
+- Requires little explicit training.
+- Makes predictions using nearby examples.
+
+
+12. LIMITATIONS OF KNN
+----------------------
+- Prediction can be slow on large datasets.
+- Requires storing training data.
+- Sensitive to feature scaling.
+- Sensitive to noise and irrelevant features.
+- Choosing K affects performance.
+- High-dimensional data can reduce the usefulness of distances.
+
+This high-dimensional problem is called the Curse of Dimensionality.
+
+
+13. IMPORTANT PYTHON CLASSES
+----------------------------
+KNeighborsClassifier
+KNeighborsRegressor
+StandardScaler
+MinMaxScaler
+Pipeline
+GridSearchCV
+train_test_split
+
+Useful methods:
+model.fit(X_train, y_train)
+model.predict(X_test)
+model.score(X_test, y_test)
+
