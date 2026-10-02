@@ -16,7 +16,7 @@ FROM customers;
 
 -- CASE WITH AGE
 
--- Example 2: Categorize customers by ag
+-- Example 2: Categorize customers by 
 SELECT
     customer_name,
     age,
