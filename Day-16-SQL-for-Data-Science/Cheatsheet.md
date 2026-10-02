@@ -27,7 +27,7 @@ HAVING → filter groups
 INNER JOIN → matching rows
 LEFT JOIN → all left rows
 RIGHT JOIN → all right rows
-FULL JOIN → all rows
+FULL JOIN → all row
 
 5. SUBQUERIES
 Query inside another query.
