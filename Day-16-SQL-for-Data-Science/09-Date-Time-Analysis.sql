@@ -21,7 +21,7 @@ FROM orders;
 
 -- EXTRACT DAY
 
--- Example 3: Extract day from order dat
+-- Example 3: Extract day from order
 SELECT
     order_id,
     order_date,
