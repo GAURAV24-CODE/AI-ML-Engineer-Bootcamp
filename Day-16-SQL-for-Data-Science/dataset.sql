@@ -1,5 +1,5 @@
 -- DAY 16: SQL FOR DATA SCIENCE
--- CREATE TABLES
+-- CREATE 
 
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
