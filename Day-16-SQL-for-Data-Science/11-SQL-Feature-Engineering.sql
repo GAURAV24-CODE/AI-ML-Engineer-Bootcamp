@@ -15,7 +15,7 @@ INNER JOIN products p
 
 -- RATIO FEATURE
 
--- Example 2: Create quantity-price rati
+-- Example 2: Create quantity-price
 SELECT
     o.order_id,
     o.quantity,
