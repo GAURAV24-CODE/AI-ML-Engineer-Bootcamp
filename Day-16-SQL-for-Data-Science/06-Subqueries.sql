@@ -13,7 +13,7 @@ WHERE income > (
     FROM customers
 );
 
--- Example 2: Customer with highest income
+-- Example 2: Customer with highest inco
 SELECT
     customer_name,
     income
