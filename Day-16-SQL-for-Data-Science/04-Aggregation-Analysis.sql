@@ -9,7 +9,7 @@ FROM customers;
 
 -- SUM
 
--- Example 2: Calculate total income
+-- Example 2: Calculate total inc
 SELECT SUM(income) AS total_income
 FROM customers;
 
