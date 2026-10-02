@@ -21,7 +21,7 @@ FROM customers;
 
 -- DENSE_RANK()
 
--- Example 3: Dense rank customers by incom
+-- Example 3: Dense rank customers by i
 SELECT
     customer_name,
     income,
