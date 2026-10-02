@@ -12,7 +12,7 @@ FROM customers c
 INNER JOIN orders o
     ON c.customer_id = o.customer_id;
 
--- Example 2: Orders with product details
+-- Example 2: Orders with product detai
 SELECT
     o.order_id,
     p.product_name,
