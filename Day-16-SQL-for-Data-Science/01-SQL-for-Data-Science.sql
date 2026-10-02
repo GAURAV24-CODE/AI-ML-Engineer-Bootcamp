@@ -18,7 +18,7 @@ WHERE income > 50000;
 SELECT AVG(income) AS average_income
 FROM customers;
 
--- Example 5: Count customers by city
+-- 5: Count customers by cit
 SELECT city, COUNT(*) AS customer_count
 FROM customers
 GROUP BY city;
