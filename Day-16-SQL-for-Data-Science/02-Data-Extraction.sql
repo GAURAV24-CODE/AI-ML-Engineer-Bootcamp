@@ -13,7 +13,7 @@ FROM customers;
 
 -- WHERE
 
--- Example 3: Customers from Nashik
+-- Example 3: Customers fr Nashik
 SELECT *
 FROM customers
 WHERE city = 'Nashik';
