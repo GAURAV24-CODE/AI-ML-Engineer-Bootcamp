@@ -3,7 +3,7 @@
 
 -- NULL VALUES
 
--- Example 1: Find customers with missing city
+-- Example 1: Find customers with miss city
 SELECT *
 FROM customers
 WHERE city IS NULL;
