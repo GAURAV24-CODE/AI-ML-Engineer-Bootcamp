@@ -23,7 +23,7 @@ INNER JOIN products p
 GROUP BY c.customer_name
 ORDER BY total_spending DESC;
 
--- Example 3: Find top 3 products by sales
+-- Example 3: Find top 3 products by sal
 SELECT
     p.product_name,
     SUM(o.quantity * p.price) AS total_sales
