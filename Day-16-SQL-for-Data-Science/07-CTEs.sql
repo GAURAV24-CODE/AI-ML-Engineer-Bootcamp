@@ -16,7 +16,7 @@ FROM customer_data;
 
 -- CTE WITH WHERE
 
--- Example 2: High-income customer
+-- Example 2: High-income cust
 WITH high_income AS (
     SELECT
         customer_name,
