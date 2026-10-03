@@ -1,0 +1,565 @@
+============================================================
+       DAY 25 - DECISION TREE INTERVIEW QUESTIONS
+                 AI/ML ENGINEER BOOTCAMP
+============================================================
+
+BASIC LEVEL
+===========
+
+Q1. What is a Decision Tree?
+
+Answer:
+A Decision Tree is a supervised machine learning algorithm
+that makes predictions by learning decision rules from data.
+It can be used for both classification and regression.
+
+
+Q2. What are the types of Decision Trees?
+
+Answer:
+There are two main types:
+
+1. Decision Tree Classifier
+   Used to predict categorical values.
+   Example: Spam or Not Spam.
+
+2. Decision Tree Regressor
+   Used to predict continuous numerical values.
+   Example: House price prediction.
+
+
+Q3. How does a Decision Tree work?
+
+Answer:
+1. Start with the training dataset.
+2. Select a feature for splitting.
+3. Find a suitable split condition.
+4. Divide the data into child nodes.
+5. Repeat the process recursively.
+6. Stop when a stopping condition is reached.
+7. Make a prediction using the final leaf node.
+
+
+Q4. What are the main components of a Decision Tree?
+
+Answer:
+1. Root Node: The first node of the tree.
+2. Decision Node: A node where a condition is checked.
+3. Branch: A connection between nodes.
+4. Leaf Node: The final node that provides a prediction.
+5. Parent Node: A node that is split.
+6. Child Node: A node created after a split.
+
+
+Q5. What is a leaf node?
+
+Answer:
+A leaf node is the terminal node of a Decision Tree.
+It does not split further and provides the final prediction.
+
+
+Q6. What is splitting in a Decision Tree?
+
+Answer:
+Splitting is the process of dividing a node's data into
+smaller groups based on a feature and a condition.
+
+The goal is to create child nodes that are more useful
+for making predictions.
+
+
+Q7. What is the difference between classification
+    and regression in a Decision Tree?
+
+Answer:
+Classification predicts categories or class labels.
+
+Example:
+Predicting whether an email is spam or not spam.
+
+Regression predicts continuous numerical values.
+
+Example:
+Predicting the price of a house.
+
+
+INTERMEDIATE LEVEL
+==================
+
+Q8. What is Gini Impurity?
+
+Answer:
+Gini Impurity measures how mixed the classes are in a node.
+
+Formula:
+
+Gini = 1 - Sum(p_i^2)
+
+Here, p_i is the proportion of class i.
+
+A Gini value of 0 means the node is pure.
+Lower Gini impurity generally indicates a purer node.
+
+
+Q9. What is Entropy in a Decision Tree?
+
+Answer:
+Entropy measures the uncertainty or impurity of a node.
+
+Formula:
+
+Entropy = -Sum(p_i * log2(p_i))
+
+An entropy value of 0 means the node is pure.
+Higher entropy indicates greater uncertainty.
+
+
+Q10. What is Information Gain?
+
+Answer:
+Information Gain measures the reduction in entropy
+after splitting a node.
+
+Formula:
+
+Information Gain =
+Parent Entropy - Weighted Child Entropy
+
+A split with higher information gain reduces uncertainty
+more than a split with lower information gain.
+
+
+Q11. What is the difference between Gini Impurity
+     and Entropy?
+
+Answer:
+Both measure impurity in classification trees.
+
+Gini Impurity:
+- Uses squared class probabilities.
+- Often computationally simpler.
+
+Entropy:
+- Uses logarithms of class probabilities.
+- Measures uncertainty using information theory.
+
+Both can be used to select splits.
+
+
+Q12. What is overfitting in a Decision Tree?
+
+Answer:
+Overfitting occurs when a tree learns the training data
+too closely, including noise and unnecessary details.
+
+The model may perform very well on training data but
+poorly on unseen data.
+
+
+Q13. How can you prevent overfitting in a Decision Tree?
+
+Answer:
+Overfitting can be controlled by:
+
+1. Limiting max_depth.
+2. Increasing min_samples_split.
+3. Increasing min_samples_leaf.
+4. Limiting max_leaf_nodes.
+5. Applying pruning.
+6. Evaluating performance on unseen data.
+
+
+Q14. What is underfitting?
+
+Answer:
+Underfitting occurs when a model is too simple to learn
+the important patterns in the data.
+
+A very shallow Decision Tree may underfit the dataset.
+
+
+Q15. What is max_depth?
+
+Answer:
+max_depth specifies the maximum depth of the tree.
+
+A smaller value creates a simpler tree.
+A larger value allows the tree to learn more complex rules.
+
+Example:
+
+DecisionTreeClassifier(max_depth=4)
+
+
+Q16. What is min_samples_split?
+
+Answer:
+It specifies the minimum number of samples required
+for a node to be split.
+
+Increasing this value can make the tree simpler and
+may help reduce overfitting.
+
+
+Q17. What is min_samples_leaf?
+
+Answer:
+It specifies the minimum number of training samples
+required in a leaf node.
+
+Increasing this value can prevent the tree from creating
+leaves containing very few samples.
+
+
+Q18. Does a Decision Tree require feature scaling?
+
+Answer:
+Usually, no.
+
+Decision Trees split data using feature thresholds.
+Their predictions generally do not depend on the
+relative scale of numerical features.
+
+Therefore, standardization or normalization is usually
+not required.
+
+
+Q19. What is pruning in a Decision Tree?
+
+Answer:
+Pruning is the process of removing or restricting parts
+of a tree to reduce unnecessary complexity.
+
+It can help reduce overfitting and improve generalization.
+
+Two types:
+1. Pre-pruning: Stop growth using conditions such as
+   max_depth or min_samples_leaf.
+2. Post-pruning: Grow a tree and then remove branches.
+
+
+Q20. What is feature importance?
+
+Answer:
+Feature importance estimates how much each feature
+contributes to the fitted Decision Tree's splitting.
+
+In scikit-learn, it can be accessed using:
+
+model.feature_importances_
+
+Feature importance does not prove that a feature
+causes the target outcome.
+
+
+ADVANCED LEVEL
+==============
+
+Q21. What are the advantages of Decision Trees?
+
+Answer:
+1. Easy to understand and interpret.
+2. Can model non-linear relationships.
+3. Usually do not require feature scaling.
+4. Can be used for classification and regression.
+5. Can capture interactions between features.
+6. Can work with numerical and encoded categorical data.
+
+
+Q22. What are the disadvantages of Decision Trees?
+
+Answer:
+1. They can overfit the training data.
+2. Small changes in data can produce a different tree.
+3. Deep trees can be difficult to interpret.
+4. A single tree can have high variance.
+5. Greedy splitting does not guarantee a globally
+   optimal tree.
+
+
+Q23. What is the difference between a Decision Tree
+     and Random Forest?
+
+Answer:
+Decision Tree:
+- Uses a single tree.
+- Easy to visualize and interpret.
+- Can have high variance.
+
+Random Forest:
+- Combines multiple decision trees.
+- Often reduces variance.
+- Usually provides more stable predictions.
+- Is generally harder to interpret than one tree.
+
+
+Q24. What is the difference between a Decision Tree
+     and K-Nearest Neighbors (KNN)?
+
+Answer:
+Decision Tree:
+- Learns decision rules from training data.
+- Usually does not require feature scaling.
+- Predicts by following tree branches.
+
+KNN:
+- Predicts using nearby training examples.
+- Often requires feature scaling.
+- Depends on distance and the selected value of k.
+
+
+Q25. What is the difference between a greedy algorithm
+     and a globally optimal solution in a Decision Tree?
+
+Answer:
+A Decision Tree commonly uses a greedy approach.
+At each node, it selects a locally good split based on
+the chosen splitting criterion.
+
+This does not guarantee that the resulting complete
+tree is globally optimal.
+
+
+Q26. Which splitting criteria are used for classification?
+
+Answer:
+Common classification criteria in scikit-learn include:
+
+1. gini
+2. entropy
+3. log_loss
+
+Example:
+
+DecisionTreeClassifier(criterion="gini")
+
+
+Q27. Which splitting criteria are used for regression?
+
+Answer:
+Common regression criteria include:
+
+1. squared_error
+2. absolute_error
+3. friedman_mse
+4. poisson
+
+The selected criterion determines how candidate splits
+are evaluated.
+
+
+Q28. How do you evaluate a Decision Tree Classifier?
+
+Answer:
+Common classification metrics include:
+
+1. Accuracy
+2. Precision
+3. Recall
+4. F1-score
+5. Confusion Matrix
+
+The appropriate metrics depend on the problem and
+the relative cost of different prediction errors.
+
+
+Q29. How do you evaluate a Decision Tree Regressor?
+
+Answer:
+Common regression metrics include:
+
+1. MAE
+2. MSE
+3. RMSE
+4. R-squared (R2)
+
+MAE and RMSE express prediction error in the target's
+units. R-squared compares the model with a mean-value
+baseline.
+
+
+Q30. Can a Decision Tree handle missing values?
+
+Answer:
+It depends on the implementation and its version.
+
+Some Decision Tree implementations support missing
+values directly, while others require preprocessing.
+
+In scikit-learn, check the documentation for the
+specific estimator and version being used.
+
+
+PYTHON AND SCIKIT-LEARN
+=======================
+
+Q31. How do you import a Decision Tree Classifier?
+
+Answer:
+
+from sklearn.tree import DecisionTreeClassifier
+
+model = DecisionTreeClassifier(random_state=42)
+
+
+Q32. How do you import a Decision Tree Regressor?
+
+Answer:
+
+from sklearn.tree import DecisionTreeRegressor
+
+model = DecisionTreeRegressor(random_state=42)
+
+
+Q33. How do you train a Decision Tree model?
+
+Answer:
+
+model.fit(X_train, y_train)
+
+The fit() method learns the decision rules from the
+training features and target values.
+
+
+Q34. How do you make predictions?
+
+Answer:
+
+y_pred = model.predict(X_test)
+
+The predict() method returns predicted class labels
+or numerical values, depending on the estimator.
+
+
+Q35. How do you visualize a Decision Tree?
+
+Answer:
+
+from sklearn.tree import plot_tree
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(15, 8))
+
+plot_tree(
+    model,
+    feature_names=X.columns,
+    filled=True,
+    rounded=True
+)
+
+plt.show()
+
+
+Q36. How do you get the depth of a trained tree?
+
+Answer:
+
+print(model.get_depth())
+
+
+Q37. How do you count the leaf nodes?
+
+Answer:
+
+print(model.get_n_leaves())
+
+
+Q38. How do you access feature importance?
+
+Answer:
+
+importance = model.feature_importances_
+
+This returns the feature importance values calculated
+by the fitted tree.
+
+
+SCENARIO-BASED QUESTIONS
+========================
+
+Q39. Your Decision Tree has 100% training accuracy but
+     poor test accuracy. What would you do?
+
+Answer:
+This suggests possible overfitting.
+
+I would:
+1. Reduce max_depth.
+2. Increase min_samples_leaf.
+3. Increase min_samples_split.
+4. Evaluate using cross-validation.
+5. Compare training and validation performance.
+
+
+Q40. Your Decision Tree performs poorly on both training
+     and test data. What could be the reason?
+
+Answer:
+The model may be underfitting.
+
+I would consider:
+1. Increasing max_depth.
+2. Reducing min_samples_leaf.
+3. Reducing min_samples_split.
+4. Checking feature quality.
+5. Checking whether the data contains useful patterns.
+
+
+Q41. Why might a small change in training data create
+     a different Decision Tree?
+
+Answer:
+Decision Trees can be sensitive to small data changes.
+A small change can alter the selected split at an early
+node, which can change the structure of later branches.
+
+
+Q42. Why should we use a test dataset?
+
+Answer:
+The test dataset estimates how well the trained model
+performs on unseen data.
+
+It helps identify whether the model generalizes beyond
+the examples used during training.
+
+
+Q43. Is feature importance the same as causation?
+
+Answer:
+No.
+
+Feature importance describes how a feature contributes
+to the fitted model's decisions.
+
+It does not prove that changing the feature causes
+the target outcome to change.
+
+
+Q44. Why can a Decision Tree be useful for house-price
+     prediction?
+
+Answer:
+A Decision Tree Regressor can learn non-linear rules
+from features such as area, number of bedrooms, and age.
+
+It divides the feature space into regions and predicts
+a numerical value for each leaf.
+
+
+Q45. Why might Random Forest perform differently from
+     a single Decision Tree?
+
+Answer:
+Random Forest combines predictions from multiple trees
+trained with randomness in their data and feature
+selection.
+
+This often reduces variance compared with a single
+tree, although the result depends on the dataset and
+model settings.
+
+
+============================================================
+             END OF INTERVIEW QUESTIONS
+============================================================
