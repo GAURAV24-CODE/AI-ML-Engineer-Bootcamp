@@ -1,0 +1,95 @@
+1. What is Random Forest?
+Ans:
+Random Forest is an ensemble learning algorithm that
+combines multiple Decision Trees.
+
+2. What is Random Forest Regression?
+Ans:
+It is used to predict continuous numerical values such
+as price, salary, or sales.
+
+3. How does Random Forest Regression work?
+Ans:
+It builds multiple Decision Trees and averages their
+predictions to produce the final prediction.
+
+4. What is Bagging?
+Ans:
+Bagging means Bootstrap Aggregation. It trains multiple
+models on bootstrap samples and combines their predictions.
+
+5. What is Bootstrap Sampling?
+Ans:
+Randomly selecting data samples WITH replacement.
+
+6. Why does Random Forest use random features?
+Ans:
+To create diverse trees and reduce correlation between
+the trees.
+
+7. How are predictions combined in regression?
+Ans:
+The predictions of all trees are averaged.
+
+8. What is n_estimators?
+Ans:
+It specifies the number of Decision Trees in the forest.
+
+9. What is max_depth?
+Ans:
+It controls the maximum depth of each Decision Tree.
+
+10. What is random_state?
+Ans:
+It makes the random process reproducible.
+
+11. Which metrics are used for Random Forest Regression?
+Ans:
+MAE, MSE, RMSE, and R².
+
+12. What is the difference between Decision Tree and
+Random Forest?
+Ans:
+Decision Tree uses one tree, while Random Forest uses
+multiple Decision Trees.
+
+13. Why is Random Forest better than a single Decision Tree
+in many cases?
+Ans:
+Combining many trees can reduce variance and make
+predictions more stable.
+
+14. Does Random Forest require feature scaling?
+Ans:
+Generally, no. Tree-based models do not require
+standardization for their splitting process.
+
+15. What is feature importance?
+Ans:
+It is an estimate of how useful each feature was for the
+fitted tree ensemble.
+
+16. What is the main disadvantage of Random Forest?
+Ans:
+It can require more memory and computation and is less
+interpretable than a single Decision Tree.
+
+17. What is the difference between Random Forest
+Classification and Regression?
+Ans:
+Classification → Majority Voting
+Regression → Average Prediction
+
+18. Write basic Random Forest Regression code.
+Ans:
+
+from sklearn.ensemble import RandomForestRegressor
+
+model = RandomForestRegressor(
+    n_estimators=100,
+    random_state=42
+)
+
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
