@@ -1,0 +1,411 @@
+============================================================
+        DAY 25 - DECISION TREE CHEAT SHEET
+             AI/ML ENGINEER BOOTCAMP
+============================================================
+
+1. WHAT IS A DECISION TREE?
+---------------------------
+A Decision Tree is a supervised machine learning algorithm
+that makes predictions by learning a sequence of conditions
+from the training data.
+
+It looks like a flowchart containing questions and decisions.
+
+Example:
+                 Area > 1000?
+                 /          \
+               Yes           No
+               /              \
+         High Price         Low Price
+
+
+2. TYPES OF DECISION TREE
+-------------------------
+1. DecisionTreeClassifier
+   Used for classification.
+   Predicts categories or class labels.
+
+   Example: Spam / Not Spam
+            Benign / Malignant
+
+2. DecisionTreeRegressor
+   Used for regression.
+   Predicts continuous numerical values.
+
+   Example: House price
+            Salary prediction
+
+
+3. IMPORTANT TERMINOLOGY
+------------------------
+Root Node:
+The first node of the tree.
+
+Decision Node:
+A node where a condition is checked.
+
+Branch:
+The path connecting nodes.
+
+Leaf Node:
+The final node containing the prediction.
+
+Splitting:
+Dividing data into smaller groups.
+
+Parent Node:
+The node that is split.
+
+Child Node:
+The nodes created after splitting.
+
+Depth:
+The number of levels in the tree.
+
+
+4. HOW DOES A DECISION TREE WORK?
+---------------------------------
+Step 1: Start with the complete training dataset.
+Step 2: Select a feature for splitting.
+Step 3: Find a suitable splitting condition.
+Step 4: Divide the data into smaller groups.
+Step 5: Repeat the process for child nodes.
+Step 6: Stop when a stopping condition is reached.
+Step 7: Use the leaf node to make predictions.
+
+
+5. CLASSIFICATION VS REGRESSION
+-------------------------------
+Classification:
+- Predicts categorical values.
+- Example: Pass or Fail.
+- Common class: DecisionTreeClassifier.
+
+Regression:
+- Predicts numerical values.
+- Example: House price in lakhs.
+- Common class: DecisionTreeRegressor.
+
+
+6. GINI IMPURITY
+----------------
+Gini Impurity measures how mixed the classes are
+within a node.
+
+Formula:
+
+Gini = 1 - Sum(p_i ** 2)
+
+Where:
+p_i = proportion of class i.
+
+Interpretation:
+Gini = 0 means the node is pure.
+Lower Gini generally indicates a purer node.
+
+Used by:
+DecisionTreeClassifier(criterion="gini")
+
+
+7. ENTROPY
+----------
+Entropy measures the uncertainty or impurity of a node.
+
+Formula:
+
+Entropy = -Sum(p_i * log2(p_i))
+
+Interpretation:
+Entropy = 0 means the node is pure.
+Higher entropy means greater class uncertainty.
+
+Used by:
+DecisionTreeClassifier(criterion="entropy")
+
+
+8. INFORMATION GAIN
+-------------------
+Information Gain measures the reduction in entropy
+after a split.
+
+Formula:
+
+Information Gain =
+Parent Entropy - Weighted Child Entropy
+
+A split with greater information gain reduces
+uncertainty more.
+
+It is commonly used with the entropy criterion.
+
+
+9. SPLITTING CRITERIA
+---------------------
+For Classification:
+- gini
+- entropy
+- log_loss (supported by current scikit-learn versions)
+
+For Regression:
+- squared_error
+- absolute_error
+- friedman_mse
+- poisson (for suitable non-negative targets)
+
+Example:
+
+DecisionTreeClassifier(criterion="gini")
+
+DecisionTreeRegressor(criterion="squared_error")
+
+
+10. OVERFITTING AND UNDERFITTING
+--------------------------------
+Overfitting:
+The tree learns the training data too closely.
+Training performance may be high, but test performance
+may be poor.
+
+Underfitting:
+The tree is too simple to learn important patterns.
+Both training and test performance may be poor.
+
+Solutions:
+- Control max_depth.
+- Increase min_samples_split.
+- Increase min_samples_leaf.
+- Use pruning.
+- Evaluate using unseen test data.
+
+
+11. IMPORTANT HYPERPARAMETERS
+-----------------------------
+max_depth:
+Maximum depth of the tree.
+
+min_samples_split:
+Minimum number of samples required to split a node.
+
+min_samples_leaf:
+Minimum number of samples required in a leaf.
+
+max_leaf_nodes:
+Maximum number of leaf nodes.
+
+criterion:
+Function used to measure split quality.
+
+random_state:
+Controls randomness for reproducibility.
+
+Example:
+
+DecisionTreeClassifier(
+    criterion="gini",
+    max_depth=4,
+    min_samples_split=2,
+    min_samples_leaf=1,
+    random_state=42
+)
+
+
+12. BASIC CLASSIFICATION CODE
+-----------------------------
+from sklearn.tree import DecisionTreeClassifier
+
+model = DecisionTreeClassifier(
+    max_depth=4,
+    random_state=42
+)
+
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+
+
+13. BASIC REGRESSION CODE
+-------------------------
+from sklearn.tree import DecisionTreeRegressor
+
+model = DecisionTreeRegressor(
+    max_depth=4,
+    random_state=42
+)
+
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+
+
+14. MODEL EVALUATION
+--------------------
+Classification Metrics:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
+
+Regression Metrics:
+- MAE
+- MSE
+- RMSE
+- R-squared (R2)
+
+
+15. VISUALIZE A DECISION TREE
+-----------------------------
+from sklearn.tree import plot_tree
+import matplotlib.pyplot as plt
+
+plt.figure(figsize=(15, 8))
+
+plot_tree(
+    model,
+    feature_names=X.columns,
+    filled=True,
+    rounded=True
+)
+
+plt.show()
+
+
+16. FEATURE IMPORTANCE
+----------------------
+Feature importance estimates how much each feature
+contributes to the fitted tree's split decisions.
+
+Code:
+
+importance = model.feature_importances_
+
+Important:
+- Higher importance means greater contribution to
+  the tree's splitting decisions.
+- It does not prove that a feature causes the target.
+- Importance can be misleading with correlated features.
+
+
+17. ADVANTAGES
+--------------
+1. Easy to understand and interpret.
+2. Can model non-linear relationships.
+3. Requires little data preprocessing.
+4. Usually does not require feature scaling.
+5. Supports classification and regression.
+6. Can capture feature interactions.
+
+
+18. DISADVANTAGES
+-----------------
+1. Can overfit the training data.
+2. Small data changes can create a different tree.
+3. Deep trees can become difficult to interpret.
+4. A single tree may have high variance.
+5. Greedy splitting does not guarantee a globally
+   optimal tree.
+
+
+19. DECISION TREE VS KNN
+-----------------------
+Decision Tree:
+- Learns rules from training data.
+- Usually does not require scaling.
+- Prediction follows tree branches.
+
+KNN:
+- Predicts using nearby training examples.
+- Usually benefits from feature scaling.
+- Prediction depends on distance and k.
+
+
+20. DECISION TREE VS RANDOM FOREST
+----------------------------------
+Decision Tree:
+- Uses a single tree.
+- Easier to visualize.
+- Can have high variance.
+
+Random Forest:
+- Combines predictions from multiple trees.
+- Often reduces variance.
+- Usually less interpretable than one tree.
+
+
+21. IMPORTANT INTERVIEW QUESTIONS
+---------------------------------
+Q1. What is a Decision Tree?
+A. A supervised learning algorithm that makes predictions
+   using feature-based decision rules.
+
+Q2. Can a Decision Tree perform regression?
+A. Yes. DecisionTreeRegressor predicts numerical values.
+
+Q3. What is Gini Impurity?
+A. A measure of class impurity in a node.
+
+Q4. What is Entropy?
+A. A measure of uncertainty in a node.
+
+Q5. What is Information Gain?
+A. The reduction in entropy after a split.
+
+Q6. What is a leaf node?
+A. A terminal node that provides the prediction.
+
+Q7. How can overfitting be controlled?
+A. Limit tree depth, increase minimum sample requirements,
+   or use pruning.
+
+Q8. Does a Decision Tree require feature scaling?
+A. Usually no.
+
+Q9. What is feature importance?
+A. An estimate of how much features contribute to
+   the tree's splitting decisions.
+
+Q10. What is the main difference between a Decision Tree
+     and a Random Forest?
+A. A Decision Tree uses one tree; a Random Forest combines
+   multiple trees.
+
+
+22. QUICK REVISION
+------------------
+Algorithm:
+Decision Tree
+
+Learning Type:
+Supervised Learning
+
+Tasks:
+Classification and Regression
+
+Classification Model:
+DecisionTreeClassifier
+
+Regression Model:
+DecisionTreeRegressor
+
+Classification Splitting:
+Gini / Entropy
+
+Regression Splitting:
+Squared Error / Absolute Error
+
+Main Overfitting Control:
+max_depth
+
+Feature Scaling:
+Usually not required
+
+Main Weakness:
+Overfitting and high variance
+
+Ensemble Extension:
+Random Forest
+
+
+============================================================
+              END OF DAY 25 CHEAT SHEET
+============================================================
