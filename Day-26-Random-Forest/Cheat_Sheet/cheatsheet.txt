@@ -1,0 +1,130 @@
+DAY 26 — RANDOM FOREST REGRESSION
+=================================
+
+1. RANDOM FOREST
+----------------
+Random Forest = Ensemble of multiple Decision Trees.
+
+Regression → Average predictions
+Classification → Majority voting
+
+
+2. RANDOM FOREST REGRESSION
+---------------------------
+Used to predict continuous numerical values.
+
+Examples:
+- House Price
+- Salary
+- Sales
+- Car Price
+
+
+3. HOW IT WORKS
+---------------
+Dataset
+   ↓
+Bootstrap Samples
+   ↓
+Multiple Decision Trees
+   ↓
+Predictions
+   ↓
+Average
+   ↓
+Final Prediction
+
+
+4. BAGGING
+----------
+Bagging = Bootstrap + Aggregation
+
+Bootstrap → Random sampling WITH replacement
+Aggregation → Combine predictions
+
+Regression → Average
+Classification → Majority Vote
+
+
+5. RANDOM FEATURES
+------------------
+At tree splits, Random Forest considers
+a random subset of features.
+
+Purpose:
+- More diverse trees
+- Less correlation between trees
+- Better generalization
+
+
+6. IMPORTANT PARAMETERS
+-----------------------
+n_estimators → Number of trees
+max_depth → Maximum tree depth
+min_samples_split → Minimum samples to split
+min_samples_leaf → Minimum samples in leaf
+max_features → Features considered per split
+random_state → Reproducible results
+
+
+7. BASIC CODE
+-------------
+from sklearn.ensemble import RandomForestRegressor
+
+model = RandomForestRegressor(
+    n_estimators=100,
+    random_state=42
+)
+
+model.fit(X_train, y_train)
+
+y_pred = model.predict(X_test)
+
+
+8. REGRESSION METRICS
+---------------------
+MAE  → Average absolute error
+MSE  → Average squared error
+RMSE → √MSE
+R²   → Measures explained variation / fit
+
+
+9. FEATURE IMPORTANCE
+---------------------
+model.feature_importances_
+
+Shows tree-based importance estimates
+for the features.
+
+
+10. DECISION TREE vs RANDOM FOREST
+----------------------------------
+Decision Tree → One tree
+Random Forest → Many trees
+
+Decision Tree → Higher variance
+Random Forest → Reduces variance
+
+
+11. ADVANTAGES
+--------------
+- Handles nonlinear relationships
+- Reduces variance
+- More robust than one tree
+- No feature scaling required for tree splits
+- Provides feature importance
+
+
+12. KEY MEMORY
+--------------
+Random Forest Regression =
+Many Decision Trees
++ Bootstrap Sampling
++ Random Features
++ Average Predictions
+
+
+INTERVIEW LINE:
+Random Forest Regression builds multiple
+Decision Trees and averages their numerical
+predictions to produce the final prediction.
