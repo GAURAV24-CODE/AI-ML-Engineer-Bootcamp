@@ -1,0 +1,91 @@
+# Day 28: Naive Bayes Interview Questions
+
+## Basic Questions
+
+**1. What is Naive Bayes?**  
+Naive Bayes is a supervised machine learning algorithm used mainly for classification based on Bayes' Theorem.
+
+**2. Why is it called Naive Bayes?**  
+Because it assumes features are conditionally independent given the class.
+
+**3. What is Bayes' Theorem?**  
+P(A|B) = P(B|A) × P(A) / P(B)
+
+**4. What are prior and posterior probabilities?**  
+Prior is the initial probability; posterior is the updated probability after observing evidence.
+
+**5. What are the types of Naive Bayes?**  
+GaussianNB, MultinomialNB, and BernoulliNB.
+
+## Intermediate Questions
+
+**6. When do we use GaussianNB?**  
+For continuous numerical features when a Gaussian distribution assumption is reasonable.
+
+**7. When do we use MultinomialNB?**  
+For count-based features, such as word counts in spam detection.
+
+**8. When do we use BernoulliNB?**  
+For binary features, such as whether a word is present or absent.
+
+**9. What is Laplace smoothing?**  
+A technique that prevents zero probability estimates for unseen feature events.
+
+**10. What is CountVectorizer?**  
+A tool that converts text into numerical word-count features.
+
+**11. Can Naive Bayes handle multiclass classification?**  
+Yes, it can classify data into multiple classes.
+
+**12. What are the advantages of Naive Bayes?**  
+It is simple, fast, and often effective for text classification.
+
+**13. What are its limitations?**  
+The independence assumption may be unrealistic, and probability estimates may be inaccurate.
+
+**14. How do you evaluate a Naive Bayes model?**  
+Using accuracy, precision, recall, F1-score, and a confusion matrix.
+
+**15. What is the difference between Naive Bayes and Logistic Regression?**  
+Naive Bayes uses Bayes' Theorem and an independence assumption; Logistic Regression learns a discriminative classification model.
+
+## Practical Questions
+
+**16. Which Naive Bayes model is commonly used for spam detection?**  
+MultinomialNB is commonly used with word-count features.
+
+**17. Why do we use `fit_transform()` on training data?**  
+To learn the vocabulary and convert training text into numerical features.
+
+**18. Why use `transform()` on test data?**  
+To use the training vocabulary without learning from the test set.
+
+**19. How do you train a Naive Bayes model in Python?**
+```python
+model = MultinomialNB()
+model.fit(X_train_counts, y_train)
+```
+
+**20. How do you make predictions?**
+```python
+y_pred = model.predict(X_test_counts)
+```
+
+**21. Can Naive Bayes be used for regression?**  
+It is primarily a classification algorithm, not a standard regression algorithm.
+
+**22. Give three real-world applications.**  
+Spam detection, sentiment analysis, and news classification.
+
+## Important Revision
+
+- Algorithm type: Supervised learning
+- Main theorem: Bayes' Theorem
+- Key assumption: Conditional independence
+- Text counts: MultinomialNB
+- Binary features: BernoulliNB
+- Continuous features: GaussianNB
+- Common issue: Zero-frequency probabilities
+- Common solution: Laplace smoothing
+
+End of Day 28 Interview Questions
