@@ -1,0 +1,71 @@
+# Day 28: Naive Bayes Cheat Sheet
+
+## 1. What is Naive Bayes?
+A supervised machine learning algorithm used mainly for classification, based on Bayes' Theorem.
+
+## 2. Bayes' Theorem
+P(A|B) = P(B|A) × P(A) / P(B)
+
+- Prior: Initial probability
+- Likelihood: Probability of evidence given a class
+- Posterior: Updated probability
+- Evidence: Overall probability of the observed data
+
+## 3. Naive Assumption
+Features are assumed to be conditionally independent given the class.
+
+## 4. Types
+- **GaussianNB:** Continuous numerical features.
+- **MultinomialNB:** Word counts and frequencies.
+- **BernoulliNB:** Binary features (present/absent).
+
+## 5. Workflow
+Dataset → Preprocessing → Train-Test Split → Train Model → Predict → Evaluate
+
+## 6. Basic Python Code
+```python
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Convert text into word counts
+vectorizer = CountVectorizer()
+X_train_counts = vectorizer.fit_transform(X_train)
+X_test_counts = vectorizer.transform(X_test)
+
+# Train the model
+model = MultinomialNB()
+model.fit(X_train_counts, y_train)
+
+# Predict and evaluate
+y_pred = model.predict(X_test_counts)
+print("Accuracy:", accuracy_score(y_test, y_pred))
+```
+
+## 7. Advantages
+- Fast and simple.
+- Effective for many text-classification tasks.
+- Works with high-dimensional data.
+
+## 8. Limitations
+- Independence assumption may be unrealistic.
+- Probability estimates may be inaccurate.
+- Needs representative training data.
+
+## 9. Applications
+- Email spam detection
+- Sentiment analysis
+- News classification
+- Document categorization
+- Language identification
+
+## 10. Interview Questions
+1. What is Naive Bayes?
+2. Why is it called naive?
+3. What is Bayes' Theorem?
+4. What are its three main types?
+5. What is Laplace smoothing?
+6. Why use MultinomialNB for word counts?
+
+**Key takeaway:** Naive Bayes predicts the most probable class using Bayes' Theorem and a conditional-independence assumption.
