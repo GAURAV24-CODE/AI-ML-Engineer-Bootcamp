@@ -1,0 +1,61 @@
+DAY 27/45 - SVM INTERVIEW QUESTIONS AND ANSWERS
+
+1. What is SVM?
+SVM is a supervised machine learning algorithm used for classification and regression.
+
+2. What are support vectors?
+They are the data points closest to the decision boundary that help determine its position.
+
+3. What is a hyperplane?
+A hyperplane is a decision boundary used to separate different classes.
+
+4. What is the margin in SVM?
+The margin is the distance between the decision boundary and the nearest data points.
+
+5. What is the difference between SVC and SVR?
+SVC predicts classes, while SVR predicts continuous numerical values.
+
+6. What is a kernel in SVM?
+A kernel helps SVM learn complex, nonlinear patterns in data.
+
+7. Name some common SVM kernels.
+Linear, Polynomial, RBF, and Sigmoid.
+
+8. What is the RBF kernel?
+RBF is a popular kernel that helps SVM model nonlinear decision boundaries.
+
+9. What does the C parameter do?
+It controls the trade-off between a wider margin and penalizing training errors.
+
+10. What is gamma in SVM?
+Gamma controls how far the influence of individual training points extends for kernels such as RBF.
+
+11. Why is feature scaling important in SVM?
+Features with larger numerical ranges can disproportionately affect SVM's calculations.
+
+12. Why use StandardScaler()?
+It standardizes features to have approximately zero mean and unit variance.
+
+13. Why use a pipeline in SVM?
+A pipeline combines preprocessing and model training, applying transformations consistently.
+
+14. What is epsilon in SVR?
+It defines a tolerance range around predictions where errors are not penalized.
+
+15. How do you evaluate SVC?
+Common metrics include accuracy, precision, recall, F1-score, and the confusion matrix.
+
+16. How do you evaluate SVR?
+Common metrics include MAE, MSE, RMSE, and R-squared.
+
+17. What are the advantages of SVM?
+It can perform well in high-dimensional spaces and model both linear and nonlinear patterns.
+
+18. What are the disadvantages of SVM?
+It can be slow on large datasets and sensitive to feature scaling and hyperparameter selection.
+
+19. What is overfitting in SVM?
+Overfitting occurs when a model learns training data too closely and performs poorly on unseen data.
+
+20. How can you tune SVM hyperparameters?
+Use methods such as GridSearchCV or RandomizedSearchCV with cross-validation.
