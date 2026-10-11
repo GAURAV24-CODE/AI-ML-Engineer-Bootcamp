@@ -1,0 +1,90 @@
+# 🔵 Day 27 — SVM Cheat Sheet
+
+## 1. SVM Basics
+- **SVM:** Supervised ML algorithm for classification and regression.
+- **Hyperplane:** Decision boundary separating classes.
+- **Support Vectors:** Points closest to the decision boundary.
+- **Margin:** Distance between the boundary and nearest points.
+- **Kernel Trick:** Helps create nonlinear decision boundaries.
+
+## 2. SVM Workflow
+
+```text
+      Dataset
+         ↓
+   Train-Test Split
+         ↓
+    Feature Scaling
+         ↓
+     Train SVM
+         ↓
+      Predict
+         ↓
+  Model Evaluation
+```
+
+## 3. Types of SVM
+- `SVC()` — Classification
+- `SVR()` — Regression
+
+## 4. Types of Kernels
+- `linear` — Linear boundary
+- `poly` — Polynomial boundary
+- `rbf` — Nonlinear boundary
+- `sigmoid` — Sigmoid-based kernel
+
+## 5. Important Parameters
+- **C:** Controls penalty for classification errors.
+  - Low C → More tolerance for violations
+  - High C → Stronger penalty for violations
+- **Gamma:** Controls influence of training points in nonlinear kernels.
+  - Low gamma → Smoother boundary
+  - High gamma → More complex boundary
+
+## 6. Important Methods & Attributes
+- `fit()` — Train model
+- `predict()` — Make predictions
+- `support_vectors_` — Support vector coordinates
+- `support_` — Support vector indices
+- `n_support_` — Number of support vectors per class
+
+## 7. Essential Code
+
+```python
+from sklearn.svm import SVC
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+
+# Scale features and train SVM
+model = Pipeline([
+    ("scaler", StandardScaler()),
+    ("svm", SVC(kernel="rbf", C=1.0, gamma="scale"))
+])
+
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+```
+
+## 8. Model Evaluation
+- `accuracy_score()` — Overall accuracy
+- `confusion_matrix()` — Correct and incorrect predictions
+- `classification_report()` — Precision, recall, F1-score
+
+## 9. Quick Revision Diagram
+
+```text
+          SVM
+           |
+     ┌─────┴─────┐
+     |           |
+Classification  Regression
+     |           |
+    SVC()       SVR()
+     |
+   Kernels
+     |
+ ┌───┼────┬─────┐
+Linear Poly  RBF Sigmoid
+```
+
+**Remember:** Scale features before SVM, and tune `C`, `gamma`, and `kernel` using cross-validation.
