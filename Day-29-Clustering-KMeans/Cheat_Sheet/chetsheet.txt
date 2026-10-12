@@ -1,0 +1,75 @@
+DAY 29/45 - K-MEANS CLUSTERING CHEAT SHEET
+==========================================
+
+1. WHAT IS K-MEANS?
+K-Means is an unsupervised ML algorithm that groups similar data
+points into K clusters.
+
+2. WORKFLOW
+1. Choose K (number of clusters).
+2. Initialize centroids.
+3. Assign points to nearest centroid.
+4. Update centroids using the mean.
+5. Repeat until convergence.
+
+3. IMPORTANT TERMS
+- K: Number of clusters.
+- Centroid: Center of a cluster.
+- Inertia/WCSS: Sum of squared distances to centroids.
+- Elbow Method: Helps select K.
+- Silhouette Score: Measures cluster quality.
+- K-Means++: Improved centroid initialization.
+
+4. PYTHON CODE
+from sklearn.cluster import KMeans
+from sklearn.preprocessing import StandardScaler
+
+# Select and scale numerical features
+X = df[["Annual_Income", "Spending_Score"]]
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Create and train the K-Means model
+kmeans = KMeans(
+    n_clusters=3,      # Create 3 clusters
+    init="k-means++",  # Initialize centroids
+    n_init=10,         # Try 10 initializations
+    random_state=42    # Reproducible results
+)
+
+# Assign cluster labels to customers
+df["Cluster"] = kmeans.fit_predict(X_scaled)
+
+# Display the clusters
+print(df)
+
+5. ADVANTAGES
+- Simple and efficient.
+- Useful for customer segmentation.
+- Works well for many numerical datasets.
+
+6. LIMITATIONS
+- Requires K in advance.
+- Sensitive to outliers and initialization.
+- Feature scaling is often important.
+- Struggles with irregular-shaped clusters.
+
+7. INTERVIEW QUESTIONS
+Q1. What is K-Means?
+Ans: An unsupervised clustering algorithm.
+
+Q2. How do you choose K?
+Ans: Elbow Method and Silhouette Score.
+
+Q3. What is a centroid?
+Ans: The mean position of points in a cluster.
+
+Q4. Why scale features?
+Ans: K-Means uses distance calculations.
+
+Q5. What does fit_predict() do?
+Ans: Trains the model and returns cluster labels.
+
+KEY TAKEAWAY:
+K-Means = Choose K + Assign Points + Update Centroids.
+==========================================
