@@ -1,0 +1,102 @@
+DAY 29/45 - K-MEANS CLUSTERING INTERVIEW QUESTIONS
+===================================================
+
+BASIC QUESTIONS
+---------------
+
+Q1. What is K-Means clustering?
+Ans: K-Means is an unsupervised machine learning algorithm that
+groups similar data points into K clusters.
+
+Q2. Why is K-Means called unsupervised learning?
+Ans: Because it works with unlabeled data and discovers patterns
+without a target column.
+
+Q3. What is K in K-Means?
+Ans: K represents the number of clusters to create.
+
+Q4. What is a centroid?
+Ans: The mean position of all data points assigned to a cluster.
+
+Q5. What are the main steps of K-Means?
+Ans: Choose K, initialize centroids, assign points, update
+centroids, and repeat until convergence.
+
+INTERMEDIATE QUESTIONS
+----------------------
+
+Q6. How do you select the best value of K?
+Ans: Use the Elbow Method, Silhouette Score, and domain knowledge.
+
+Q7. What is the Elbow Method?
+Ans: It plots inertia against K and looks for the point where
+the reduction in inertia begins to slow down.
+
+Q8. What is inertia?
+Ans: The sum of squared distances between data points and their
+assigned cluster centroids.
+
+Q9. Why is feature scaling important in K-Means?
+Ans: K-Means uses distance calculations. Features with larger
+numerical ranges can dominate without scaling.
+
+Q10. What is K-Means++?
+Ans: An initialization method that selects starting centroids
+more strategically.
+
+Q11. What is the Silhouette Score?
+Ans: A metric that measures how well points fit their own cluster
+compared with neighboring clusters. It ranges from -1 to +1.
+
+Q12. Is K-Means sensitive to outliers?
+Ans: Yes. Outliers can pull centroids away from the main groups.
+
+ADVANCED QUESTIONS
+------------------
+
+Q13. What are the limitations of K-Means?
+Ans: It requires K in advance, is sensitive to outliers and
+initialization, and may struggle with irregular-shaped clusters.
+
+Q14. Can K-Means handle categorical data directly?
+Ans: Standard K-Means is designed for numerical features.
+Categorical data needs suitable encoding, and other algorithms
+may be more appropriate.
+
+Q15. What is the difference between K-Means and Hierarchical
+Clustering?
+Ans: K-Means forms K clusters using centroids. Hierarchical
+Clustering builds a hierarchy of clusters, often visualized
+using a dendrogram.
+
+Q16. What does random_state=42 do?
+Ans: It makes randomized initialization reproducible.
+
+Q17. What is the difference between fit() and predict()?
+Ans: fit() learns the clusters. predict() assigns new points to
+the learned clusters.
+
+Q18. What does fit_predict() do?
+Ans: It fits the model and returns cluster labels for the data.
+
+PRACTICAL QUESTIONS
+-------------------
+
+Q19. Give one real-world application of K-Means.
+Ans: Customer segmentation based on income and spending score.
+
+Q20. What happens when K is too large?
+Ans: The data may be split into too many small clusters, making
+the groups less useful.
+
+Q21. Does lower inertia always mean a better model?
+Ans: No. Inertia usually decreases as K increases, so use other
+metrics and domain knowledge to select K.
+
+Q22. How do you assign a new customer to a cluster?
+Ans: Scale the new customer's features using the fitted scaler
+and pass them to the trained model's predict() method.
+
+===================================================
+END OF INTERVIEW QUESTIONS
+===================================================
