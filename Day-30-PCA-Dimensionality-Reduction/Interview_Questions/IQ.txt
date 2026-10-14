@@ -1,0 +1,65 @@
+PCA INTERVIEW QUESTIONS — SHORT
+Day 30 | AI/ML Engineer Bootcamp
+====================================
+
+Q1. What is PCA?
+PCA reduces the number of features while preserving variance.
+
+Q2. What is the full form of PCA?
+Principal Component Analysis.
+
+Q3. Is PCA supervised or unsupervised?
+Unsupervised learning.
+
+Q4. Why is PCA used?
+For dimensionality reduction and data visualization.
+
+Q5. What is PC1?
+The component capturing maximum variance.
+
+Q6. What is PC2?
+The next-highest variance component, orthogonal to PC1.
+
+Q7. Why is scaling important in PCA?
+To prevent large-scale features from dominating.
+
+Q8. What is explained variance?
+The variance captured by a component.
+
+Q9. What does PCA(n_components=2) do?
+Reduces the data to two components.
+
+Q10. What does PCA(n_components=0.95) mean?
+Retains approximately 95% of the variance.
+
+Q11. Does PCA use target labels?
+No.
+
+Q12. What is a major disadvantage of PCA?
+Reduced interpretability and possible information loss.
+
+Q13. PCA vs. feature selection?
+PCA creates new features; feature selection keeps original features.
+
+Q14. PCA vs. LDA?
+PCA maximizes variance; LDA focuses on class separation.
+
+Q15. Can PCA improve accuracy?
+Sometimes, but not always.
+
+Q16. Can PCA be used before Logistic Regression?
+Yes.
+
+Q17. How do you avoid data leakage with PCA?
+Split first; fit PCA only on training data.
+
+Q18. Are principal components correlated?
+They are uncorrelated in standard PCA.
+
+Q19. Is PCA sensitive to outliers?
+Yes.
+
+Q20. How do you choose the number of components?
+Use cumulative explained variance and model evaluation.
+
+END — PCA INTERVIEW REVISION
