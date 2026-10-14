@@ -1,0 +1,124 @@
+DAY 30 — PCA CHEATSHEET
+AI/ML ENGINEER BOOTCAMP
+================================
+
+1. WHAT IS PCA?
+PCA = Principal Component Analysis.
+An unsupervised technique used for dimensionality reduction.
+
+2. WHY PCA?
+- Reduce features
+- Simplify data
+- Visualize high-dimensional data
+- Reduce redundancy
+- Potentially speed up training
+
+3. KEY TERMS
+- PC1: Captures maximum variance.
+- PC2: Captures next-highest variance, orthogonal to PC1.
+- Explained Variance: Information variation captured.
+- Scaling: Makes features comparable.
+- Dimensionality Reduction: Reduces feature count.
+
+4. PCA WORKFLOW
+Dataset → Train-Test Split → Scaling → PCA → ML Model → Evaluation
+
+5. BASIC PYTHON CODE
+--------------------------------
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X_train)
+
+pca = PCA(n_components=2)
+X_train_pca = pca.fit_transform(X_scaled)
+
+print(pca.explained_variance_ratio_)
+print(pca.explained_variance_ratio_.sum())
+
+6. IMPORTANT PARAMETERS
+--------------------------------
+PCA(n_components=2)
+Keeps 2 components.
+
+PCA(n_components=0.95)
+Keeps enough components to preserve about 95% variance.
+
+fit_transform()
+Learns PCA and transforms training data.
+
+transform()
+Transforms test data using learned PCA.
+
+7. PCA WITH A MODEL
+--------------------------------
+from sklearn.pipeline import make_pipeline
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+
+model = make_pipeline(
+    StandardScaler(),
+    PCA(n_components=0.95),
+    LogisticRegression(max_iter=2000)
+)
+
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+
+8. ADVANTAGES
+--------------------------------
+- Fewer features
+- Easier visualization
+- Reduced redundancy
+- May reduce training time
+
+9. DISADVANTAGES
+--------------------------------
+- Information can be lost
+- Components are difficult to interpret
+- Sensitive to outliers
+- Does not guarantee better accuracy
+
+10. PCA VS LDA
+--------------------------------
+PCA: Unsupervised; maximizes variance.
+LDA: Supervised; focuses on class separation.
+
+11. COMMON MISTAKES
+--------------------------------
+- Forgetting feature scaling
+- Fitting PCA before splitting data
+- Using fit_transform() on test data
+- Assuming PCA always improves accuracy
+- Confusing variance retained with accuracy
+
+12. INTERVIEW QUICK REVISION
+--------------------------------
+Q: Is PCA supervised?
+A: No, it is unsupervised.
+
+Q: What is PC1?
+A: The direction of maximum variance.
+
+Q: Why scale before PCA?
+A: To prevent large-scale features from dominating.
+
+Q: Does PCA use target labels?
+A: No.
+
+Q: Does 95% variance mean 95% accuracy?
+A: No.
+
+Q: How to prevent leakage?
+A: Split first; fit scaling and PCA on training data only.
+
+13. REMEMBER
+--------------------------------
+PCA = Dimensionality Reduction
+StandardScaler = Feature Scaling
+Explained Variance = Variance Captured
+Pipeline = Safer Preprocessing + Model
+
+END OF DAY 30 — PCA
