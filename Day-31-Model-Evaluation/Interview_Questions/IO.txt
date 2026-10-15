@@ -1,0 +1,164 @@
+# Day 31 — Model Evaluation Interview Questions & Answers
+
+## 1. Basic Model Evaluation
+
+**Q1. What is model evaluation?**  
+Model evaluation measures how well a machine learning model performs on unseen data using suitable metrics.
+
+**Q2. What is the difference between classification and regression?**  
+Classification predicts categories, such as Pass/Fail. Regression predicts continuous values, such as price or marks.
+
+**Q3. What is generalization?**  
+Generalization is the ability of a model to make accurate predictions on new, unseen data.
+
+**Q4. Why do we split data into training and testing sets?**  
+Training data teaches the model; testing data evaluates its performance on unseen examples.
+
+**Q5. What does `random_state=42` do?**  
+It makes randomized operations reproducible so the same split can be obtained when the setup is unchanged.
+
+## 2. Classification Metrics
+
+**Q6. What is accuracy?**  
+The proportion of all predictions that are correct.
+
+Formula: (TP + TN) / (TP + TN + FP + FN)
+
+**Q7. What is precision?**  
+Of all predicted positive cases, the proportion that are actually positive.
+
+Formula: TP / (TP + FP)
+
+**Q8. What is recall?**  
+Of all actual positive cases, the proportion correctly identified.
+
+Formula: TP / (TP + FN)
+
+**Q9. What is the F1-score?**  
+The harmonic mean of precision and recall.
+
+Formula: 2 × (Precision × Recall) / (Precision + Recall)
+
+**Q10. When is recall more important than precision?**  
+When missing a positive case is especially costly, such as failing to identify a potentially fraudulent transaction.
+
+**Q11. What is specificity?**  
+The proportion of actual negative cases correctly identified.
+
+Formula: TN / (TN + FP)
+
+**Q12. Why can accuracy be misleading?**  
+With imbalanced data, a model may achieve high accuracy by predicting the majority class while missing many minority-class cases.
+
+## 3. Confusion Matrix
+
+**Q13. What is a confusion matrix?**  
+A table comparing actual and predicted classes using true positives, true negatives, false positives, and false negatives.
+
+**Q14. What is a false positive (FP)?**  
+The model predicts positive, but the actual class is negative.
+
+**Q15. What is a false negative (FN)?**  
+The model predicts negative, but the actual class is positive.
+
+**Q16. How do you create a confusion matrix in Scikit-learn?**
+```python
+from sklearn.metrics import confusion_matrix
+
+print(confusion_matrix(y_test, y_pred))
+```
+
+For binary labels `[0, 1]`, the standard layout is `[[TN, FP], [FN, TP]]`.
+
+## 4. Regression Metrics
+
+**Q17. What is MAE?**  
+Mean Absolute Error is the average absolute difference between actual and predicted values.
+
+**Q18. What is MSE?**  
+Mean Squared Error averages the squared prediction errors, penalizing larger errors more heavily.
+
+**Q19. What is RMSE?**  
+Root Mean Squared Error is the square root of MSE and uses the same units as the target.
+
+**Q20. What is R² score?**  
+R² measures performance relative to predicting the target mean. It can be negative when the model performs worse than that baseline.
+
+**Q21. Which regression metric is best?**  
+It depends on the task. MAE is easy to interpret, RMSE penalizes large errors more strongly, and R² measures relative fit.
+
+## 5. Threshold, ROC and AUC
+
+**Q22. What is a classification threshold?**  
+A cutoff used to convert predicted probabilities into class labels.
+
+**Q23. What happens when the classification threshold decreases?**  
+The model generally predicts more positive cases, often increasing recall while potentially reducing precision.
+
+**Q24. What is an ROC curve?**  
+A plot of true positive rate against false positive rate across different classification thresholds.
+
+**Q25. What is AUC?**  
+Area Under the Curve. ROC-AUC measures how well a model ranks positive cases above negative cases. A value closer to 1 generally indicates stronger ranking performance.
+
+## 6. Overfitting and Underfitting
+
+**Q26. What is overfitting?**  
+The model learns training data too closely and performs poorly on unseen data.
+
+**Q27. What is underfitting?**  
+The model is too simple or insufficiently trained to capture the patterns, performing poorly even on training data.
+
+**Q28. How can you reduce overfitting?**  
+Use regularization, simpler models, pruning, appropriate feature selection, more representative data, or cross-validation for model selection.
+
+**Q29. What is the bias-variance trade-off?**  
+It describes the balance between errors caused by overly simple assumptions (bias) and excessive sensitivity to training data (variance).
+
+## 7. Cross-Validation
+
+**Q30. What is cross-validation?**  
+A method that evaluates a model across multiple training-validation splits.
+
+**Q31. What is K-Fold cross-validation?**  
+The data is divided into K folds. Each fold serves as validation once while the others are used for training.
+
+**Q32. What is Stratified K-Fold?**  
+A cross-validation method that attempts to preserve class proportions in each fold.
+
+**Q33. What is data leakage?**  
+When information unavailable at prediction time improperly influences model training or evaluation, producing overly optimistic results.
+
+**Q34. How can you prevent preprocessing leakage?**  
+Use a Scikit-learn pipeline so preprocessing is fitted only on each training fold.
+
+## 8. Model Comparison and Improvement
+
+**Q35. How do you compare machine learning models?**  
+Evaluate candidate models on the same data splits using appropriate metrics, preferably with cross-validation.
+
+**Q36. What is a hyperparameter?**  
+A setting chosen before or during training that controls model behavior, such as `n_neighbors` in KNN.
+
+**Q37. What is GridSearchCV?**  
+A Scikit-learn tool that searches specified hyperparameter combinations using cross-validation.
+
+**Q38. What is RandomizedSearchCV?**  
+A tool that samples a specified number of hyperparameter combinations instead of exhaustively testing the full grid.
+
+**Q39. Should you tune the model using the test set?**  
+No. Tune using training data and cross-validation, then reserve the test set for final evaluation.
+
+**Q40. How can you improve a machine learning model?**  
+Improve data quality, engineer useful features, compare algorithms, tune hyperparameters, choose suitable metrics, and check for overfitting.
+
+## Quick Revision
+
+- Classification → Accuracy, Precision, Recall, F1, ROC-AUC.
+- Regression → MAE, MSE, RMSE, R².
+- Overfitting → Good training performance, poor unseen-data performance.
+- Underfitting → Poor training and unseen-data performance.
+- Cross-validation → Evaluates performance across multiple splits.
+- GridSearchCV → Searches specified hyperparameter combinations.
+- Data leakage → Information improperly enters training or evaluation.
+- Final test set → Keep untouched during model selection.
