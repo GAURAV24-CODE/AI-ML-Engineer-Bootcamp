@@ -1,0 +1,69 @@
+# Day 31 — Model Evaluation Cheat Sheet
+
+## 1. Classification vs Regression
+- Classification: Predicts categories (Pass/Fail).
+- Regression: Predicts continuous values (Marks/Price).
+
+## 2. Train-Test Split
+- `train_test_split(X, y, test_size=0.2, random_state=42)`
+- Training data learns patterns; test data evaluates performance.
+- `stratify=y` helps preserve class proportions in classification.
+
+## 3. Classification Metrics
+- Accuracy = (TP + TN) / (TP + TN + FP + FN)
+- Precision = TP / (TP + FP)
+- Recall = TP / (TP + FN)
+- Specificity = TN / (TN + FP)
+- F1-score = 2 × (Precision × Recall) / (Precision + Recall)
+
+## 4. Confusion Matrix
+- TP: Actual positive, predicted positive.
+- TN: Actual negative, predicted negative.
+- FP: Actual negative, predicted positive.
+- FN: Actual positive, predicted negative.
+- sklearn: `confusion_matrix(y_test, y_pred)`
+
+## 5. Regression Metrics
+- MAE: Average absolute prediction error.
+- MSE: Average squared prediction error.
+- RMSE: Square root of MSE; same units as target.
+- R²: Measures fit relative to a mean-prediction baseline.
+- Lower MAE/MSE/RMSE is generally better; higher R² is generally better.
+
+## 6. Classification Threshold
+- Converts predicted probabilities into class labels.
+- Higher threshold usually increases precision and decreases recall.
+- Lower threshold usually increases recall and may decrease precision.
+
+## 7. ROC Curve and AUC
+- TPR (Recall) = TP / (TP + FN)
+- FPR = FP / (FP + TN)
+- ROC plots TPR against FPR.
+- AUC closer to 1 indicates better ranking ability.
+
+## 8. Overfitting vs Underfitting
+- Overfitting: Performs well on training data but poorly on unseen data.
+- Underfitting: Performs poorly on both training and unseen data.
+- Solutions: Regularization, simpler models, better features, more data.
+
+## 9. Cross-Validation
+- K-Fold: Splits data into K folds and evaluates across them.
+- Stratified K-Fold: Preserves class proportions.
+- Use pipelines to avoid preprocessing leakage.
+- Keep the final test set untouched during model selection.
+
+## 10. Model Comparison and Improvement
+- Compare models using the same cross-validation folds.
+- Select metrics suitable for the task.
+- Tune hyperparameters with `GridSearchCV` or `RandomizedSearchCV`.
+- Consider performance, complexity, speed, and interpretability.
+
+## 11. Basic ML Workflow
+1. Load and explore data.
+2. Separate features (X) and target (y).
+3. Split training and testing data.
+4. Train the model using `model.fit(X_train, y_train)`.
+5. Predict using `model.predict(X_test)`.
+6. Evaluate using suitable metrics.
+7. Improve and tune the model.
+8. Perform final evaluation on the test set.
