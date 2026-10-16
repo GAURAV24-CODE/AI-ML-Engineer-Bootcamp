@@ -1,0 +1,93 @@
+11. HYPERPARAMETER TUNING — INTERVIEW QUESTIONS
+================================================
+
+Q1. What is hyperparameter tuning?
+Answer: It is the process of finding the best hyperparameter
+values to improve model performance on unseen data.
+
+Q2. What is the difference between parameters and hyperparameters?
+Answer: Parameters are learned during training. Hyperparameters
+are settings chosen before or during model selection.
+
+Q3. What is GridSearchCV?
+Answer: It tests all specified hyperparameter combinations using
+cross-validation to find a good configuration.
+
+Q4. What is RandomizedSearchCV?
+Answer: It tests a selected number of sampled combinations.
+It can be faster than GridSearchCV for large search spaces.
+
+Q5. What is cross-validation?
+Answer: It splits training data into folds and evaluates the model
+across different train-validation combinations.
+
+Q6. What is the difference between GridSearchCV and
+RandomizedSearchCV?
+Answer: GridSearchCV tests every specified combination.
+RandomizedSearchCV tests a fixed number of sampled combinations.
+
+Q7. What does cv=5 mean?
+Answer: It uses 5 cross-validation folds to evaluate each
+candidate configuration.
+
+Q8. What are best_params_ and best_score_?
+Answer: best_params_ gives the best hyperparameter combination.
+best_score_ gives its best mean cross-validation score.
+
+Q9. Why should we not tune hyperparameters using test data?
+Answer: Repeatedly using test results to choose settings can
+cause biased evaluation. Keep the test set for final assessment.
+
+Q10. What is overfitting?
+Answer: The model learns training data too closely and performs
+poorly on unseen data.
+
+Q11. How can hyperparameter tuning reduce overfitting?
+Answer: By selecting settings that control model complexity,
+such as tree depth or regularization strength.
+
+Q12. Why is feature scaling important for KNN?
+Answer: KNN uses distances. Features with larger numeric ranges
+can dominate distance calculations if data is not scaled.
+
+Q13. Which hyperparameters are important for KNN?
+Answer: n_neighbors, weights, p, and metric.
+
+Q14. Which hyperparameters are important for Decision Trees?
+Answer: max_depth, min_samples_split, min_samples_leaf,
+criterion, and max_features.
+
+Q15. Which hyperparameters are important for Random Forest?
+Answer: n_estimators, max_depth, min_samples_split,
+min_samples_leaf, and max_features.
+
+Q16. What does C control in Logistic Regression?
+Answer: C is the inverse of regularization strength.
+Smaller C means stronger regularization.
+
+Q17. What does n_estimators mean in Random Forest?
+Answer: It specifies the number of decision trees in the forest.
+
+Q18. What is the purpose of a baseline model?
+Answer: It provides an initial performance score for comparison
+with tuned models.
+
+Q19. Does hyperparameter tuning always improve test accuracy?
+Answer: No. It may improve cross-validation performance but
+does not guarantee better performance on the test set.
+
+Q20. What is data leakage during model tuning?
+Answer: It occurs when information that should be unavailable
+during training influences model selection or evaluation.
+
+12. QUICK INTERVIEW REVISION
+============================
+- GridSearchCV       : Tests all specified combinations.
+- RandomizedSearchCV: Tests sampled combinations.
+- cv                 : Number of cross-validation folds.
+- scoring            : Metric used to compare models.
+- best_params_       : Best hyperparameter settings.
+- best_score_        : Best mean cross-validation score.
+- Overfitting        : Poor generalization due to excessive fitting.
+- Test set           : Reserved for final evaluation.
+- Pipeline           : Helps keep preprocessing inside each CV fold.
