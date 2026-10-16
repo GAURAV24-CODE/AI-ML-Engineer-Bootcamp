@@ -1,0 +1,118 @@
+DAY 32 — HYPERPARAMETER TUNING CHEAT SHEET
+==========================================
+
+1. IMPORTANT VARIABLES
+----------------------
+X                  : Input features
+y                  : Target/output labels
+X_train, X_test    : Training and testing features
+y_train, y_test    : Actual labels
+y_pred             : Predicted labels
+test_size=0.25     : Uses 25% data for testing
+random_state=42    : Makes results reproducible
+stratify=y         : Maintains class proportions
+
+2. IMPORTANT CONCEPTS
+---------------------
+Parameter          : Value learned during training
+Hyperparameter     : Setting chosen before training
+Overfitting        : Model learns training data too closely
+Underfitting       : Model fails to learn important patterns
+Cross-validation   : Evaluates model across multiple data folds
+Data leakage       : Improper use of information during training
+Baseline model     : Initial model used for comparison
+
+3. HYPERPARAMETER TUNING METHODS
+--------------------------------
+Manual Tuning      : Changes settings manually
+GridSearchCV       : Tests all specified parameter combinations
+RandomizedSearchCV : Tests a random sample of combinations
+param_grid         : Stores candidate hyperparameter values
+cv=4               : Uses 4 cross-validation folds
+scoring            : Metric used to compare models
+n_jobs=-1          : Uses available CPU cores in parallel
+best_params_       : Best hyperparameter combination
+best_score_        : Best mean cross-validation score
+best_estimator_    : Best fitted model
+
+4. LOGISTIC REGRESSION
+----------------------
+C                  : Regularization strength; smaller C = stronger regularization
+penalty            : Regularization type (l1, l2)
+solver             : Optimization algorithm
+max_iter           : Maximum training iterations
+class_weight       : Helps handle imbalanced classes
+
+5. DECISION TREE
+----------------
+max_depth          : Maximum tree depth
+min_samples_split  : Minimum samples needed to split a node
+min_samples_leaf   : Minimum samples required in a leaf
+criterion          : Split-quality measure (gini, entropy, log_loss)
+max_features       : Features considered at each split
+Pruning            : Reduces tree complexity
+
+6. K-NEAREST NEIGHBORS (KNN)
+----------------------------
+n_neighbors        : Number of neighbors used for prediction
+weights            : uniform or distance-based neighbor weights
+p                  : 1 = Manhattan distance; 2 = Euclidean distance
+metric             : Distance measurement method
+StandardScaler     : Scales features; important for distance-based models
+
+7. RANDOM FOREST
+----------------
+n_estimators       : Number of decision trees
+max_depth          : Maximum depth of each tree
+min_samples_split  : Minimum samples needed to split a node
+min_samples_leaf   : Minimum samples required in a leaf
+max_features       : Features considered at each split
+class_weight       : Helps handle imbalanced classes
+Ensemble Learning  : Combines multiple models
+Bootstrap Sampling : Samples data with replacement
+
+8. IMPORTANT FUNCTIONS
+----------------------
+fit()                : Trains the model
+predict()            : Predicts labels or values
+predict_proba()      : Predicts class probabilities when supported
+Pipeline()           : Combines preprocessing and a model
+StandardScaler()     : Standardizes features
+accuracy_score()     : Calculates accuracy
+classification_report(): Shows precision, recall, F1-score and support
+confusion_matrix()   : Summarizes classification predictions
+feature_importances_ : Estimates feature contributions in tree models
+
+9. EVALUATION METRICS
+---------------------
+Accuracy     : Fraction of correct predictions
+Precision    : Correct positive predictions / predicted positives
+Recall       : Correct positive predictions / actual positives
+F1-score     : Harmonic mean of precision and recall
+
+10. ESSENTIAL WORKFLOW
+----------------------
+1. Prepare X and y.
+2. Split data into training and testing sets.
+3. Apply preprocessing when required.
+4. Train a baseline model.
+5. Define hyperparameter values.
+6. Tune using GridSearchCV or RandomizedSearchCV.
+7. Select parameters using cross-validation.
+8. Evaluate on the held-out test set.
+9. Compare results and document findings.
+
+IMPORTANT REMINDERS
+-------------------
+- Keep test data separate during hyperparameter tuning.
+- Use cross-validation to compare hyperparameters.
+- Scale features for KNN and commonly for Logistic Regression.
+- Decision Trees and Random Forests generally do not require scaling.
+- Tuning does not guarantee better test performance.
+- Use Pipeline to help prevent preprocessing data leakage.
+
+DAY 32 SUMMARY
+--------------
+Hyperparameter tuning finds suitable model settings to improve
+generalization. Use cross-validation on training data for tuning
+and reserve test data for final evaluation.
