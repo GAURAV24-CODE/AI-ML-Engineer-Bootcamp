@@ -1,0 +1,46 @@
+# Day 33/45 — Ensemble Learning Interview Questions 🤖
+
+**1. What is Ensemble Learning?**  
+Combining multiple models to improve prediction performance.
+
+**2. What are the main types of Ensemble Learning?**  
+Bagging, Boosting, Voting, and Stacking.
+
+**3. What is Bagging?**  
+Training models on bootstrap samples and combining their predictions.
+
+**4. What is Boosting?**  
+Training models sequentially to improve the ensemble's predictions.
+
+**5. What is the difference between Bagging and Boosting?**  
+Bagging trains models independently; Boosting trains models sequentially.
+
+**6. What is Random Forest?**  
+An ensemble of decision trees using bootstrap sampling and random feature selection.
+
+**7. What is AdaBoost?**  
+A boosting algorithm that gives more emphasis to previously misclassified examples.
+
+**8. What is Gradient Boosting?**  
+An algorithm that builds models sequentially to optimize a loss function.
+
+**9. What is a Voting Classifier?**  
+It combines predictions from multiple classification models.
+
+**10. What is the difference between Hard and Soft Voting?**  
+Hard voting uses class labels; Soft voting averages predicted probabilities.
+
+**11. What is a weak learner?**  
+A simple model that performs only slightly better than random guessing.
+
+**12. Does Ensemble Learning always improve accuracy?**  
+No. Performance depends on the dataset, models, and tuning.
+
+**13. What is `n_estimators`?**  
+The number of estimators or learners in an ensemble.
+
+**14. What is `learning_rate` in Boosting?**  
+It controls the contribution of each boosting learner.
+
+**15. Which metrics evaluate a classification model?**  
+Accuracy, Precision, Recall, F1-score, and Confusion Matrix.
