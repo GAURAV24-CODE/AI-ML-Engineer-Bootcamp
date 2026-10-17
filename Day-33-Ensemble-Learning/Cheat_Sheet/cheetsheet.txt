@@ -1,0 +1,72 @@
+# Day 33/45 — Ensemble Learning Cheat Sheet 🤖
+
+## 1. Ensemble Learning
+Combines multiple models to improve prediction performance, stability, and generalization.
+
+**Types:** Bagging, Boosting, Voting, Stacking.
+
+## 2. Bagging vs Boosting
+
+| Bagging | Boosting |
+|---|---|
+| Models train independently | Models train sequentially |
+| Reduces variance | Can reduce bias and variance |
+| Example: Random Forest | Examples: AdaBoost, Gradient Boosting |
+
+## 3. Important Algorithms
+
+- **Random Forest:** Multiple decision trees + majority voting/averaging.
+- **AdaBoost:** Gives more emphasis to previously misclassified examples.
+- **Gradient Boosting:** Builds models sequentially to optimize a loss function.
+- **Voting Classifier:** Combines predictions from different models.
+- **Stacking:** Uses a meta-model to combine base-model predictions.
+
+## 4. Important Python Classes
+
+```python
+from sklearn.ensemble import (
+    RandomForestClassifier,
+    AdaBoostClassifier,
+    GradientBoostingClassifier,
+    VotingClassifier,
+    BaggingClassifier
+)
+```
+
+## 5. Key Parameters
+
+| Parameter | Purpose |
+|---|---|
+| `n_estimators` | Number of estimators |
+| `learning_rate` | Contribution of each boosting learner |
+| `max_depth` | Maximum tree depth |
+| `random_state` | Reproducible results |
+| `voting="hard"` | Majority class voting |
+| `voting="soft"` | Average predicted probabilities |
+
+## 6. Model Evaluation
+
+- **Accuracy:** Overall correct predictions.
+- **Precision:** How many predicted positives are correct.
+- **Recall:** How many actual positives are identified.
+- **F1-score:** Harmonic mean of precision and recall.
+- **Confusion Matrix:** Counts correct and incorrect predictions.
+
+## 7. Important Interview Points
+
+1. **Why Ensemble Learning?** To improve stability and potentially improve predictive performance.
+2. **What is Bagging?** Training models on bootstrap samples and combining predictions.
+3. **What is Boosting?** Sequentially building learners to improve the ensemble.
+4. **Random Forest vs AdaBoost?** Random Forest uses bagging and random feature selection; AdaBoost focuses on errors from earlier learners.
+5. **Hard vs Soft Voting?** Hard uses class labels; soft averages class probabilities.
+6. **Does an ensemble always perform better?** No, it depends on the data, models, and tuning.
+
+## 8. Quick Revision
+
+**Bagging →** Bootstrap samples → Parallel models → Combine predictions
+
+**Boosting →** Sequential models → Improve errors/loss → Combine predictions
+
+**Voting →** Different models → Hard or soft vote → Final prediction
+
+**Day 33 status:** Ensemble Learning fundamentals, Bagging, Boosting, Random Forest, AdaBoost, Gradient Boosting, Voting, and practical implementation.
