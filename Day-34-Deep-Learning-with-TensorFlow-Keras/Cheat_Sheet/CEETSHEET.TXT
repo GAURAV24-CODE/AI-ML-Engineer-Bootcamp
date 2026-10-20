@@ -1,0 +1,232 @@
+# DAY 34 — TENSORFLOW CHEAT SHEET
+==========================================
+
+## 1. IMPORTANT VARIABLES
+-------------------------
+tf                  : TensorFlow library alias
+tf.__version__      : Installed TensorFlow version
+X                   : Input features
+y                   : Target/output values
+X_train             : Training features
+X_test              : Testing features
+y_train             : Training targets
+y_test              : Testing targets
+y_pred              : Predicted values
+model               : Neural network model
+history             : Training history
+epochs              : Number of training passes
+batch_size          : Samples processed per training batch
+learning_rate       : Controls optimizer update size
+
+## 2. IMPORTANT CONCEPTS
+------------------------
+Tensor              : Multidimensional data structure
+Scalar              : Zero-dimensional tensor
+Vector              : One-dimensional tensor
+Matrix              : Two-dimensional tensor
+Deep Learning       : Learning patterns using neural networks
+Neural Network      : Connected layers of computational units
+Neuron              : Computational unit in a neural network
+Weights             : Trainable values used by the model
+Bias                : Trainable offset added to layer calculations
+Activation Function : Introduces nonlinearity
+Epoch               : One pass through the training dataset
+Batch               : Subset of training samples
+Gradient            : Derivative used to update model parameters
+Backpropagation     : Calculates gradients through a network
+Loss Function       : Measures prediction error
+Optimizer           : Updates model parameters to reduce loss
+
+## 3. TENSOR OPERATIONS
+----------------------
+tf.constant()       : Creates a constant tensor
+tf.Variable()       : Creates an updateable variable
+tf.zeros()          : Creates a tensor filled with zeros
+tf.ones()           : Creates a tensor filled with ones
+tf.reshape()        : Changes tensor shape
+tf.shape()          : Returns tensor dimensions as a tensor
+tf.add()            : Adds tensor values
+tf.multiply()       : Multiplies tensor values
+tf.reduce_sum()     : Calculates the sum
+tf.reduce_mean()    : Calculates the mean
+.numpy()            : Converts an eager tensor to a NumPy value/array
+tf.GradientTape()   : Records operations for automatic differentiation
+tape.gradient()     : Calculates gradients
+
+## 4. TENSORFLOW AND KERAS
+-------------------------
+tf.keras.Sequential() : Creates a sequential model
+tf.keras.layers.Input() : Defines model input shape
+Dense()                : Fully connected neural network layer
+activation             : Controls a layer's output transformation
+relu                   : Common hidden-layer activation
+sigmoid                : Maps outputs between 0 and 1
+softmax                : Produces class probability distributions
+model.summary()        : Displays model architecture
+model.compile()        : Configures loss, optimizer and metrics
+model.fit()            : Trains the model
+model.evaluate()       : Evaluates model performance
+model.predict()        : Generates predictions
+model.save()           : Saves the model
+load_model()            : Loads a saved Keras model
+
+## 5. IMPORTANT ACTIVATION FUNCTIONS
+------------------------------------
+ReLU       : max(0, x); commonly used in hidden layers
+Sigmoid    : Maps a value to the range (0, 1)
+Softmax    : Converts class scores into probabilities
+Linear     : Common output activation for regression
+Tanh       : Maps values between -1 and 1
+
+## 6. OPTIMIZERS
+---------------
+Adam       : Adaptive optimizer; common starting choice
+SGD        : Stochastic Gradient Descent
+RMSprop    : Adaptive learning-rate optimizer
+
+learning_rate : Controls the size of parameter updates
+Too High     : May cause unstable training
+Too Low      : May make training slow
+
+## 7. LOSS FUNCTIONS
+-------------------
+Mean Squared Error (MSE) : Common regression loss
+Mean Absolute Error (MAE): Average absolute prediction error
+Binary Crossentropy      : Common binary classification loss
+Sparse Categorical Crossentropy : Integer-labelled multiclass loss
+Categorical Crossentropy : One-hot-labelled multiclass loss
+
+## 8. MODEL TRAINING PARAMETERS
+-------------------------------
+epochs             : Number of training passes
+batch_size         : Number of samples per batch
+validation_split   : Fraction of training data used for validation
+verbose            : Controls training output
+shuffle            : Shuffles training samples when supported
+callbacks          : Adds training controls such as early stopping
+EarlyStopping      : Stops training when a monitored metric stops improving
+patience           : Number of epochs allowed without improvement
+Dropout            : Randomly disables units during training to help reduce overfitting
+
+## 9. DATA PREPROCESSING
+-----------------------
+train_test_split() : Splits data into training and testing sets
+StandardScaler()   : Standardizes features
+fit_transform()   : Fits preprocessing and transforms training data
+transform()       : Applies fitted preprocessing to new data
+Data Leakage       : Unintended use of information from validation/test data
+NumPy              : Numerical arrays and calculations
+Pandas             : Data manipulation and analysis
+
+IMPORTANT:
+Fit the scaler on training data only.
+Apply the same fitted scaler to validation, test and new data.
+
+## 10. EVALUATION METRICS
+------------------------
+MAE          : Mean Absolute Error; lower is generally better
+MSE          : Mean Squared Error; lower is generally better
+RMSE         : Root Mean Squared Error; lower is generally better
+R² Score     : Regression goodness-of-fit measure
+Accuracy     : Fraction of correct classification predictions
+Precision    : Fraction of predicted positives that are correct
+Recall       : Fraction of actual positives correctly identified
+F1-score     : Harmonic mean of precision and recall
+
+## 11. MODEL SAVING AND LOADING
+------------------------------
+model.save("model.keras")       : Saves a Keras model
+tf.keras.models.load_model()    : Loads a saved model
+joblib.dump()                   : Saves a fitted scaler or Python object
+joblib.load()                   : Loads a saved Python object
+
+Remember:
+Save the fitted preprocessing object along with the model when needed.
+
+## 12. IMPORTANT PYTHON EXAMPLES
+-------------------------------
+
+Create a tensor:
+    x = tf.constant([1, 2, 3])
+
+Create a variable:
+    w = tf.Variable(5.0)
+
+Build a neural network:
+    model = tf.keras.Sequential([
+        tf.keras.layers.Input(shape=(3,)),
+        tf.keras.layers.Dense(64, activation="relu"),
+        tf.keras.layers.Dense(1)
+    ])
+
+Compile:
+    model.compile(
+        optimizer="adam",
+        loss="mean_squared_error",
+        metrics=["mae"]
+    )
+
+Train:
+    history = model.fit(
+        X_train,
+        y_train,
+        epochs=100,
+        batch_size=16,
+        validation_split=0.2
+    )
+
+Predict:
+    y_pred = model.predict(X_test)
+
+Save:
+    model.save("model.keras")
+
+Load:
+    model = tf.keras.models.load_model("model.keras")
+
+## 13. COMMON ERRORS AND SOLUTIONS
+----------------------------------
+ModuleNotFoundError : Install the missing package in the selected Python environment
+Shape mismatch     : Check the number, shape and order of input features
+Overfitting         : Try early stopping, dropout or a simpler model
+Underfitting        : Review model capacity, features and training settings
+Slow training       : Reduce model size or batch/data workload where appropriate
+Poor predictions    : Check data quality, scaling, loss and evaluation
+Data leakage        : Fit preprocessing only on training data
+
+## 14. ESSENTIAL WORKFLOW
+-------------------------
+1. Import required libraries.
+2. Prepare and explore the dataset.
+3. Define features X and target y.
+4. Split training and testing data.
+5. Fit preprocessing on training data.
+6. Build the neural network.
+7. Compile the model.
+8. Train using model.fit().
+9. Inspect training and validation loss.
+10. Evaluate on held-out test data.
+11. Predict new examples.
+12. Save the model and preprocessing objects.
+13. Document the results and limitations.
+
+IMPORTANT REMINDERS
+-------------------
+- TensorFlow supports tensors, automatic differentiation and deep learning.
+- Keras provides a high-level API for building neural networks.
+- Choose output layers and loss functions according to the task.
+- Regression predicts numerical values; classification predicts classes.
+- Scaling is often useful for neural networks.
+- Keep test data separate during model development.
+- Training loss alone does not prove good generalization.
+- Save preprocessing objects alongside the trained model when required.
+- Synthetic datasets are useful for practice but are not evidence of real-world accuracy.
+
+DAY 34 SUMMARY
+--------------
+TensorFlow is a machine learning framework for numerical computation
+and deep learning. Learn tensor operations, neural network layers,
+activation functions, loss functions, optimizers, training, evaluation
+and prediction. A complete workflow includes preprocessing, training,
+testing, saving the model and reusing the same preprocessing for new data.
+NOW GIEV INTWERVIEW QESTIONS
