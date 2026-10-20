@@ -1,0 +1,91 @@
+# DAY 34 — TENSORFLOW INTERVIEW QUESTIONS (SHORT)
+
+1. **What is TensorFlow?**  
+   An open-source framework for machine learning and deep learning.
+
+2. **What is a tensor?**  
+   A multidimensional data structure.
+
+3. **What is Keras?**  
+   A high-level API for building neural networks.
+
+4. **TensorFlow vs NumPy?**  
+   NumPy handles numerical computing; TensorFlow also supports model training and automatic differentiation.
+
+5. **What is a neural network?**  
+   A model made of interconnected computational units called neurons.
+
+6. **What is an epoch?**  
+   One pass through the training dataset.
+
+7. **What is batch size?**  
+   Number of samples processed in one batch.
+
+8. **What is a loss function?**  
+   It measures the model's prediction error.
+
+9. **What is an optimizer?**  
+   It updates model parameters to reduce loss.
+
+10. **What is an activation function?**  
+    It transforms a neuron's output and can introduce nonlinearity.
+
+11. **What is ReLU?**  
+    An activation function: `max(0, x)`.
+
+12. **What is backpropagation?**  
+    It calculates gradients used to update network weights.
+
+13. **What is GradientTape?**  
+    TensorFlow's API for recording operations and calculating gradients.
+
+14. **What is overfitting?**  
+    When a model performs well on training data but poorly on unseen data.
+
+15. **What is underfitting?**  
+    When a model fails to learn important patterns.
+
+16. **What does `model.compile()` do?**  
+    Configures the optimizer, loss, and metrics.
+
+17. **What does `model.fit()` do?**  
+    Trains the model.
+
+18. **What does `model.predict()` do?**  
+    Generates predictions.
+
+19. **What is an epoch vs batch?**  
+    An epoch is a full training pass; a batch is a subset of samples.
+
+20. **How do you save a TensorFlow model?**  
+    `model.save("model.keras")`
+
+21. **How do you load a model?**  
+    `tf.keras.models.load_model("model.keras")`
+
+22. **What is a learning rate?**  
+    It controls the size of optimizer updates.
+
+23. **What is Adam?**  
+    An adaptive optimization algorithm.
+
+24. **What is a Dense layer?**  
+    A fully connected neural network layer.
+
+25. **How do you check the TensorFlow version?**  
+    `print(tf.__version__)`
+
+26. **What is MAE?**  
+    Mean Absolute Error; lower is generally better.
+
+27. **What is MSE?**  
+    Mean Squared Error; it penalizes larger errors more strongly.
+
+28. **Regression vs classification?**  
+    Regression predicts numerical values; classification predicts classes.
+
+29. **Why scale input features?**  
+    Scaling can improve training stability and convergence.
+
+30. **What is a validation dataset?**  
+    Data used to monitor model performance during development.
