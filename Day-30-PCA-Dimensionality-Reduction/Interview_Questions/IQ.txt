@@ -9,7 +9,7 @@ Q2. What is the full form of PCA?
 Principal Component Analysis.
 
 Q3. Is PCA supervised or unsupervised?
-Unsupervised learning.
+Unsupervised learning
 
 Q4. Why is PCA used?
 For dimensionality reduction and data visualization.
