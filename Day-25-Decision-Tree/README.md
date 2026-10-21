@@ -4,7 +4,7 @@ Welcome to **Day 25** of my AI/ML Engineer Bootcamp journey! Today, I explored *
 
 ---
 
-## 📌 Objective
+## 📌 Objectiv
 
 Understand how Decision Trees split data into smaller groups to perform classification and regression.
 
