@@ -208,8 +208,7 @@ Data leakage        : Fit preprocessing only on training data
 10. Evaluate on held-out test data.
 11. Predict new examples.
 12. Save the model and preprocessing objects.
-13. Document the results and limitations.
-
+13. Document the results and limitations
 IMPORTANT REMINDERS
 -------------------
 - TensorFlow supports tensors, automatic differentiation and deep 
@@ -222,11 +221,4 @@ IMPORTANT REMINDERS
 - Save preprocessing objects alongside the trained model when required.
 - Synthetic datasets are useful for practice but are not evidence of real-world accuracy.
 
-DAY 34 SUMMARY
---------------
-TensorFlow is a machine learning framework for numerical computation
-and deep learning. Learn tensor operations, neural network layers,
-activation functions, loss functions, optimizers, training, evaluation
-and prediction. A complete workflow includes preprocessing, training,
-testing, saving the model and reusing the same preprocessing for new data.
-NOW GIEV INTWERVIEW QESTIONS
+
