@@ -1,1 +1,1 @@
-ir tinclude the all information about the streamlit application
+ir tinclude the all information about the streamlit applica
