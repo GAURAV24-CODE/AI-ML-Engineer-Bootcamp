@@ -1,4 +1,4 @@
-# 🚀 Day 02 – Conditional Statements & Loops | AI/ML Engineer Bootcamp
+# 🚀 Day 02 – Conditional Statements & Loops | AI/ML Engr Bootcamp
 
 ## 📅 Day 02 Overview
 
