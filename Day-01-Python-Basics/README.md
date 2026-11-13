@@ -1,4 +1,4 @@
-# 🐍 Day 1 – Python Basics
+# 🐍 Day 1 – Python Basic
 
 > **AI/ML Engineer Bootcamp | 45-Day Challenge** 🚀
 
