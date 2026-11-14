@@ -1,1 +1,23 @@
-fdngn  f 
+fdngn  f jnjjkm mm git add "08-Set-Operations/Cheatsheet.md"
+git commit -m "Update Set Operations cheatsheet"
+git push origin master
+
+git add "08-Set-Operations/README.md"
+git commit -m "Update Set Operations README"
+git push origin master
+
+git add "09-String-Functions/README.md"
+git commit -m "Update String Functions README"
+git push origin master
+
+git add "11-CTEs/06-CTE-vs-Subquery.md"
+git commit -m "Update CTE vs Subquery notes"
+git push origin master
+
+git add "11-CTEs/IQ.txt"
+git commit -m "Update CTE interview questions"
+git push origin master
+
+git add "11-CTEs/README.md"
+git commit -m "Update CTE README"
+git push origin master
