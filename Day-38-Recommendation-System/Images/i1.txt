@@ -1,1 +1,35 @@
-askkdsknkandnsn
+askkdsknkandnsngit add 08-Set-Operations/Cheatsheet.md
+git commit -m "Update Set Operations Cheatsheet"
+git push origin master
+
+git add 09-String-Functions/Cheatsheet.md
+git commit -m "Update String Functions Cheatsheet"
+git push origin master
+
+git add 11-CTEs/IQ.txt
+git commit -m "Update CTE Interview Questions"
+git push origin master
+
+git add 11-CTEs/README.md
+git commit -m "Update CTE README"
+git push origin master
+
+git add 15-Database-Design/One-to-Many.md
+git commit -m "Add One-to-Many Database Design Notes"
+git push origin master
+
+git add 15-Database-Design/README.md
+git commit -m "Update Database Design README"
+git push origin master
+
+git add 15-Database-Design/Transactions.md
+git commit -m "Add Database Transactions Notes"
+git push origin master
+
+git add 15-Database-Design/image-1.png
+git commit -m "Add Database Design Image 1"
+git push origin master
+
+git add 15-Database-Design/image.png
+git commit -m "Add Database Design Image"
+git push origin master
