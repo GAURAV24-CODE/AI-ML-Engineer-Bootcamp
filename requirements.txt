@@ -9,7 +9,7 @@
 
 
 
-
+jnejgjnjfvnjnf
 
 
 
@@ -432,7 +432,7 @@ Day-45-Capstone-Project/
 
 MACHINE LEARNING
 │
-├── 21. ML Introduction
+├── 21. ML Introductio
 │   ├── ML Fundamentals → Learning from data
 │   ├── AI vs ML vs DL → AI ⊃ ML ⊃ DL
 │   ├── Types of ML → Different learning approaches
