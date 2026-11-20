@@ -1,4 +1,4 @@
-EDA = Explore → Clean → Analyze → Visualize → Insightsssssssssssssssssss
+EDA = Explore → Clean → Analyze → Visualize → Insights
 
 1. EDA
    → Understand data, find patterns, problems, and relationships.
