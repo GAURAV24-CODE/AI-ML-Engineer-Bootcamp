@@ -32,4 +32,4 @@ git push origin master
 
 git add 15-Database-Design/image.png
 git commit -m "Add Database Design Image"
-git push origin master
+git pus
