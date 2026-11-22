@@ -2,7 +2,7 @@
 
 > **AI/ML Engineer Bootcamp | 45-Day Challenge** 🚀
 
-This repository contai my **Day 1** learning journey, where I built a strong foundation in Python through hands-on coding, exercises, and mini projects
+This repository contai my **Day 1** learning journey, where I built a strong in Python through hands-on coding, exercises, and mini projects
 ## 🎯 Skills Learned
 
 - ✅ Python Fundamentals
