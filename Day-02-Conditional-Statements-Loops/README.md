@@ -1,6 +1,6 @@
 # 🚀 Day 02 – Conditional Statements & Loops | AI/ML Engr Bootca
 
-## 📅 Day 02 Overview
+## 📅 Day 02 Ove
 
 Welcome to **Day 02** of the **45-Day AI/ML Engineer Bootcamp**.
 
