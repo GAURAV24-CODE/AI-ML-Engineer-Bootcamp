@@ -27,9 +27,5 @@ git commit -m "Add Database Transactions Notes"
 git push origin master
 
 git add 15-Database-Design/image-1.png
-git commit -m "Add Database Design Image 1"
-git push origin master
-
-git add 15-Database-Design/image.png
-git commit -m "Add Database Design Image"
+"
 git push origin master
