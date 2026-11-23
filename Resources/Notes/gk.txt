@@ -1,1 +1,35 @@
-sdbhbsfabkbbbbbb
+git add "MODULE_01_PYTHON_FUNDAMENTALS/DAY_01_Introduction_to_Python/mindmap.txt"
+git commit -m "Update Day 01 Python Introduction Mindmap"
+git push origin master
+
+git add "MODULE_01_PYTHON_FUNDAMENTALS/DAY_02_Variables_and_Data_Types/mindmap.txt"
+git commit -m "Update Day 02 Variables and Data Types Mindmap"
+git push origin master
+
+git add "MODULE_01_PYTHON_FUNDAMENTALS/DAY_06_Strings/info.md"
+git commit -m "Update Day 06 Strings Information"
+git push origin master
+
+git add "MODULE_01_PYTHON_FUNDAMENTALS/DAY_06_Strings/mindmap.txt"
+git commit -m "Update Day 06 Strings Mindmap"
+git push origin master
+
+git add "MODULE_01_PYTHON_FUNDAMENTALS/DAY_07_Lists/mindmap.txt"
+git commit -m "Update Day 07 Lists Mindmap"
+git push origin master
+
+git add "MODULE_01_PYTHON_FUNDAMENTALS/DAY_18_Python_Practice_and_Problem_Solving/mindmap.txt"
+git commit -m "Update Day 18 Python Practice Mindmap"
+git push origin master
+
+git add "MODULE_04_PROFESSIONAL_PYTHON_AND_PROJECTS/DAY_29_Logging_and_Debugging/info.md"
+git commit -m "Update Day 29 Logging and Debugging Information"
+git push origin master
+
+git add "MODULE_04_PROFESSIONAL_PYTHON_AND_PROJECTS/DAY_29_Logging_and_Debugging/mindmap.txt"
+git commit -m "Update Day 29 Logging and Debugging Mindmap"
+git push origin master
+
+git add "README.md"
+git commit -m "Update Project README"
+git push origin master
