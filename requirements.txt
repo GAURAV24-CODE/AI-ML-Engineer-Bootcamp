@@ -559,5 +559,5 @@ MACHINE LEARNING
     ├── XGBoost → Optimized gradient boosting
     ├── LightGBM → Fast gradient boosting
     ├── CatBoost → Categorical boosting
-    ├── Stacking → Meta-model combines models
+    ├── Stacking → Meta-model combines modelssss
     └── Blending → Weighted model combinatio
