@@ -1,4 +1,4 @@
-# 🚀 Day 02 – Conditional Statements & Loops | AI/ML Engr Bootca
+# 🚀 Day 02 – Conditional Statements & Loopsss | AI/ML Engr Bootca
 
 ## 📅 Day 02 Ove
 
