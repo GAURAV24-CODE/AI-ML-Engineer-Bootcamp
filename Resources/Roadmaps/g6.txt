@@ -18,5 +18,5 @@ git add "11-CTEs/IQ.txt"
 git commi
 
 git add "11-CTEs/README.md"
-git commit -m "Update CTE README"
+git c
 git push origin master
