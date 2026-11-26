@@ -7,7 +7,7 @@ EDA = Explore → Clean → Analyze → Visualize → Insightsssss
    shape     → rows & columns
    head()    → first rows
    tail()    → last rows
-   info()    → types + non-null values
+   info()    → types + non-null valu
    describe()→ statistics
    nunique() → unique count
 
