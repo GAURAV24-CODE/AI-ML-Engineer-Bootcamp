@@ -32,4 +32,4 @@ git push origin master
 
 git add "README.md"
 git commit -m "Update Project README"
-git push origin master
+git push origin
