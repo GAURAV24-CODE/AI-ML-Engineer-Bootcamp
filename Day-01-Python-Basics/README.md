@@ -10,7 +10,7 @@ This repository contai my **Day 1** learning journey, where I  am built a strong
 - ✅ User Input & Output
 - ✅ Operators
 - ✅ Type Casting
-- ✅ Basic Problem Solving
+- ✅ Basic Problem So
 
 ## 📂 Project Structure
 
