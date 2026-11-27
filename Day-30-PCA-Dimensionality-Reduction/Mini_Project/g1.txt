@@ -31,5 +31,4 @@ git commit -m "Update Day 29 Logging and Debugging Mindmap"
 git push origin master
 
 git add "README.md"
-git commit -m "Update Project README"
-git push origin master
+git cos
