@@ -28,4 +28,3 @@ git push origin master
 
 git add 15-Database-Design/image-1.png
 "
-git push origin master
