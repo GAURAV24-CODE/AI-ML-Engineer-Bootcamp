@@ -19,5 +19,3 @@ git commit -m "Add One-to-Many Database Design Notes"
 git push origin master
 
 
-git add 15-Database-Design/image.png
-git commit -m "Add 
