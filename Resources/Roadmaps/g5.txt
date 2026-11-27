@@ -11,6 +11,6 @@ git add "09-String-Functions/README.md"
 git add "11-CTEs/IQ.txt"
 git
 
-git add "11-CTEs/README.md"
+git add "11-CTEs/RE
 git commit -m "Update CTE README"
 git push origin master
