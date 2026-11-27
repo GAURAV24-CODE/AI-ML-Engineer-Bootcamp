@@ -8,7 +8,7 @@ This repository contai my **Day 1** learning journey, where I  am built a strong
 - ✅ Python Fundamentals
 - ✅ Variables & Data Types
 - ✅ User Input & Output
-- ✅ Operators
+- ✅ Operator
 - ✅ Type Casting
 - ✅ Basic Problem So
 
