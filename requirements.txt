@@ -560,4 +560,4 @@ MACHINE LEARNING
     ├── LightGBM → Fast gradient boosting
     ├── CatBoost → Categorical boosting
     ├── Stacking → Meta-model combines modelssss
-    └── Blending → Weighted model combinatio
+    └── Blending → Weighted model combinatioNSs
