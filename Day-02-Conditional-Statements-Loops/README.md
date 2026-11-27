@@ -6,7 +6,7 @@ Welcome to **Day 02** of the **45-Day AI/ML Engineer Bootcamp**.
 
 Today focuses on one of the most important programming concepts—**decision making and iteration**. You'll learn how Python uses conditional statements and loops to control program flow, solve logical problems, and automate repetitive tasks.
 
-These concepts form the foundation for writing algorithms, solving coding interview questions, and building AI/ML application
+These concepts form the foundation for writing algorithms, solving coding interview questions, and building AI/ML application AFE
 
 ---
 
