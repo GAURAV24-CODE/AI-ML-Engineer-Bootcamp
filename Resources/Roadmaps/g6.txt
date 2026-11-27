@@ -13,10 +13,3 @@ git push origin master
 git add "11-CTEs/06-CTE-vs-Subquery.md"
 git commit -m "Update CTE vs Subquery notes"
 git push origin master
-
-git add "11-CTEs/IQ.txt"
-git commi
-
-git add "11-CTEs/README.md"
-git c
-git push origin master
