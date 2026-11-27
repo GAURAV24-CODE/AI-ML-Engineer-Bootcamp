@@ -4,7 +4,7 @@
 
 1. POPULATION
    → Entire group
-   Example: All stude
+   Example: All studeNTSs
 
 2. SAMPLE
    → Small part of population
