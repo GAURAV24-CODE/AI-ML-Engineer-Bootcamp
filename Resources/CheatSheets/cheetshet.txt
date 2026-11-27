@@ -30,6 +30,4 @@ git add "MODULE_04_PROFESSIONAL_PYTHON_AND_PROJECTS/DAY_29_Logging_and_Debugging
 git commit -m "Update Day 29 Logging and Debugging Mindmap"
 git push origin master
 
-git add "README.md"
-git commit -m "Update Project README"
-git push origin
+git add "READMs
