@@ -15,7 +15,5 @@ git commit -m "Update CTE README"
 git push origin master
 
 git add 15-Database-Design/One-to-Many.md
-git commit -m "Add One-to-Many Database Design Notes"
-git push origin master
-
+git com
 
