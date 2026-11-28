@@ -49,9 +49,7 @@ git push origin master
 git add "README.md"
 git commit -m "Update Project README"
 git push origin master
-git add "11-CTEs/IQ.txt"
-gitCTE interview questions"
-git push o
+git add "11-CT
 
 git add "11-CTEs/README.md"
 git commit -m "Update CTE README"
