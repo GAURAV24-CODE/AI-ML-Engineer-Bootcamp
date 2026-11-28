@@ -1,7 +1,7 @@
 EDA = Explore → Clean → Analyze → Visualize → Insightsssss
 
 1.
-   → Understand data, find patterns, problems, and relationships.
+   → Understand data, find patterns, problems, and relationship
 
 2. DATA UNDERSTANDING
    shape     → rows & columns
